@@ -1,4 +1,4 @@
 NSXtensions
 ===========
 
-A collection of useful extensions for standard Cocoa classes
+A collection of useful extensions for standard Cocoa classes.
