@@ -62,7 +62,7 @@
     return [self MacAddressOfInterface:@"pdp_ip0"];
 }
 
-+ (NSString *)uniqueID
++ (NSString *)uniqueIdentifier
 {
     return UIDevice.WiFiMACAddress.SHA256;
 }

@@ -28,7 +28,7 @@
  
  @return A unique identifier for the device.
  */
-+ (NSString *)uniqueID;
++ (NSString *)uniqueIdentifier;
 
 /**
  Get available system RAM.

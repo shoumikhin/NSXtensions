@@ -7,7 +7,7 @@
     return [NSManagedObject.alloc initWithEntity:[NSEntityDescription entityForName:name inManagedObjectContext:self] insertIntoManagedObjectContext:self];
 }
 
-- (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors anndFetchLimit:(NSUInteger)limit
+- (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit
 {
     NSFetchRequest *request = NSFetchRequest.new;
     
@@ -25,7 +25,7 @@
 {
     @try
     {
-        NSArray *toRemove = [self objectsOfEntity:name withPredicate:predicate sortDecriptors:sortDescriptors anndFetchLimit:0];
+        NSArray *toRemove = [self objectsOfEntity:name withPredicate:predicate sortDecriptors:sortDescriptors andFetchLimit:0];
         
         for (NSManagedObject *object in toRemove)
             [self deleteObject:object];
