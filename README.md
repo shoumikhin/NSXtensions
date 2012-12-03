@@ -9,6 +9,24 @@ Simply add:
 
 to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):
 
+### MKMapView
+
+    - (NSInteger)zoomLevel;  //get the current zoom level
+    
+    //change map's location and zoom level
+    - (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate zoomLevel:(NSUInteger)zoomLevel animated:(BOOL)animated;
+
+### NSDate
+
+    //helper methods whose names speak for themselves
+    - (NSInteger)secondsAfterDate:(NSDate *)date;
+    - (NSInteger)minutesAfterDate:(NSDate *)date;
+    - (NSInteger)minutesBeforeDate:(NSDate *)date;
+    - (NSInteger)hoursAfterDate:(NSDate *)date;
+    - (NSInteger)hoursBeforeDate:(NSDate *)date;
+    - (NSInteger)daysAfterDate:(NSDate *)date;
+    - (NSInteger)daysBeforeDate:(NSDate *)date;
+
 ### NSException
     
     - (NSArray *)backtrace;  //pretty-formatted stack trace
@@ -80,3 +98,16 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (NSString *)uniqueIdentifier;  //globally unique device identifier (actually SHA256 of Wi-Fi MAC address)
     
     + (double)availableMemory;  //how much of free memory remains in system (Megabytes)
+
+
+### UIView
+
+    - (UIViewController *)viewController;  //returns a parent view controller
+    - (BOOL)findAndResignFirstResponder;  //resigns the first responder, if found in this view hierarchy
+    
+### UIWebView
+
+    //load HTML content with specific font
+    - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL font:(UIFont *)font;
+    
+    - (void)clearCookies;  //clear all saved cookies

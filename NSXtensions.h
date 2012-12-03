@@ -1,3 +1,5 @@
+#import "MKMapViewX.h"
+#import "NSDateX.h"
 #import "NSExceptionX.h"
 #import "NSFileManagerX.h"
 #import "NSManagedObjectContextX.h"
@@ -6,3 +8,5 @@
 #import "NSStringX.h"
 #import "UIApplicationX.h"
 #import "UIDeviceX.h"
+#import "UIViewX.h"
+#import "UIWebViewX.h"
