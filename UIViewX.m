@@ -17,10 +17,25 @@
 
 - (UIViewController *)viewController
 {
-    return (UIViewController *)[self searchForUIViewController];
+    return (UIViewController *)self.searchForUIViewController;
 }
 
-- (BOOL)findAndResignFirstResponder
+- (UIView *)superviewOfClass:(Class)aClass
+{
+	UIView *view = self.superview;
+    
+	while (view)
+    {
+        if ([view isKindOfClass:aClass])
+			break;
+		else
+			view = view.superview;
+	}
+    
+	return view;
+}
+
+- (BOOL)resignFirstResponderRecursively
 {
     if (self.isFirstResponder)
     {
@@ -30,10 +45,19 @@
     }
     
     for (UIView *subView in self.subviews)
-        if ([subView findAndResignFirstResponder])
+        if (subView.resignFirstResponderRecursively)
             return YES;
 
     return NO;
+}
+
+- (void)moveTo:(CGPoint)destination duration:(NSTimeInterval)seconds options:(UIViewAnimationOptions)options
+{
+    [UIView animateWithDuration:seconds delay:0.0 options:options animations:^
+    {
+        self.frame = CGRectMake(destination.x, destination.y, self.frame.size.width, self.frame.size.height);
+    }
+    completion:nil];
 }
 
 @end

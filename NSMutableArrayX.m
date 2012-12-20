@@ -2,6 +2,18 @@
 
 @implementation NSMutableArray (X)
 
++ (id)arrayUsingWeakReferences
+{
+    return [self arrayUsingWeakReferencesWithCapacity:0];
+}
+
++ (id)arrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity
+{
+    CFArrayCallBacks callbacks = {0, NULL, NULL, CFCopyDescription, CFEqual};
+    
+    return (__bridge_transfer id)(CFArrayCreateMutable(0, capacity, &callbacks));
+}
+
 - (void)shuffle
 {
     static BOOL seeded;

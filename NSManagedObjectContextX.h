@@ -34,7 +34,8 @@
  @param name Entiry name of the object.
  @param predicate NSPredicate to fetch the objects to be removed.
  @param sortDescriptors A list of sorting rules.
+ @param limit A fetch limit of objects to delete. Zero means unlimited.
  */
-- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate andSortDecriptors:(NSArray *)sortDescriptors;
+- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit;
 
 @end

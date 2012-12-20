@@ -11,6 +11,38 @@
 
 @implementation UIDevice (X)
 
++ (BOOL)isPhone
+{
+    return UIUserInterfaceIdiomPhone == UIDevice.currentDevice.userInterfaceIdiom;
+}
+
++ (BOOL)isPhone4Inch
+{
+    return UIUserInterfaceIdiomPhone == UIDevice.currentDevice.userInterfaceIdiom && 568.0 == UIScreen.mainScreen.bounds.size.height;
+}
+
++ (BOOL)isPad
+{
+    return UIUserInterfaceIdiomPad == UIDevice.currentDevice.userInterfaceIdiom;
+}
+
++ (BOOL)isPad8Inch
+{
+    size_t size;
+    
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    
+    char *machine = malloc(size);
+    
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    
+    NSString *platform = [NSString stringWithUTF8String:machine];
+    
+    free(machine);
+    
+    return [platform isEqualToString:@"iPad2,5"] || [platform isEqualToString:@"iPad2,6"] || [platform isEqualToString:@"iPad2,7"];
+}
+
 + (NSString *)MacAddressOfInterface:(NSString *)interface
 {
     int mib[6];
@@ -77,6 +109,19 @@
 		return NSNotFound;
     
 	return vm_page_size * stats.free_count / (double)0x100000;
+}
+
++ (UIDeviceResolution)resolution
+{
+    BOOL isRetina = [UIScreen.mainScreen respondsToSelector:@selector(scale)];
+    
+    if (self.class.isPad)
+        return isRetina ? UIDeviceResolutioniPadStandardHi : UIDeviceResolutioniPadStandard;
+    else
+        if (self.class.isPhone4Inch)
+            return UIDeviceResolutioniPhoneTallerHi;
+        else
+            return isRetina ? UIDeviceResolutioniPhoneStandardHi : UIDeviceResolutioniPhoneStandard;
 }
 
 @end

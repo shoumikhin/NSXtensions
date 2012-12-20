@@ -17,10 +17,27 @@
 - (UIViewController *)viewController;
 
 /**
+ Get a superview of specific class.
+ 
+ @param aClass Specific class to search.
+ @return Superview of class specified.
+ */
+- (UIView *)superviewOfClass:(Class)aClass;
+
+/**
  Search through the view hierarchy starting from this view and resign the first responder, if found.
  
  @return YES, if the first responder was resigned, NO otherwise.
  */
-- (BOOL)findAndResignFirstResponder;
+- (BOOL)resignFirstResponderRecursively;
+
+/**
+ Move view to a new position with animaton.
+ 
+ @param destination New coordinates for view's frame origin.
+ @param duration Duration of animation in seconds.
+ @param options Animation options.
+ */
+- (void)moveTo:(CGPoint)destination duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options;
 
 @end

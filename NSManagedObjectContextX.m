@@ -16,16 +16,16 @@
     request.fetchLimit = limit;
     
     if (sortDescriptors)
-        [request setSortDescriptors:sortDescriptors];
+        request.sortDescriptors = sortDescriptors;
     
     return [self executeFetchRequest:request error:nil];
 }
 
-- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate andSortDecriptors:(NSArray *)sortDescriptors
+- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit
 {
     @try
     {
-        NSArray *toRemove = [self objectsOfEntity:name withPredicate:predicate sortDecriptors:sortDescriptors andFetchLimit:0];
+        NSArray *toRemove = [self objectsOfEntity:name withPredicate:predicate sortDecriptors:sortDescriptors andFetchLimit:limit];
         
         for (NSManagedObject *object in toRemove)
             [self deleteObject:object];

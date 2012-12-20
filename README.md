@@ -1,7 +1,11 @@
 NSXtensions
 ===========
 
-A collection of useful extensions for standard Cocoa classes. Pull requests are welcome! :)
+A collection of useful extensions for standard Cocoa classes. Also available among CocoaPods.
+
+Pull requests are welcome! :)
+
+## Usage
 
 Simply add:
 
@@ -9,14 +13,14 @@ Simply add:
 
 to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):
 
-### MKMapView
+#### MKMapView
 
     - (NSInteger)zoomLevel;  //get the current zoom level
     
     //change map's location and zoom level
     - (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate zoomLevel:(NSUInteger)zoomLevel animated:(BOOL)animated;
 
-### NSDate
+#### NSDate
 
     //helper methods whose names speak for themselves
     - (NSInteger)secondsAfterDate:(NSDate *)date;
@@ -27,11 +31,17 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     - (NSInteger)daysAfterDate:(NSDate *)date;
     - (NSInteger)daysBeforeDate:(NSDate *)date;
 
-### NSException
+#### NSDictionary
+
+    //merge two dictionaries
+    + (NSDictionary *)dictionaryByMerging:(NSDictionary *)first with:(NSDictionary *)second;
+    - (NSDictionary *)dictionaryByMergingWith:(NSDictionary *)other;
+
+#### NSException
     
     - (NSArray *)backtrace;  //pretty-formatted stack trace
     
-### NSFileManager
+#### NSFileManager
 
     //get standard directories paths and URLs
     + (NSURL *)documentsURL;
@@ -45,7 +55,7 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     
     + (double)availableDiskSpace;  //check available disk space (Megabytes)
     
-### NSManagedObjectContext
+#### NSManagedObjectContext
 
     //create new object
     - (NSManagedObject *)newObjectOfEntity:(NSString *)name;
@@ -56,7 +66,11 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     //delete objects with options
     - (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate andSortDecriptors:(NSArray *)sortDescriptors;
 
-### NSMutableArray
+#### NSMutableArray
+
+    //a new array storing weak references to objects
+    + (id)arrayUsingWeakReferences;
+    + (id)arrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity;
 
     - (void)shuffle;  //randomly mix contents
     
@@ -68,19 +82,30 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     - (void)push:(id)anObject;
     - (id)pop;
 
-### NSSet
+#### NSObject
+
+    //add or change methods in run-time
+    + (void)swizzleMethod:(SEL)originalMethod withMethod:(SEL)newMethod;
+    + (void)appendMethod:(SEL)newMethod fromClass:(Class)aClass;
+    + (void)replaceMethod:(SEL)aMethod fromClass:(Class)aClass;
+
+#### NSSet
 
     - (NSDictionary *)indexedDictionary;  //returns a dictionary with integer keys and all objects in set as values
 
-### NSString
+#### NSString
 
     //hash of contents
     - (NSString *)MD5;
     - (NSString *)SHA256;
 
     - (NSString *)likeUUID;  //helper to insert dashes in 32-chars length string to make it look like UUID
+    
+#### NSURL
 
-### UIApplication
+    - (NSURL *)hostURL;  //get base host URL
+
+#### UIApplication
 
     + (NSString *)identifier;  //application's bundle identifier
     + (NSString *)version;  //application's bundle version
@@ -89,7 +114,13 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
     + (NSArray *)backtrace;  //pretty-formatted backtrace of current point of execution
 
-### UIDevice
+#### UIDevice
+
+    //check the device type
+    + (BOOL)isPhone;
+    + (BOOL)isPhone4Inch;
+    + (BOOL)isPad;
+    + (BOOL)isPad8Inch;
 
     //get MAC addresses of installed network interfaces
     + (NSString *)WiFiMACAddress;
@@ -98,14 +129,27 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (NSString *)uniqueIdentifier;  //globally unique device identifier (actually SHA256 of Wi-Fi MAC address)
     
     + (double)availableMemory;  //how much of free memory remains in system (Megabytes)
+    
+    + (UIDeviceResolution)resolution;  //get device resolution
 
+#### UIImage
 
-### UIView
+    //convenient way to download an image
+    - (id)initWithContentsOfURL:(NSURL *)URL;
+    + (id)imageWithContentsOfURL:(NSURL *)URL;
+
+#### UIView
 
     - (UIViewController *)viewController;  //returns a parent view controller
-    - (BOOL)findAndResignFirstResponder;  //resigns the first responder, if found in this view hierarchy
+    - (BOOL)resignFirstResponderRecursively;  //resigns the first responder, if found in this view hierarchy
     
-### UIWebView
+    //find a superview of specific class
+    - (UIView *)superviewOfClass:(Class)aClass;
+    
+    //move with animation
+    - (void)moveTo:(CGPoint)destination duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options;
+    
+#### UIWebView
 
     //load HTML content with specific font
     - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL font:(UIFont *)font;

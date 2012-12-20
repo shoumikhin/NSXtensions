@@ -10,6 +10,18 @@
 @interface NSMutableArray (X)
 
 /**
+ A new array storing weak references to objects.
+ */
++ (id)arrayUsingWeakReferences;
+
+/**
+ A new array storing weak references to objects.
+ 
+ @param capacity Array's capacity.
+ */
++ (id)arrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity;
+
+/**
  Randomly shuffle the array's content.
  */
 - (void)shuffle;
