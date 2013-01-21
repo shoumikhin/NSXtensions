@@ -4,14 +4,14 @@
 
 - (NSManagedObject *)newObjectOfEntity:(NSString *)name
 {
-    return [NSManagedObject.alloc initWithEntity:[NSEntityDescription entityForName:name inManagedObjectContext:self] insertIntoManagedObjectContext:self];
+    return [NSManagedObject.alloc initWithEntity:self.persistentStoreCoordinator.managedObjectModel.entitiesByName[name] insertIntoManagedObjectContext:self];
 }
 
-- (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit
+- (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit
 {
     NSFetchRequest *request = NSFetchRequest.new;
-    
-    request.entity = [NSEntityDescription entityForName:name inManagedObjectContext:self];
+
+    request.entity = self.persistentStoreCoordinator.managedObjectModel.entitiesByName[name];
     request.predicate = predicate;
     request.fetchLimit = limit;
     
@@ -21,17 +21,20 @@
     return [self executeFetchRequest:request error:nil];
 }
 
-- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit
+- (void)deleteObjects:(NSArray *)objects
 {
+    for (NSManagedObject *object in objects)
     @try
     {
-        NSArray *toRemove = [self objectsOfEntity:name withPredicate:predicate sortDecriptors:sortDescriptors andFetchLimit:limit];
-        
-        for (NSManagedObject *object in toRemove)
-            [self deleteObject:object];
+        [self deleteObject:object];
     }
     @catch (NSException *exception)
     {}
+}
+
+- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit
+{
+    [self deleteObjects:[self objectsOfEntity:name withPredicate:predicate sortDescriptors:sortDescriptors andFetchLimit:limit]];
 }
 
 @end

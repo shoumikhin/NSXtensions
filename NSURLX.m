@@ -4,7 +4,18 @@
 
 - (NSURL *)hostURL
 {
-	return [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@", self.scheme, self.host]];
+    NSMutableString *ret = NSMutableString.new;
+    
+    if (self.scheme.length)
+        [ret appendFormat:@"%@://", self.scheme];
+    
+    if (self.host.length)
+        [ret appendString:self.host];
+
+    if (self.port)
+        [ret appendFormat:@":%@", self.port];
+    
+	return [NSURL.alloc initWithString:ret];
 }
 
 @end

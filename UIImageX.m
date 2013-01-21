@@ -4,12 +4,12 @@
 
 - (id)initWithContentsOfURL:(NSURL *)URL
 {
-    return [self initWithData:[NSData dataWithContentsOfURL:URL]];
+    return [self initWithData:[NSData.alloc initWithContentsOfURL:URL]];
 }
 
 + (UIImage *)imageWithContentsOfURL:(NSURL *)URL
 {
-    return [UIImage imageWithData:[NSData dataWithContentsOfURL:URL]];
+    return [UIImage imageWithData:[NSData.alloc initWithContentsOfURL:URL]];
 }
 
 @end

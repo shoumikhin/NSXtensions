@@ -26,7 +26,14 @@
  @param limit A fetch limit of objects to return. Zero means unlimited.
  @return An array of fetched objects.
  */
-- (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit;
+- (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit;
+
+/**
+ Delete several objects.
+ 
+ @param objects Objects to delete.
+ */
+- (void)deleteObjects:(NSArray *)objects;
 
 /**
  Delete several objects.
@@ -36,6 +43,6 @@
  @param sortDescriptors A list of sorting rules.
  @param limit A fetch limit of objects to delete. Zero means unlimited.
  */
-- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit;
+- (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit;
 
 @end

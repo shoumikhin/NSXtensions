@@ -11,7 +11,7 @@
 
 + (NSString *)pathForDirectory:(NSSearchPathDirectory)directory
 {
-    return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    return NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES)[0];
 }
 
 + (NSURL *)documentsURL
@@ -60,7 +60,7 @@
         if (-1 != getxattr(filePath, attrName, NULL, sizeof(u_int8_t), 0, 0))
             removexattr(filePath, attrName, 0);
         
-        return [[NSURL fileURLWithPath:path] setResourceValue:@(YES) forKey:NSURLIsExcludedFromBackupKey error:nil];
+        return [[NSURL.alloc initFileURLWithPath:path] setResourceValue:@(YES) forKey:NSURLIsExcludedFromBackupKey error:nil];
     }
 }
 

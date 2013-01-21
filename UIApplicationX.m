@@ -51,7 +51,7 @@
     void *stack[0x80];
     int count = backtrace(stack, sizeof(stack)/sizeof(stack[0]));
     char **strings = backtrace_symbols(stack, count);
-    NSMutableArray *ret = [NSMutableArray arrayWithCapacity:count];
+    NSMutableArray *ret = [NSMutableArray.alloc initWithCapacity:count];
     
     for (int i = 0; i < count; ++i)
 	 	[ret addObject:@(strings[i])];

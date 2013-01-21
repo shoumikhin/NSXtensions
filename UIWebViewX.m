@@ -4,7 +4,7 @@
 
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL font:(UIFont *)font
 {
-    [self loadHTMLString:[NSString stringWithFormat:@"<html> \n<style type=\"text/css\"> \nbody {font-family: \"%@\"; font-size: %f;}\n</style> \n</head> \n<body>%@</body> \n</html>", font.fontName, font.pointSize, string] baseURL:baseURL];
+    [self loadHTMLString:[NSString.alloc initWithFormat:@"<html> \n<style type=\"text/css\"> \nbody {font-family: \"%@\"; font-size: %f;}\n</style> \n</head> \n<body>%@</body> \n</html>", font.fontName, font.pointSize, string] baseURL:baseURL];
 }
 
 - (void)clearCookies

@@ -36,7 +36,7 @@
     
     sysctlbyname("hw.machine", machine, &size, NULL, 0);
     
-    NSString *platform = [NSString stringWithUTF8String:machine];
+    NSString *platform = [NSString.alloc initWithUTF8String:machine];
     
     free(machine);
     
@@ -77,7 +77,7 @@
     sdl = (struct sockaddr_dl *)(ifm + 1);
     mac = (unsigned char *)LLADDR(sdl);
     
-    NSString *ret = [NSString stringWithFormat:@"%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]];
+    NSString *ret = [NSString.alloc initWithFormat:@"%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]];
     
     free(buf);
     

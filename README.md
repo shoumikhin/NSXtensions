@@ -61,10 +61,13 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     - (NSManagedObject *)newObjectOfEntity:(NSString *)name;
     
     //fetch objects with options, zero limit means unlimited
-    - (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDecriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit;
+    - (NSArray *)objectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors andFetchLimit:(NSUInteger)limit;
+    
+    //delete multiple objects
+    - (void)deleteObjects:(NSArray *)objects;
     
     //delete objects with options
-    - (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate andSortDecriptors:(NSArray *)sortDescriptors;
+    - (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors;
 
 #### NSMutableArray
 
