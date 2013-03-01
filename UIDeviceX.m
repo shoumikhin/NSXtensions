@@ -43,6 +43,25 @@
     return [platform isEqualToString:@"iPad2,5"] || [platform isEqualToString:@"iPad2,6"] || [platform isEqualToString:@"iPad2,7"];
 }
 
++ (BOOL)isSimulator
+{
+    return [UIDevice.currentDevice.model isEqualToString:@"iPhone Simulator"] || [UIDevice.currentDevice.model isEqualToString:@"iPad Simulator"];
+}
+
++ (BOOL)isJailbroken
+{
+    if (!self.class.isSimulator)
+    {
+        if ([NSFileManager.defaultManager fileExistsAtPath:@"/private/var/lib/apt/"])
+            return YES;
+        
+        if (!NSBundle.mainBundle.infoDictionary[@"SignerIdentity"])
+            return YES;
+    }
+    
+    return NO;
+}
+
 + (NSString *)MacAddressOfInterface:(NSString *)interface
 {
     int mib[6];

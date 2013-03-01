@@ -23,6 +23,7 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 #### NSDate
 
     //helper methods whose names speak for themselves
+    + (unsigned long long)millisecondsSince1970;
     - (NSInteger)secondsAfterDate:(NSDate *)date;
     - (NSInteger)minutesAfterDate:(NSDate *)date;
     - (NSInteger)minutesBeforeDate:(NSDate *)date;
@@ -124,7 +125,10 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (BOOL)isPhone4Inch;
     + (BOOL)isPad;
     + (BOOL)isPad8Inch;
-
+    
+    + (BOOL)isSimulator;  //check if the current device is iOS Simulator
+    + (BOOL)isJailbroken;  //check if the device is cracked
+    
     //get MAC addresses of installed network interfaces
     + (NSString *)WiFiMACAddress;
     + (NSString *)CellularMACAddress;

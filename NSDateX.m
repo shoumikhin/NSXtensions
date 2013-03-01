@@ -1,5 +1,7 @@
 #import "NSDateX.h"
 
+#include <sys/time.h>
+
 #define SECOND 1
 #define MINUTE 60
 #define HOUR 3600
@@ -8,6 +10,15 @@
 #define YEAR 31556926
 
 @implementation NSDate (X)
+
++ (unsigned long long)millisecondsSince1970
+{
+    struct timeval tp;
+    
+    gettimeofday(&tp, NULL);
+    
+    return 1000.0 * tp.tv_sec + tp.tv_usec / 1000.0;
+}
 
 - (NSInteger)secondsAfterDate:(NSDate *)date
 {

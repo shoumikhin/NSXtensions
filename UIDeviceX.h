@@ -38,6 +38,20 @@
 + (BOOL)isPad8Inch;
 
 /**
+ Check if the current device is iOS Simulator.
+ 
+ @return YES if the device is simulated.
+ */
++ (BOOL)isSimulator;
+
+/**
+ Check if the device is jailbroken.
+ 
+ @return YES if the device is jailbroken.
+ */
++ (BOOL)isJailbroken;
+
+/**
  Get Wi-Fi MAC address.
  
  @return Device Wi-Fi MAC address.

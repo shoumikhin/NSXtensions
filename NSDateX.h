@@ -10,6 +10,11 @@
 @interface NSDate (X)
 
 /**
+ Get milliseconds passed since Jan, 1, 1970.
+ */
++ (unsigned long long)millisecondsSince1970;
+
+/**
  Get seconds passed after a given date.
  
  @param date Relative date.
