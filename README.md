@@ -36,7 +36,7 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
     //merge two dictionaries
     + (NSDictionary *)dictionaryByMerging:(NSDictionary *)first with:(NSDictionary *)second;
-    - (NSDictionary *)dictionaryByMergingWith:(NSDictionary *)other;
+    - (NSDictionary *)mergeWith:(NSDictionary *)other;
 
 #### NSException
     
@@ -109,6 +109,10 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
     - (NSURL *)hostURL;  //get base host URL
 
+#### NSUUID
+
+    + (NString *)makeUUID;  //generate a new unique identifier
+
 #### UIApplication
 
     + (NSString *)identifier;  //application's bundle identifier
@@ -144,6 +148,15 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     //convenient way to download an image
     - (id)initWithContentsOfURL:(NSURL *)URL;
     + (id)imageWithContentsOfURL:(NSURL *)URL;
+    
+#### UITabBarController
+
+	//methods to hide/show the tab bar similarly to the standard navigation bar behavior
+	@property (nonatomic, getter = isTabBarHidden) BOOL tabBarHidden;
+	- (void)setTabBarHidden:(BOOL)hidden animated:(BOOL)animated;
+	
+	//animated swipe-like transition between presented view controllers
+	- (void)swipeToIndex:(NSUInteger)index;
 
 #### UIView
 

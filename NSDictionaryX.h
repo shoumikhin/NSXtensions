@@ -19,11 +19,11 @@
 + (NSDictionary *)dictionaryByMerging:(NSDictionary *)first with:(NSDictionary *)second;
 
 /**
- Merge another dictionary.
+ Merge another dictionary. Does not change the receiver.
  
  @param second A dictionary to merge with.
  @return A dictionary with merged contents of the receiver and the argument.
  */
-- (NSDictionary *)dictionaryByMergingWith:(NSDictionary *)other;
+- (NSDictionary *)mergeWith:(NSDictionary *)other;
 
 @end
