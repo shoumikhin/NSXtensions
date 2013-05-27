@@ -46,6 +46,11 @@
     return ret;
 }
 
++ (CGFloat)statusBarHeight
+{
+    return MIN(UIApplication.sharedApplication.statusBarFrame.size.width, UIApplication.sharedApplication.statusBarFrame.size.height);
+}
+
 + (NSArray *)backtrace
 {
     void *stack[0x80];

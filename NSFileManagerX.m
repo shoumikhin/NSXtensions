@@ -46,22 +46,7 @@
 
 + (BOOL)addSkipBackupAttributeToFile:(NSString *)path
 {
-    char const *filePath = path.UTF8String;
-    char const *attrName = "com.apple.MobileBackup";
-    
-    if (!&NSURLIsExcludedFromBackupKey)
-    {
-        u_int8_t attrValue = 1;
-        
-        return setxattr(filePath, attrName, &attrValue, sizeof(attrValue), 0, 0);
-    }
-    else
-    {
-        if (-1 != getxattr(filePath, attrName, NULL, sizeof(u_int8_t), 0, 0))
-            removexattr(filePath, attrName, 0);
-        
-        return [[NSURL.alloc initFileURLWithPath:path] setResourceValue:@(YES) forKey:NSURLIsExcludedFromBackupKey error:nil];
-    }
+    return [[NSURL.alloc initFileURLWithPath:path] setResourceValue:@(YES) forKey:NSURLIsExcludedFromBackupKey error:nil];
 }
 
 + (double)availableDiskSpace

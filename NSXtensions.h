@@ -11,6 +11,7 @@
 #import "NSURLX.h"
 #import "NSUUIDX.h"
 #import "UIApplicationX.h"
+#import "UIColorX.h"
 #import "UIDeviceX.h"
 #import "UIImageX.h"
 #import "UITabBarControllerX.h"

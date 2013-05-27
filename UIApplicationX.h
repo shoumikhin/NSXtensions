@@ -31,6 +31,13 @@
 + (CGRect)frame;
 
 /**
+ Get application's status bar height.
+
+ @return Status bar current height.
+ */
++ (CGFloat)statusBarHeight;
+
+/**
  Get stack backtrace.
  
  @return Application's backtrace for current thread at place where this method is called.

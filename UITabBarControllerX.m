@@ -9,7 +9,7 @@
     if (self.isTabBarHidden == hidden)
         return;
 
-    CGFloat height = UIApplication.frame.size.height + 20.0;  //status bar height
+    CGFloat height = UIApplication.frame.size.height + UIApplication.statusBarHeight;
 
     height -= hidden ? 0.0 : self.tabBar.frame.size.height;
 
@@ -22,20 +22,11 @@
             if ([view isKindOfClass:UITabBar.class])
                 [view setFrame:CGRectMake(view.frame.origin.x, height, view.frame.size.width, view.frame.size.height)];
             else
-                if (hidden)
-                    [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, height)];
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, height)];
     }
     completion:^(BOOL finished)
     {
         self.tabBar.hidden = hidden;
-
-        if (!hidden)
-            [UIView animateWithDuration:animated ? UINavigationControllerHideShowBarDuration : 0.0 animations:^
-            {
-                for(UIView *view in self.view.subviews)
-                    if (![view isKindOfClass:UITabBar.class])
-                        [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, height)];
-            }];
     }];
 }
 
@@ -64,6 +55,7 @@
 
     [UIView animateWithDuration:0.33 animations:^
      {
+         self.tabBar.userInteractionEnabled = NO;
          fromView.frame = CGRectMake(index > self.selectedIndex ? - screenWidth : screenWidth, viewSize.origin.y, screenWidth, viewSize.size.height);
          toView.frame = CGRectMake(0.0, viewSize.origin.y, screenWidth, viewSize.size.height);
      }
@@ -71,6 +63,7 @@
      {
          [fromView removeFromSuperview];
          self.selectedIndex = index;
+         self.tabBar.userInteractionEnabled = YES;
      }];
 }
 
