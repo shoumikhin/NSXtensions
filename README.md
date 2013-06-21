@@ -1,5 +1,7 @@
-NSXtensions
-===========
+# NSXtensions
+
+![Pod Version](http://cocoapod-badges.herokuapp.com/v/NSXtensions/badge.png)
+![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)
 
 A collection of useful extensions for standard Cocoa classes. Also available among CocoaPods.
 
