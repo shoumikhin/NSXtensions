@@ -44,4 +44,29 @@
  */
 + (NSArray *)backtrace;
 
+/**
+ Makes a call.
+ 
+ @param phoneNumber Phone number to call.
+ @param shouldSchedule Schedule a returning local notification or not.
+ */
++ (void)call:(NSString *)phoneNumber andScheduleReturnNotification:(BOOL)shouldSchedule;
+
+/**
+ Sends an e-mail.
+ 
+ @param emailAddress E-mail address of receiver.
+ @param shouldSchedule Schedule a returning local notification or not.
+ */
++ (void)mail:(NSString *)emailAddress andScheduleReturnNotification:(BOOL)shouldSchedule;
+
+/**
+ Opens site link in Web-browser.
+ 
+ @param siteAddress Site link to open.
+ @param shouldSchedule Schedule a returning local notification or not.
+ */
++ (void)openSite:(NSString *)siteAddress andScheduleReturnNotification:(BOOL)shouldSchedule;
+
+
 @end
