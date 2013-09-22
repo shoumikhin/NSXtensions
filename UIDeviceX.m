@@ -1,5 +1,7 @@
 #import "UIDeviceX.h"
 
+#import <AdSupport/AdSupport.h>
+
 #import "NSStringX.h"
 
 #include <sys/socket.h>
@@ -115,7 +117,10 @@
 
 + (NSString *)uniqueIdentifier
 {
-    return UIDevice.WiFiMACAddress.SHA256;
+    if ([self.class systemVersionIsAtLeast:@"7.0"])
+        return ASIdentifierManager.sharedManager.advertisingIdentifier.UUIDString;
+    else
+        return UIDevice.WiFiMACAddress.SHA256;
 }
 
 + (double)availableMemory
@@ -141,6 +146,11 @@
             return UIDeviceResolutioniPhoneTallerHi;
         else
             return isRetina ? UIDeviceResolutioniPhoneStandardHi : UIDeviceResolutioniPhoneStandard;
+}
+
++ (BOOL)systemVersionIsAtLeast:(NSString *)version
+{
+    return NSOrderedAscending != [UIDevice.currentDevice.systemVersion compare:version options:NSNumericSearch];
 }
 
 @end

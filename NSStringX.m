@@ -36,10 +36,17 @@ typedef unsigned char * (* hashing_algorithm_t)(const void *data, CC_LONG len, u
 
 - (NSString *)likeUUID
 {
+    if (0x24 == self.length)  //length of UUID with dashes
+        if ('-' == [self characterAtIndex:8] &&
+            '-' == [self characterAtIndex:13] &&
+            '-' == [self characterAtIndex:18] &&
+            '-' == [self characterAtIndex:23])
+            return self.copy;
+
+    if (0x20 != self.length)  //length of UUID without dashes
+        return nil;
+
     NSMutableString *ret = self.uppercaseString.mutableCopy;
-    
-    if (0x20 != ret.length)  //length of UUID without dashes
-        return @"";
     
     [ret insertString:@"-" atIndex:8];
     [ret insertString:@"-" atIndex:13];

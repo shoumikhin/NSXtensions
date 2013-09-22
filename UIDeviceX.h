@@ -95,4 +95,12 @@ typedef NS_ENUM(NSUInteger, UIDeviceResolution)
  */
 + (UIDeviceResolution)resolution;
 
+/**
+ Check if a specific system version is supported.
+
+ @param version String representing system version, e.g. @"6.0".
+ @return YES if running on a system with given version or older.
+ */
++ (BOOL)systemVersionIsAtLeast:(NSString *)version;
+
 @end

@@ -9,7 +9,7 @@
     if (self.isTabBarHidden == hidden)
         return;
 
-    CGFloat height = UIApplication.frame.size.height + UIApplication.statusBarHeight;
+    CGFloat height = UIApplication.frame.size.height + (UIApplication.sharedApplication.isStatusBarHidden ? 0.0 : UIApplication.statusBarHeight);
 
     height -= hidden ? 0.0 : self.tabBar.frame.size.height;
 
@@ -18,7 +18,7 @@
         if (!hidden)
             self.tabBar.hidden = hidden;
 
-        for(UIView *view in self.view.subviews)
+        for (UIView *view in self.view.subviews)
             if ([view isKindOfClass:UITabBar.class])
                 [view setFrame:CGRectMake(view.frame.origin.x, height, view.frame.size.width, view.frame.size.height)];
             else

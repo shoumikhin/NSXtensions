@@ -3,7 +3,7 @@
 ![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)<br>
 ![Pod Version](http://cocoapod-badges.herokuapp.com/v/NSXtensions/badge.png)
 
-A collection of useful extensions for standard Cocoa classes. Also available among CocoaPods.
+A collection of useful categories for standard Cocoa classes. Also available among CocoaPods.
 
 Pull requests are welcome! :)
 
@@ -115,6 +115,10 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
     + (NString *)makeUUID;  //generate a new unique identifier
 
+#### UIAlertView
+
+	- (void)showWithCompletion:(void (^)(UIAlertView *alertView, NSInteger buttonIndex))completionBlock;  //display an alert and execute a completion block on dismiss
+
 #### UIApplication
 
     + (NSString *)identifier;  //application's bundle identifier
@@ -149,6 +153,8 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (double)availableMemory;  //how much of free memory remains in system (Megabytes)
 
     + (UIDeviceResolution)resolution;  //get device resolution
+    
+    + (BOOL)systemVersionIsAtLeast:(NSString *)version;  //check if a specific system version is supported
 
 #### UIImage
 

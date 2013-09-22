@@ -10,6 +10,7 @@
 #import "NSStringX.h"
 #import "NSURLX.h"
 #import "NSUUIDX.h"
+#import "UIAlertViewX.h"
 #import "UIApplicationX.h"
 #import "UIColorX.h"
 #import "UIDeviceX.h"
