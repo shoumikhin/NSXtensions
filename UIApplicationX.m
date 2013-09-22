@@ -66,4 +66,55 @@
     return ret;
 }
 
++ (void)call:(NSString *)phoneNumber andScheduleReturnNotification:(BOOL)shouldSchedule
+{
+    if (![phoneNumber hasPrefix:@"tel://"])
+        phoneNumber = [@"tel://" stringByAppendingString:phoneNumber];
+    
+    [self openURL:phoneNumber andScheduleReturnNotification:shouldSchedule];
+}
+
++ (void)mail:(NSString *)emailAddress andScheduleReturnNotification:(BOOL)shouldSchedule
+{
+    if (![emailAddress hasPrefix:@"mailto://"])
+        emailAddress = [@"mailto://" stringByAppendingString:emailAddress];
+    
+    [self openURL:emailAddress andScheduleReturnNotification:shouldSchedule];
+}
+
++ (void)openSite:(NSString *)siteAddress andScheduleReturnNotification:(BOOL)shouldSchedule
+{
+    if (!([siteAddress hasPrefix:@"http://"] || [siteAddress hasPrefix:@"https://"]))
+        siteAddress = [@"http://" stringByAppendingString:siteAddress];
+    
+    [self openURL:siteAddress andScheduleReturnNotification:shouldSchedule];
+}
+
++ (void)openURL:(NSString *)urlString andScheduleReturnNotification:(BOOL)shouldSchedule
+{
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    UIApplication *sharedApp = [UIApplication sharedApplication];
+    
+#if !TARGET_IPHONE_SIMULATOR
+    if ([sharedApp canOpenURL:url]) {
+#endif
+        [sharedApp openURL:url];
+        
+        if (shouldSchedule) {
+            UILocalNotification *notification = [UILocalNotification new];
+            notification.timeZone = [NSTimeZone systemTimeZone];
+            notification.fireDate = [[NSDate date] dateByAddingTimeInterval:3.0f];
+            notification.alertAction = @"Return";
+            notification.alertBody = [NSString stringWithFormat:@"Return to %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
+            notification.soundName = UILocalNotificationDefaultSoundName;
+            
+            [sharedApp scheduleLocalNotification:notification];
+        }
+#if !TARGET_IPHONE_SIMULATOR
+    }
+#endif
+}
+
+
 @end
