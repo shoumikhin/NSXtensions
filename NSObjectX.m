@@ -96,14 +96,54 @@ void method_replace(Class toClass, Class fromClass, SEL selector)
     method_swizzle(self.class, originalMethod, newMethod);
 }
 
-+ (void)appendMethod:(SEL)newMethod fromClass:(Class)aClass
++ (void)appendMethod:(SEL)newMethod fromClass:(Class)klass
 {
-    method_append(self.class, aClass, newMethod);
+    method_append(self.class, klass, newMethod);
 }
 
-+ (void)replaceMethod:(SEL)aMethod fromClass:(Class)aClass
++ (void)replaceMethod:(SEL)method fromClass:(Class)klass
 {
-    method_replace(self.class, aClass, aMethod);
+    method_replace(self.class, klass, method);
+}
+
+- (BOOL)respondsToSelector:(SEL)selector untilClass:(Class)stopClass
+{
+    return [self.class instancesRespondToSelector:selector untilClass:stopClass];
+}
+
+- (BOOL)superRespondsToSelector:(SEL)selector
+{
+    return [self.superclass instancesRespondToSelector:selector];
+}
+
+- (BOOL)superRespondsToSelector:(SEL)selector untilClass:(Class)stopClass
+{
+    return [self.superclass instancesRespondToSelector:selector untilClass:stopClass];
+}
+
++ (BOOL)instancesRespondToSelector:(SEL)selector untilClass:(Class)stopClass
+{
+    BOOL __block (^ __weak block_self)(Class klass, SEL selector, Class stopClass);
+    BOOL (^block)(Class klass, SEL selector, Class stopClass) = [^
+    (Class klass, SEL selector, Class stopClass)
+    {
+        if (!klass || klass == stopClass)
+            return NO;
+
+        unsigned methodCount = 0;
+        Method *methodList = class_copyMethodList(klass, &methodCount);
+
+        if (methodList)
+            for (unsigned i = 0; i < methodCount; ++i)
+                if (method_getName(methodList[i]) == selector)
+                    return YES;
+
+        return block_self(klass.superclass, selector, stopClass);
+    } copy];
+
+    block_self = block;
+    
+    return block(self.class, selector, stopClass);
 }
 
 @end

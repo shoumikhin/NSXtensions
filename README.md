@@ -94,6 +94,12 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (void)swizzleMethod:(SEL)originalMethod withMethod:(SEL)newMethod;
     + (void)appendMethod:(SEL)newMethod fromClass:(Class)aClass;
     + (void)replaceMethod:(SEL)aMethod fromClass:(Class)aClass;
+    
+    //check whether an object or class implements or inherits a specified method up to and exluding a particular class in hierarchy
+    - (BOOL)respondsToSelector:(SEL)selector untilClass:(Class)stopClass;
+    - (BOOL)superRespondsToSelector:(SEL)selector;
+    - (BOOL)superRespondsToSelector:(SEL)selector untilClass:(Class)stopClass;
+    + (BOOL)instancesRespondToSelector:(SEL)selector untilClass:(Class)stopClass;
 
 #### NSSet
 
@@ -128,6 +134,11 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (CGFloat)statusBarHeight;  //application's status bar height
 
     + (NSArray *)backtrace;  //pretty-formatted backtrace of current point of execution
+    
+	//  call, email or open ULR with an ability to quickly return back
+    + (void)call:(NSString *)phoneNumber andShowReturn:(BOOL)shouldReturn;
+    + (void)email:(NSString *)address andShowReturn:(BOOL)shouldReturn;
+    + (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn;
 
 #### UIColor
 

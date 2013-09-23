@@ -1,7 +1,7 @@
 //
 //  UIApplicationX.h
 //
-//  Copyright (c) 2012 Anthony Shoumikhin. All rights reserved under MIT license.
+//  Copyright (c) 2013 Anthony Shoumikhin. All rights reserved under MIT license.
 //  mailto:anthony@shoumikh.in
 //
 
@@ -45,28 +45,27 @@
 + (NSArray *)backtrace;
 
 /**
- Makes a call.
+ Call a phone number.
  
  @param phoneNumber Phone number to call.
- @param shouldSchedule Schedule a returning local notification or not.
+ @param shouldReturn If YES then display a notification to return to this app.
  */
-+ (void)call:(NSString *)phoneNumber andScheduleReturnNotification:(BOOL)shouldSchedule;
++ (void)call:(NSString *)phoneNumber andShowReturn:(BOOL)shouldReturn;
 
 /**
- Sends an e-mail.
+ Send an email.
  
- @param emailAddress E-mail address of receiver.
- @param shouldSchedule Schedule a returning local notification or not.
+ @param address Email address.
+ @param shouldReturn If YES then display a notification to return to this app.
  */
-+ (void)mail:(NSString *)emailAddress andScheduleReturnNotification:(BOOL)shouldSchedule;
++ (void)email:(NSString *)address andShowReturn:(BOOL)shouldReturn;
 
 /**
- Opens site link in Web-browser.
+ Open URL in a default browser.
  
- @param siteAddress Site link to open.
- @param shouldSchedule Schedule a returning local notification or not.
+ @param url URL to open.
+ @param shouldReturn If YES then display a notification to return to this app.
  */
-+ (void)openSite:(NSString *)siteAddress andScheduleReturnNotification:(BOOL)shouldSchedule;
-
++ (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn;
 
 @end

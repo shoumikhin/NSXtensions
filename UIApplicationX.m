@@ -2,6 +2,8 @@
 
 #include <execinfo.h>
 
+#define RETURN_ALERT_TIMEOUT 3.0
+
 @implementation UIApplication (X)
 
 + (NSString *)identifier
@@ -66,55 +68,54 @@
     return ret;
 }
 
-+ (void)call:(NSString *)phoneNumber andScheduleReturnNotification:(BOOL)shouldSchedule
++ (void)call:(NSString *)phoneNumber andShowReturn:(BOOL)shouldReturn
 {
+    if (!phoneNumber.length)
+        return;
+
     if (![phoneNumber hasPrefix:@"tel://"])
         phoneNumber = [@"tel://" stringByAppendingString:phoneNumber];
-    
-    [self openURL:phoneNumber andScheduleReturnNotification:shouldSchedule];
+
+    [self openURL:[NSURL URLWithString:phoneNumber] andShowReturn:shouldReturn];
 }
 
-+ (void)mail:(NSString *)emailAddress andScheduleReturnNotification:(BOOL)shouldSchedule
++ (void)email:(NSString *)address andShowReturn:(BOOL)shouldReturn
 {
-    if (![emailAddress hasPrefix:@"mailto://"])
-        emailAddress = [@"mailto://" stringByAppendingString:emailAddress];
+    if (!address.length)
+        return;
+
+    if (![address hasPrefix:@"mailto://"])
+        address = [@"mailto://" stringByAppendingString:address];
     
-    [self openURL:emailAddress andScheduleReturnNotification:shouldSchedule];
+    [self openURL:[NSURL URLWithString:address] andShowReturn:shouldReturn];
 }
 
-+ (void)openSite:(NSString *)siteAddress andScheduleReturnNotification:(BOOL)shouldSchedule
++ (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn
 {
-    if (!([siteAddress hasPrefix:@"http://"] || [siteAddress hasPrefix:@"https://"]))
-        siteAddress = [@"http://" stringByAppendingString:siteAddress];
-    
-    [self openURL:siteAddress andScheduleReturnNotification:shouldSchedule];
-}
+    if (!url)
+        return;
 
-+ (void)openURL:(NSString *)urlString andScheduleReturnNotification:(BOOL)shouldSchedule
-{
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    UIApplication *sharedApp = [UIApplication sharedApplication];
-    
 #if !TARGET_IPHONE_SIMULATOR
-    if ([sharedApp canOpenURL:url]) {
+    if ([UIApplication.sharedApplication canOpenURL:url])
+    {
 #endif
-        [sharedApp openURL:url];
+        [UIApplication.sharedApplication openURL:url];
         
-        if (shouldSchedule) {
-            UILocalNotification *notification = [UILocalNotification new];
-            notification.timeZone = [NSTimeZone systemTimeZone];
-            notification.fireDate = [[NSDate date] dateByAddingTimeInterval:3.0f];
+        if (shouldReturn)
+        {
+            UILocalNotification *notification = UILocalNotification.new;
+
+            notification.timeZone = NSTimeZone.systemTimeZone;
+            notification.fireDate = [NSDate.date dateByAddingTimeInterval:RETURN_ALERT_TIMEOUT];
             notification.alertAction = @"Return";
-            notification.alertBody = [NSString stringWithFormat:@"Return to %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
+            notification.alertBody = [NSString stringWithFormat:@"Back to %@", [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleNameKey]];
             notification.soundName = UILocalNotificationDefaultSoundName;
             
-            [sharedApp scheduleLocalNotification:notification];
+            [UIApplication.sharedApplication scheduleLocalNotification:notification];
         }
 #if !TARGET_IPHONE_SIMULATOR
     }
 #endif
 }
-
 
 @end
