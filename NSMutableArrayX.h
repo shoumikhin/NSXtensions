@@ -36,7 +36,7 @@
 /**
  Get the first enqueued object and remove it from the array.
  
- @return The firt object of the array.
+ @return The first object of the array.
  */
 - (id)dequeue;
 
