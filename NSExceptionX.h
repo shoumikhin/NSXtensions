@@ -1,7 +1,7 @@
 //
 //  NSExceptionX.h
 //
-//  Copyright (c) 2013 Anthony Shoumikhin. All rights reserved under MIT license.
+//  Copyright (c) 2014 Anthony Shoumikhin. All rights reserved under MIT license.
 //  mailto:anthony@shoumikh.in
 //
 
