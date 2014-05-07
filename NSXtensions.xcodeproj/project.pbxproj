@@ -32,6 +32,7 @@
 		D66F5AAECDE13004BABBF72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F549C33A16FA6521C6168 /* main.m */; };
 		D66F5ADE771AEE6E7D181AF0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66F5F2C5F3F39AE9A28DAF4 /* Images.xcassets */; };
 		D66F5B73707C193DB407DB01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54E276432E77B3AF4F51 /* UIKit.framework */; };
+		D66F5BB1873DF8161B1DDE37 /* NSError+X.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F55B434FCBF53572D431C /* NSError+X.m */; };
 		D66F5C767974B0B824C8988D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F55CD29BA482EDBB9EDAB /* AppDelegate.m */; };
 		D66F5CA5EAEB53A0F4143F4B /* NSURLX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5853C4236F18C9D083F3 /* NSURLX.m */; };
 		D66F5D3F30606E7833772046 /* UIImageX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5EE3FD16D49D8C417F5B /* UIImageX.m */; };
@@ -66,6 +67,7 @@
 		D66F52A821816BF37766EBBF /* UIApplicationX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationX.h; sourceTree = "<group>"; };
 		D66F52C324269C3574E959D8 /* NSObjectX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectX.m; sourceTree = "<group>"; };
 		D66F536FD3368DA3E68656B5 /* NSDateX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateX.h; sourceTree = "<group>"; };
+		D66F537DF3BD3DB603B31975 /* NSError+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+X.h"; sourceTree = "<group>"; };
 		D66F53837B54BED698BAF23B /* UIDeviceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceX.h; sourceTree = "<group>"; };
 		D66F53A8AB71E5A9049907A3 /* NSXtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSXtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66F549C33A16FA6521C6168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		D66F54F3D182BDB59FBEEE27 /* UITabBarControllerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarControllerX.h; sourceTree = "<group>"; };
 		D66F550400F1E1023097DADC /* NSSetX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSetX.h; sourceTree = "<group>"; };
 		D66F556CFDB4EA61A2493086 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D66F55B434FCBF53572D431C /* NSError+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+X.m"; sourceTree = "<group>"; };
 		D66F55B6D1CB86884CF6CAFA /* NSUUIDX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUUIDX.m; sourceTree = "<group>"; };
 		D66F55CD29BA482EDBB9EDAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D66F55F909059A27B5553B9E /* UIApplicationX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationX.m; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				D66F5D39C6BE02C912BFA575 /* UIViewX.m */,
 				D66F5868268E8A1A739BC586 /* UIWebViewX.h */,
 				D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */,
+				D66F55B434FCBF53572D431C /* NSError+X.m */,
+				D66F537DF3BD3DB603B31975 /* NSError+X.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -365,6 +370,7 @@
 				D66F5DCFE0C06023F0AD7CD4 /* UITabBarControllerX.m in Sources */,
 				D66F5F208BDCD725F9CAB2DD /* UIViewX.m in Sources */,
 				D66F5703C1AC49DC6C42D2B5 /* UIWebViewX.m in Sources */,
+				D66F5BB1873DF8161B1DDE37 /* NSError+X.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +550,7 @@
 				D66F51D843F7AC98B8D881DC /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D66F55EF7E723964E86D5046 /* Build configuration list for PBXProject "NSXtensions" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +568,7 @@
 				D66F50ED6DC1DE1BE94E4664 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
