@@ -3,10 +3,10 @@
 // Copyright (c) 2014 Anthony Shoumikhin. All rights reserved.
 //
 
-#import "NSError+X.h"
+#import "NSErrorX.h"
 
 
-@implementation NSError (X)
+@implementation NSErrorX (X)
 
 -(void)showAlertView
 {
