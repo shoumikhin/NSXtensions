@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D66F500EFCBDD41132269E31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D66F57A5C85B5D1C0BB43D4A /* InfoPlist.strings */; };
 		D66F50CE2DCB4E24A0B37FE2 /* MKMapViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5F060172631F973A873E /* MKMapViewX.m */; };
 		D66F50E6F296832EC7068D55 /* NSObjectX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F52C324269C3574E959D8 /* NSObjectX.m */; };
 		D66F511C75622B16D805D675 /* NSManagedObjectContextX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5BF83583DBA767203FDF /* NSManagedObjectContextX.m */; };
@@ -29,11 +28,7 @@
 		D66F58116426BEC6C9EF206E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D66F5707A119AFDA4EA923AA /* InfoPlist.strings */; };
 		D66F5815F287D078F11FAAC7 /* NSExceptionX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F50D8853B99CEED479844 /* NSExceptionX.m */; };
 		D66F59786A8603683767248C /* NSStringX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5CCC4CB931604798EE87 /* NSStringX.m */; };
-		D66F5AAECDE13004BABBF72C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F549C33A16FA6521C6168 /* main.m */; };
-		D66F5ADE771AEE6E7D181AF0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66F5F2C5F3F39AE9A28DAF4 /* Images.xcassets */; };
 		D66F5B73707C193DB407DB01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54E276432E77B3AF4F51 /* UIKit.framework */; };
-		D66F5BB1873DF8161B1DDE37 /* NSErrorX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F55B434FCBF53572D431C /* NSErrorX.m */; };
-		D66F5C767974B0B824C8988D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F55CD29BA482EDBB9EDAB /* AppDelegate.m */; };
 		D66F5CA5EAEB53A0F4143F4B /* NSURLX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5853C4236F18C9D083F3 /* NSURLX.m */; };
 		D66F5D3F30606E7833772046 /* UIImageX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5EE3FD16D49D8C417F5B /* UIImageX.m */; };
 		D66F5DCFE0C06023F0AD7CD4 /* UITabBarControllerX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5EFC1D1C14B97BF22750 /* UITabBarControllerX.m */; };
@@ -56,11 +51,9 @@
 
 /* Begin PBXFileReference section */
 		D66F5008C768048062D1999E /* NSDateX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateX.m; sourceTree = "<group>"; };
-		D66F500A1BF5027FB0D56687 /* NSXtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSXtensions-Prefix.pch"; sourceTree = "<group>"; };
 		D66F5091CE0E77CEFC9612CF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		D66F509AC286CB27283C75AC /* NSObjectX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectX.h; sourceTree = "<group>"; };
 		D66F50D8853B99CEED479844 /* NSExceptionX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionX.m; sourceTree = "<group>"; };
-		D66F516387F71E413C3DB155 /* NSXtensions-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "NSXtensions-Info.plist"; sourceTree = "<group>"; };
 		D66F523327ACF9A659B42AC0 /* NSXtensionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSXtensionsTests.m; sourceTree = "<group>"; };
 		D66F525AD22656CED6253261 /* NSExceptionX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionX.h; sourceTree = "<group>"; };
 		D66F52998D2D9CDCCE0B6696 /* NSFileManagerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerX.h; sourceTree = "<group>"; };
@@ -70,7 +63,6 @@
 		D66F537DF3BD3DB603B31975 /* NSErrorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSErrorX.h; sourceTree = "<group>"; };
 		D66F53837B54BED698BAF23B /* UIDeviceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceX.h; sourceTree = "<group>"; };
 		D66F53A8AB71E5A9049907A3 /* NSXtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSXtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D66F549C33A16FA6521C6168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D66F54E276432E77B3AF4F51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D66F54F18AA85C0DC7C7620E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D66F54F3D182BDB59FBEEE27 /* UITabBarControllerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarControllerX.h; sourceTree = "<group>"; };
@@ -78,11 +70,9 @@
 		D66F556CFDB4EA61A2493086 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D66F55B434FCBF53572D431C /* NSErrorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSErrorX.m; sourceTree = "<group>"; };
 		D66F55B6D1CB86884CF6CAFA /* NSUUIDX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUUIDX.m; sourceTree = "<group>"; };
-		D66F55CD29BA482EDBB9EDAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D66F55F909059A27B5553B9E /* UIApplicationX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationX.m; sourceTree = "<group>"; };
 		D66F5643ECBCE62D2F4E690B /* UIColorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorX.h; sourceTree = "<group>"; };
 		D66F569DB3D33FA2FFB15E42 /* UIColorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorX.m; sourceTree = "<group>"; };
-		D66F56A446A9618F19746FA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D66F572D25798B4AABEDBCF4 /* UIDeviceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceX.m; sourceTree = "<group>"; };
 		D66F5775220DF4DB9583C06D /* NSXtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "NSXtensionsTests-Info.plist"; sourceTree = "<group>"; };
 		D66F57A4FD9ED0DECEE7AB99 /* NSFileManagerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerX.m; sourceTree = "<group>"; };
@@ -94,7 +84,6 @@
 		D66F59D0816F5D4A3AEA3E6B /* NSStringX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringX.h; sourceTree = "<group>"; };
 		D66F5A1F226F3FDE8580046C /* NSDictionaryX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryX.h; sourceTree = "<group>"; };
 		D66F5B29EF601231D83A74EE /* NSUUIDX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUUIDX.h; sourceTree = "<group>"; };
-		D66F5B378A11BF688896B879 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D66F5B45F10F803743F7A3E5 /* UIViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewX.h; sourceTree = "<group>"; };
 		D66F5BAD39FF11AEF71F054E /* NSXtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = NSXtensions.podspec; sourceTree = "<group>"; };
 		D66F5BE9DAF98BE727893EF9 /* NSManagedObjectContextX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSManagedObjectContextX.h; sourceTree = "<group>"; };
@@ -111,7 +100,6 @@
 		D66F5EFC1D1C14B97BF22750 /* UITabBarControllerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarControllerX.m; sourceTree = "<group>"; };
 		D66F5F060172631F973A873E /* MKMapViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewX.m; sourceTree = "<group>"; };
 		D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewX.m; sourceTree = "<group>"; };
-		D66F5F2C5F3F39AE9A28DAF4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D66F5F64B2AD679FA5F0425A /* NSMutableArrayX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayX.h; sourceTree = "<group>"; };
 		D66F5F75BEEEC13F8D55CAB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D66F5F9A496070C3779FE886 /* NSMutableArrayX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayX.m; sourceTree = "<group>"; };
@@ -142,17 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D66F53EEA4DCC24FDF5F6DFC /* NSXtensions */ = {
-			isa = PBXGroup;
-			children = (
-				D66F5917A5F1DF47738F228B /* Supporting Files */,
-				D66F56A446A9618F19746FA3 /* AppDelegate.h */,
-				D66F55CD29BA482EDBB9EDAB /* AppDelegate.m */,
-				D66F5F2C5F3F39AE9A28DAF4 /* Images.xcassets */,
-			);
-			path = NSXtensions;
-			sourceTree = "<group>";
-		};
 		D66F560CA14B3322F8B25CD6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,23 +157,11 @@
 			path = NSXtensionsTests;
 			sourceTree = "<group>";
 		};
-		D66F5917A5F1DF47738F228B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D66F516387F71E413C3DB155 /* NSXtensions-Info.plist */,
-				D66F57A5C85B5D1C0BB43D4A /* InfoPlist.strings */,
-				D66F549C33A16FA6521C6168 /* main.m */,
-				D66F500A1BF5027FB0D56687 /* NSXtensions-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		D66F5C81832CE82C7DC21C3B = {
 			isa = PBXGroup;
 			children = (
 				D66F569E4116D5089EAEC2E7 /* Products */,
 				D66F5FF231F4FF032284B9B6 /* Frameworks */,
-				D66F53EEA4DCC24FDF5F6DFC /* NSXtensions */,
 				D66F56C9E871115892127ABB /* NSXtensionsTests */,
 				D66F5E07BEFAB80E27A7156C /* MKMapViewX.h */,
 				D66F5F060172631F973A873E /* MKMapViewX.m */,
@@ -334,8 +299,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66F500EFCBDD41132269E31 /* InfoPlist.strings in Resources */,
-				D66F5ADE771AEE6E7D181AF0 /* Images.xcassets in Resources */,
 				D66F53E9AAA83B192EEC00ED /* NSXtensions.podspec in Resources */,
 				D66F56EF6B162F10BDE75785 /* README.md in Resources */,
 			);
@@ -348,8 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66F5AAECDE13004BABBF72C /* main.m in Sources */,
-				D66F5C767974B0B824C8988D /* AppDelegate.m in Sources */,
 				D66F50CE2DCB4E24A0B37FE2 /* MKMapViewX.m in Sources */,
 				D66F5726871BFAF1C8D97DDE /* NSDateX.m in Sources */,
 				D66F5FA7DDE639EE9E8169C8 /* NSDictionaryX.m in Sources */,
@@ -370,7 +331,7 @@
 				D66F5DCFE0C06023F0AD7CD4 /* UITabBarControllerX.m in Sources */,
 				D66F5F208BDCD725F9CAB2DD /* UIViewX.m in Sources */,
 				D66F5703C1AC49DC6C42D2B5 /* UIWebViewX.m in Sources */,
-				D66F5BB1873DF8161B1DDE37 /* NSErrorX.m in Sources */,
+				D66F5BB1873DF8161B1DDE37,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,14 +358,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				D66F5F75BEEEC13F8D55CAB9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D66F57A5C85B5D1C0BB43D4A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D66F5B378A11BF688896B879 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
