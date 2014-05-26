@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSErrorX (X)
+@interface NSError (X)
 
 - (void)showAlertView;
 
