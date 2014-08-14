@@ -56,4 +56,12 @@ typedef unsigned char * (* hashing_algorithm_t)(const void *data, CC_LONG len, u
     return ret;
 }
 
+- (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options
+{
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:nil];
+    NSRange range = [[regex firstMatchInString:self options:0 range:NSMakeRange(0, self.length)] rangeAtIndex:1];
+    
+    return [self substringWithRange:range];
+}
+
 @end

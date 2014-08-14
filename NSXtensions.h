@@ -15,6 +15,7 @@
 #import "UIColorX.h"
 #import "UIDeviceX.h"
 #import "UIImageX.h"
+#import "UINavigationControllerX.h"
 #import "UITabBarControllerX.h"
 #import "UIViewX.h"
 #import "UIWebViewX.h"

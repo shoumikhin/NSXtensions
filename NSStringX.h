@@ -1,7 +1,7 @@
 //
 //  NSStringX.h
 //
-//  Copyright (c) 2013 Anthony Shoumikhin. All rights reserved under MIT license.
+//  Copyright (c) 2014 Anthony Shoumikhin. All rights reserved under MIT license.
 //  mailto:anthony@shoumikh.in
 //
 
@@ -29,5 +29,14 @@
  @return A copy of a string with dashes according to pretty UUID representation or empty string, if initial string lenght is not equal to 32.
  */
 - (NSString *)likeUUID;
+
+/**
+ Get a first receiver's substring that matches a given regular expression.
+ 
+ @param pattern A regular expression pattern to use for substring search.
+ @param options Options for the given regular expression pattern.
+ @return A receiver's substring that matches a given regular expression, or nil otherwise.
+ */
+- (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;
 
 @end

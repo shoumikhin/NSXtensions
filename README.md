@@ -112,6 +112,9 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     - (NSString *)SHA256;
 
     - (NSString *)likeUUID;  //helper to insert dashes in 32-chars length string to make it look like UUID
+    
+    //first substring that matches a given regular expression
+    - (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;
 
 #### NSURL
 
@@ -146,6 +149,10 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
 #### UIDevice
 
+
+	+ (NSString *)machineName;  //hadrware device name
+	+ (NSString *)deviceName;  //human readable device name
+
     //check the device type
     + (BOOL)isPhone;
     + (BOOL)isPhone4Inch;
@@ -159,11 +166,11 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (NSString *)WiFiMACAddress;
     + (NSString *)CellularMACAddress;
 
-    + (NSString *)uniqueIdentifier;  //globally unique device identifier (actually SHA256 of Wi-Fi MAC address)
+    + (NSString *)uniqueIdentifier;  //globally unique device identifier (SHA256 of Wi-Fi MAC address before iOS 7.0, and identifier for vendor now)
 
     + (double)availableMemory;  //how much of free memory remains in system (Megabytes)
 
-    + (UIDeviceResolution)resolution;  //get device resolution
+    + (UIDeviceResolution)resolution;  //get the device screen resolution
     
     + (BOOL)systemVersionIsAtLeast:(NSString *)version;  //check if a specific system version is supported
 
@@ -172,6 +179,19 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     //convenient way to download an image
     - (id)initWithContentsOfURL:(NSURL *)URL;
     + (id)imageWithContentsOfURL:(NSURL *)URL;
+    
+    //applies the blur effect to the image
+    - (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
+    
+    - (UIImage *)cropToRect:(CGRect)rect;  //returns a new image representing a cropped part of the original
+
+#### UINavigationController
+
+	//animates navigation action with custom CoreAnimation transitions
+	- (void)pushViewController:(UIViewController *)viewController withTransitionType:(NSString *)type;
+	- (UIViewController *)popViewControllerWithTransitionType:(NSString *)type;
+	- (NSArray *)popToRootViewControllerWithTransitionType:(NSString *)type;
+	- (NSArray *)popToViewController:(UIViewController *)viewController withTransitionType:(NSString *)type;
 
 #### UITabBarController
 
