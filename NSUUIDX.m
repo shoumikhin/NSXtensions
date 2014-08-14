@@ -4,8 +4,8 @@
 
 + (NSString *)makeUUID
 {
-    CFUUIDRef uuidRef = CFUUIDCreate(NULL);
-    CFStringRef uuid = CFUUIDCreateString(NULL, uuidRef);
+    CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+    CFStringRef uuid = CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
 
     CFRelease(uuidRef);
 
