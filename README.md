@@ -107,14 +107,18 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
 #### NSString
 
+    //first substring that matches a given regular expression
+    - (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;
+    
+    //short and smart way to deal with URL percent escapes
+    - (NSString *)URLEncoded;
+    - (NSString *)URLDecoded;
+
     //hash of contents
     - (NSString *)MD5;
     - (NSString *)SHA256;
 
     - (NSString *)likeUUID;  //helper to insert dashes in 32-chars length string to make it look like UUID
-    
-    //first substring that matches a given regular expression
-    - (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;
 
 #### NSURL
 

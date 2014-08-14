@@ -4,6 +4,24 @@
 
 @implementation NSString (X)
 
+- (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options
+{
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:nil];
+    NSRange range = [[regex firstMatchInString:self options:0 range:NSMakeRange(0, self.length)] rangeAtIndex:1];
+
+    return [self substringWithRange:range];
+}
+
+- (NSString *)URLEncoded
+{
+    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)self, NULL, CFSTR(" !@#$&*()=+[]\\;:'’\",/?"), kCFStringEncodingUTF8));
+}
+
+- (NSString *)URLDecoded
+{
+    return [(NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (__bridge CFStringRef)self, CFSTR(""), kCFStringEncodingUTF8)) stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+}
+
 typedef unsigned char * (* hashing_algorithm_t)(const void *data, CC_LONG len, unsigned char *hash);
 
 - (NSString *)hashAs:(hashing_algorithm_t)algorithm withSize:(size_t)size
@@ -14,7 +32,7 @@ typedef unsigned char * (* hashing_algorithm_t)(const void *data, CC_LONG len, u
     char const *bytes = self.UTF8String;
     unsigned char hash[size];
     
-    algorithm(bytes, strlen(bytes), hash);
+    algorithm(bytes, (CC_LONG)strlen(bytes), hash);
     
     NSMutableString *ret = [NSMutableString.alloc initWithCapacity:2 * size];
     
@@ -54,14 +72,6 @@ typedef unsigned char * (* hashing_algorithm_t)(const void *data, CC_LONG len, u
     [ret insertString:@"-" atIndex:23];
     
     return ret;
-}
-
-- (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options
-{
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:nil];
-    NSRange range = [[regex firstMatchInString:self options:0 range:NSMakeRange(0, self.length)] rangeAtIndex:1];
-    
-    return [self substringWithRange:range];
 }
 
 @end

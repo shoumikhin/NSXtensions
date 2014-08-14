@@ -16,24 +16,27 @@
 
 - (UIImage *)applyTintEffectWithColor:(UIColor *)tintColor
 {
-    const CGFloat EffectColorAlpha = 0.6;
+    CGFloat const EffectColorAlpha = 0.6;
     UIColor *effectColor = tintColor;
-    int componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
-    if (componentCount == 2) {
+    size_t componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
+
+    if (2 == componentCount)
+    {
         CGFloat b;
-        if ([tintColor getWhite:&b alpha:NULL]) {
+
+        if ([tintColor getWhite:&b alpha:NULL])
             effectColor = [UIColor colorWithWhite:b alpha:EffectColorAlpha];
-        }
     }
-    else {
+    else
+    {
         CGFloat r, g, b;
-        if ([tintColor getRed:&r green:&g blue:&b alpha:NULL]) {
+
+        if ([tintColor getRed:&r green:&g blue:&b alpha:NULL])
             effectColor = [UIColor colorWithRed:r green:g blue:b alpha:EffectColorAlpha];
-        }
     }
+
     return [self applyBlurWithRadius:10 tintColor:effectColor saturationDeltaFactor:-1.0 maskImage:nil];
 }
-
 
 - (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage
 {
@@ -80,7 +83,7 @@
         if (hasBlur)
         {
             CGFloat inputRadius = blurRadius * UIScreen.mainScreen.scale;
-            NSUInteger radius = floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
+            uint32_t radius = floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
             
             if (radius % 2 != 1)
                 radius += 1;
