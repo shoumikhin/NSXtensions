@@ -1,6 +1,7 @@
 #import "MKMapViewX.h"
 #import "NSDateX.h"
 #import "NSDictionaryX.h"
+#import "NSErrorX.h"
 #import "NSExceptionX.h"
 #import "NSFileManagerX.h"
 #import "NSManagedObjectContextX.h"

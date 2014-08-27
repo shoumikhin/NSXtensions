@@ -40,6 +40,13 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (NSDictionary *)dictionaryByMerging:(NSDictionary *)first with:(NSDictionary *)second;
     - (NSDictionary *)mergeWith:(NSDictionary *)other;
 
+#### NSError
+
+	- (NSString *)friendlyLocalizedDescription;  //a friendly human-readable localized description
+	
+	//create an NSError object with given domain, code and userInfo with a friendly human-readable localized description for known domains and codes
+	+ (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
+
 #### NSException
 
     - (NSArray *)backtrace;  //pretty-formatted stack trace
