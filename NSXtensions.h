@@ -1,3 +1,4 @@
+#import "MacroX.h"
 #import "MKMapViewX.h"
 #import "NSDateX.h"
 #import "NSDictionaryX.h"

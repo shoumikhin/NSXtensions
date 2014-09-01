@@ -15,6 +15,14 @@ Simply add:
 
 to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):
 
+#### MacroX.h
+
+Precompile definitions of some commonly-used boilerplate code.
+
+	SHOW_ALERT(title, message, delegate, cancel, other)  //pop up a UIAlertView with the given values
+	
+	SYNTHESIZE_SINGLETON_FOR_CLASS(classname)  //a macro to synthesize boilerplate code for a given class to support the singleton design pattern
+
 #### MKMapView
 
     - (NSInteger)zoomLevel;  //get the current zoom level
