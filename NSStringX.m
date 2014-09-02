@@ -7,9 +7,9 @@
 - (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options
 {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:nil];
-    NSRange range = [[regex firstMatchInString:self options:0 range:NSMakeRange(0, self.length)] rangeAtIndex:1];
+    NSTextCheckingResult *result = [regex firstMatchInString:self options:0 range:NSMakeRange(0, self.length)];
 
-    return [self substringWithRange:range];
+    return result.numberOfRanges > 1 ? [self substringWithRange:[result rangeAtIndex:1]] : nil;
 }
 
 - (NSString *)URLEncoded

@@ -985,7 +985,7 @@
                  @"thread_depress_abort was called on a thread which was not currently depressed.",
 
              @(KERN_TERMINATED) :
-                 @"Object has been terminated and is no longer available",
+                 @"Object has been terminated and is no longer available.",
 
              @(KERN_LOCK_SET_DESTROYED) :
                  @"Lock set has been destroyed and is no longer available.",
@@ -1003,7 +1003,7 @@
                  @"Semaphore has been destroyed and is no longer available.",
              
              @(KERN_RPC_SERVER_TERMINATED) :
-                 @"Return from RPC indicating the target server was terminated before it successfully replied ",
+                 @"Return from RPC indicating the target server was terminated before it successfully replied.",
              
              @(KERN_RPC_TERMINATE_ORPHAN) :
                  @"Terminate an orphaned activation.",
@@ -1012,7 +1012,7 @@
                  @"Allow an orphaned activation to continue executing.",
              
              @(KERN_NOT_SUPPORTED) :
-                 @"Empty thread activation",
+                 @"Empty thread activation.",
              
              @(KERN_NODE_DOWN) :
                  @"Remote node down or inaccessible.",
@@ -1021,7 +1021,7 @@
                  @"A signalled thread was not actually waiting.",
              
              @(KERN_OPERATION_TIMED_OUT) :
-                 @"Some thread-oriented operation timed out",
+                 @"Some thread-oriented operation timed out.",
              
              @(KERN_CODESIGN_ERROR) :
                  @"During a page fault, indicates that the page was rejected as a result of a signature check.",
