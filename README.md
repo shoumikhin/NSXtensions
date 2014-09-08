@@ -55,6 +55,9 @@ Precompile definitions of some commonly-used boilerplate code.
 	//create an NSError object with given domain, code and userInfo with a friendly human-readable localized description for known domains and codes
 	+ (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
 
+    // Shows alert with localizedFailureReason or localizedDescription
+    - (void)showAlertView;
+
 #### NSException
 
     - (NSArray *)backtrace;  //pretty-formatted stack trace
