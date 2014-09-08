@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CE44EF219BDDFA600C314BE /* NSErrorX.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE44EEF19BDDFA600C314BE /* NSErrorX.m */; };
+		1CE44EF319BDDFA600C314BE /* UINavigationControllerX.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE44EF119BDDFA600C314BE /* UINavigationControllerX.m */; };
 		D66F50CE2DCB4E24A0B37FE2 /* MKMapViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5F060172631F973A873E /* MKMapViewX.m */; };
 		D66F50E6F296832EC7068D55 /* NSObjectX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F52C324269C3574E959D8 /* NSObjectX.m */; };
 		D66F511C75622B16D805D675 /* NSManagedObjectContextX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5BF83583DBA767203FDF /* NSManagedObjectContextX.m */; };
@@ -50,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CE44EED19BDDFA600C314BE /* MacroX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroX.h; sourceTree = "<group>"; };
+		1CE44EEE19BDDFA600C314BE /* NSErrorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSErrorX.h; sourceTree = "<group>"; };
+		1CE44EEF19BDDFA600C314BE /* NSErrorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSErrorX.m; sourceTree = "<group>"; };
+		1CE44EF019BDDFA600C314BE /* UINavigationControllerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerX.h; sourceTree = "<group>"; };
+		1CE44EF119BDDFA600C314BE /* UINavigationControllerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerX.m; sourceTree = "<group>"; };
 		D66F5008C768048062D1999E /* NSDateX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateX.m; sourceTree = "<group>"; };
 		D66F5091CE0E77CEFC9612CF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		D66F509AC286CB27283C75AC /* NSObjectX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectX.h; sourceTree = "<group>"; };
@@ -166,6 +173,11 @@
 				D66F536FD3368DA3E68656B5 /* NSDateX.h */,
 				D66F5008C768048062D1999E /* NSDateX.m */,
 				D66F5A1F226F3FDE8580046C /* NSDictionaryX.h */,
+				1CE44EED19BDDFA600C314BE /* MacroX.h */,
+				1CE44EEE19BDDFA600C314BE /* NSErrorX.h */,
+				1CE44EEF19BDDFA600C314BE /* NSErrorX.m */,
+				1CE44EF019BDDFA600C314BE /* UINavigationControllerX.h */,
+				1CE44EF119BDDFA600C314BE /* UINavigationControllerX.m */,
 				D66F57F6DA063E142A352979 /* NSDictionaryX.m */,
 				D66F525AD22656CED6253261 /* NSExceptionX.h */,
 				D66F50D8853B99CEED479844 /* NSExceptionX.m */,
@@ -319,9 +331,11 @@
 				D66F59786A8603683767248C /* NSStringX.m in Sources */,
 				D66F5CA5EAEB53A0F4143F4B /* NSURLX.m in Sources */,
 				D66F53EEA97D41BF80EF5CB0 /* NSUUIDX.m in Sources */,
+				1CE44EF319BDDFA600C314BE /* UINavigationControllerX.m in Sources */,
 				D66F5566C458A0D7C6EC6306 /* UIAlertViewX.m in Sources */,
 				D66F55237D37F85B44631F42 /* UIApplicationX.m in Sources */,
 				D66F55852E381AA603EFC654 /* UIColorX.m in Sources */,
+				1CE44EF219BDDFA600C314BE /* NSErrorX.m in Sources */,
 				D66F556B455EEDD0296D5716 /* UIDeviceX.m in Sources */,
 				D66F5D3F30606E7833772046 /* UIImageX.m in Sources */,
 				D66F5DCFE0C06023F0AD7CD4 /* UITabBarControllerX.m in Sources */,
@@ -498,6 +512,7 @@
 				D66F51D843F7AC98B8D881DC /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D66F55EF7E723964E86D5046 /* Build configuration list for PBXProject "NSXtensions" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +530,7 @@
 				D66F50ED6DC1DE1BE94E4664 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
