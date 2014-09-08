@@ -1093,4 +1093,21 @@
                                         } : nil];
 }
 
+
+-(void)showAlertView
+{
+    [self showAlertViewWithTitle:@"Error" andMessage:self.localizedFailureReason ?: self.localizedDescription];
+}
+
+-(void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
+        [alertView show];
+    });
+}
+
 @end
