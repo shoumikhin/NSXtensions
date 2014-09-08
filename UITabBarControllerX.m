@@ -53,7 +53,7 @@
     [fromView.superview addSubview:toView];
     toView.frame = CGRectMake(index > self.selectedIndex ? screenWidth : - screenWidth, viewSize.origin.y, screenWidth, viewSize.size.height);
 
-    [UIView animateWithDuration:0.33 animations:^
+    [UIView animateWithDuration:UIApplication.sharedApplication.statusBarOrientationAnimationDuration animations:^
      {
          self.tabBar.userInteractionEnabled = NO;
          fromView.frame = CGRectMake(index > self.selectedIndex ? - screenWidth : screenWidth, viewSize.origin.y, screenWidth, viewSize.size.height);
