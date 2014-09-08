@@ -92,3 +92,12 @@ SYNTHESIZE_SINGLETON_RETAIN_METHODS
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IS_IPHONE_5 (IS_IPHONE && IS_WIDESCREEN)
+
+/**
+ *  Determining the orientation of the device
+ */
+#define LANDSCAPE UIInterfaceOrientationIsLandscape(self.interfaceOrientation)
+#define LANDSCAPE_RIGHT [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft
+#define LANDSCAPE_LEFT [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight
+#define PORTRAIT UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
+#define PORTRAIT_REVERSE [UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown
