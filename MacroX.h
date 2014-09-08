@@ -82,3 +82,13 @@ while(0)
 SYNTHESIZE_SINGLETON_RETAIN_METHODS
 
 #define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(classname, shared)
+
+/**
+ *  Several macros that might be handy to detect if the device is an iPhone, iPad, or iPhone5
+ */
+
+#define IS_WIDESCREEN ([[UIScreen mainScreen] bounds].size.height == 568)
+#define IS_RETINA ([[UIScreen mainScreen] scale] == 2.0)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_5 (IS_IPHONE && IS_WIDESCREEN)
