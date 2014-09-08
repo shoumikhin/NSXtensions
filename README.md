@@ -22,6 +22,21 @@ Precompile definitions of some commonly-used boilerplate code.
 	SHOW_ALERT(title, message, delegate, cancel, other)  //pop up a UIAlertView with the given values
 	
 	SYNTHESIZE_SINGLETON_FOR_CLASS(classname)  //a macro to synthesize boilerplate code for a given class to support the singleton design pattern
+			
+	Detect if the device is an iPhone, iPad, or iPhone5:
+	IS_WIDESCREEN
+	IS_RETINA
+	IS_IPAD
+	IS_IPHONE
+	IS_IPHONE_5
+	
+	Determining the orientation of the device:
+	LANDSCAPE
+	LANDSCAPE_RIGHT
+	LANDSCAPE_LEFT
+	PORTRAIT
+	PORTRAIT_REVERSE
+
 
 #### MKMapView
 
