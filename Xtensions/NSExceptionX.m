@@ -7,13 +7,13 @@
 - (NSArray *)backtrace
 {
     NSArray *addresses = self.callStackReturnAddresses;
-    unsigned count = addresses.count;
+    NSUInteger count = addresses.count;
     void **stack = malloc(count * sizeof(void *));
     
     for (unsigned i = 0; i < count; ++i)
         stack[i] = (void *)[addresses[i] longValue];
     
-    char **strings = backtrace_symbols(stack, count);
+    char **strings = backtrace_symbols(stack, (int)count);
     NSMutableArray *ret = [NSMutableArray arrayWithCapacity:count];
     
     for (int i = 0; i < count; ++i)

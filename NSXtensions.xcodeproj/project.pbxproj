@@ -7,35 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D66F50CE2DCB4E24A0B37FE2 /* MKMapViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5F060172631F973A873E /* MKMapViewX.m */; };
-		D66F50E6F296832EC7068D55 /* NSObjectX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F52C324269C3574E959D8 /* NSObjectX.m */; };
-		D66F511C75622B16D805D675 /* NSManagedObjectContextX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5BF83583DBA767203FDF /* NSManagedObjectContextX.m */; };
-		D66F513ACD6B08CDCED1F63A /* NSSetX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5860117EFB6E6B41D525 /* NSSetX.m */; };
+		D66F50251EEA208268CF7885 /* UIWebViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5506A4C44EC802B396BD /* UIWebViewX.m */; };
+		D66F5058B26DCFF151153F09 /* MKMapViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5D0D3303442D9EFB5AA5 /* MKMapViewX.m */; };
+		D66F506C4E93EED3028A2E65 /* NSManagedObjectContextX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F511358A3606A0A6AC270 /* NSManagedObjectContextX.m */; };
+		D66F50F7B695C81708BFE03E /* UIColorX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F53D061B3727DA09E8389 /* UIColorX.m */; };
 		D66F5152C84335BC305FF92A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54E276432E77B3AF4F51 /* UIKit.framework */; };
-		D66F51D33E5E801884A56627 /* NSMutableArrayX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5F9A496070C3779FE886 /* NSMutableArrayX.m */; };
-		D66F53E9AAA83B192EEC00ED /* NSXtensions.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D66F5BAD39FF11AEF71F054E /* NSXtensions.podspec */; };
-		D66F53EEA97D41BF80EF5CB0 /* NSUUIDX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F55B6D1CB86884CF6CAFA /* NSUUIDX.m */; };
+		D66F528A6652D9D0F1EA8B97 /* NSDictionaryX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5D3F2E77FAC6CD85B25F /* NSDictionaryX.m */; };
+		D66F53E6B48827A45073326F /* UIAlertViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5CB383C587B95731121B /* UIAlertViewX.m */; };
 		D66F5404DE4253196E7547AA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54F18AA85C0DC7C7620E /* XCTest.framework */; };
+		D66F540A7F1034F4C763EB90 /* NSURLX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F58A55A7BF249C56B0BE6 /* NSURLX.m */; };
+		D66F540B87951D3C1C81502E /* UINavigationControllerX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F545D5FCEB5B07CA1DCC5 /* UINavigationControllerX.m */; };
 		D66F54417EB25B14E24BC040 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F5FCC5E2D16B8842F88E2 /* Foundation.framework */; };
 		D66F54E9CCD3354A1A3121C3 /* NSXtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F523327ACF9A659B42AC0 /* NSXtensionsTests.m */; };
-		D66F55237D37F85B44631F42 /* UIApplicationX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F55F909059A27B5553B9E /* UIApplicationX.m */; };
-		D66F5566C458A0D7C6EC6306 /* UIAlertViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5945B452FB2C04811D22 /* UIAlertViewX.m */; };
-		D66F556B455EEDD0296D5716 /* UIDeviceX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F572D25798B4AABEDBCF4 /* UIDeviceX.m */; };
-		D66F55852E381AA603EFC654 /* UIColorX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F569DB3D33FA2FFB15E42 /* UIColorX.m */; };
-		D66F56EF6B162F10BDE75785 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D66F5091CE0E77CEFC9612CF /* README.md */; };
-		D66F5703C1AC49DC6C42D2B5 /* UIWebViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */; };
-		D66F5726871BFAF1C8D97DDE /* NSDateX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5008C768048062D1999E /* NSDateX.m */; };
+		D66F559079A1A8A607219B3C /* NSXtensions.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D66F5CC517A9FA0D1272E859 /* NSXtensions.podspec */; };
+		D66F55BF8674B467B11D15B6 /* UITabBarControllerX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5CD09EA25EED388AC8A0 /* UITabBarControllerX.m */; };
+		D66F55EC109487590D856895 /* UIViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F58B9A4EB2177AD945AE7 /* UIViewX.m */; };
+		D66F564868C89F9A4BDAF41A /* NSUUIDX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F522D7388DCB9F714FD31 /* NSUUIDX.m */; };
+		D66F571CFA1BA2720A9384E7 /* NSMutableArrayX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56259172EFF64CA55509 /* NSMutableArrayX.m */; };
 		D66F58116426BEC6C9EF206E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D66F5707A119AFDA4EA923AA /* InfoPlist.strings */; };
-		D66F5815F287D078F11FAAC7 /* NSExceptionX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F50D8853B99CEED479844 /* NSExceptionX.m */; };
-		D66F59786A8603683767248C /* NSStringX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5CCC4CB931604798EE87 /* NSStringX.m */; };
+		D66F587FE14DA5E625C1B07C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D66F5B2F7833374F9447C6CC /* README.md */; };
+		D66F593974D89ED4CAF629EA /* UIDeviceX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F53216CF65DD3992F3544 /* UIDeviceX.m */; };
+		D66F5978D4B0EF91A8886419 /* UIApplicationX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F503DE53FF2B908F0ECB9 /* UIApplicationX.m */; };
+		D66F5A1B8825154C8C4D3722 /* NSObjectX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F578F1D508549666F5B48 /* NSObjectX.m */; };
+		D66F5B0B3544D84F68CD98FA /* NSStringX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5737ADF7B1EC8D30F8C5 /* NSStringX.m */; };
+		D66F5B6872CF2FFB62B561E6 /* NSDateX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56391480B01195DA42D0 /* NSDateX.m */; };
 		D66F5B73707C193DB407DB01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54E276432E77B3AF4F51 /* UIKit.framework */; };
-		D66F5CA5EAEB53A0F4143F4B /* NSURLX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5853C4236F18C9D083F3 /* NSURLX.m */; };
-		D66F5D3F30606E7833772046 /* UIImageX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5EE3FD16D49D8C417F5B /* UIImageX.m */; };
-		D66F5DCFE0C06023F0AD7CD4 /* UITabBarControllerX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5EFC1D1C14B97BF22750 /* UITabBarControllerX.m */; };
+		D66F5B903B16F06937253984 /* NSExceptionX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5C15E919FF281DAA88CC /* NSExceptionX.m */; };
+		D66F5D19901484DB54A16435 /* UIImageX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F565AB852EDFA41EE7424 /* UIImageX.m */; };
 		D66F5E7D7796D7620FE3CFDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F556CFDB4EA61A2493086 /* CoreGraphics.framework */; };
-		D66F5EF22806C0C9D91947AE /* NSFileManagerX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F57A4FD9ED0DECEE7AB99 /* NSFileManagerX.m */; };
-		D66F5F208BDCD725F9CAB2DD /* UIViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5D39C6BE02C912BFA575 /* UIViewX.m */; };
-		D66F5FA7DDE639EE9E8169C8 /* NSDictionaryX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F57F6DA063E142A352979 /* NSDictionaryX.m */; };
+		D66F5F6930DD9E01D0894368 /* NSSetX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5BFCE94EB0E3DC4D2870 /* NSSetX.m */; };
+		D66F5FD2C137D9EE7308A4E7 /* NSFileManagerX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5DF9966FE634823281F8 /* NSFileManagerX.m */; };
 		D66F5FF00D2B2D410050D2C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F5FCC5E2D16B8842F88E2 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,60 +51,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D66F5008C768048062D1999E /* NSDateX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateX.m; sourceTree = "<group>"; };
-		D66F5091CE0E77CEFC9612CF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
-		D66F509AC286CB27283C75AC /* NSObjectX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectX.h; sourceTree = "<group>"; };
-		D66F50D8853B99CEED479844 /* NSExceptionX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionX.m; sourceTree = "<group>"; };
+		D66F501E8F45F19571F630E9 /* NSExceptionX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionX.h; sourceTree = "<group>"; };
+		D66F503DE53FF2B908F0ECB9 /* UIApplicationX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationX.m; sourceTree = "<group>"; };
+		D66F50FCBDB89D9AE1565FF6 /* UIDeviceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceX.h; sourceTree = "<group>"; };
+		D66F511358A3606A0A6AC270 /* NSManagedObjectContextX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSManagedObjectContextX.m; sourceTree = "<group>"; };
+		D66F522D7388DCB9F714FD31 /* NSUUIDX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUUIDX.m; sourceTree = "<group>"; };
 		D66F523327ACF9A659B42AC0 /* NSXtensionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSXtensionsTests.m; sourceTree = "<group>"; };
-		D66F525AD22656CED6253261 /* NSExceptionX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionX.h; sourceTree = "<group>"; };
-		D66F52998D2D9CDCCE0B6696 /* NSFileManagerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerX.h; sourceTree = "<group>"; };
-		D66F52A821816BF37766EBBF /* UIApplicationX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationX.h; sourceTree = "<group>"; };
-		D66F52C324269C3574E959D8 /* NSObjectX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectX.m; sourceTree = "<group>"; };
-		D66F536FD3368DA3E68656B5 /* NSDateX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateX.h; sourceTree = "<group>"; };
-		D66F537DF3BD3DB603B31975 /* NSErrorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSErrorX.h; sourceTree = "<group>"; };
-		D66F53837B54BED698BAF23B /* UIDeviceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceX.h; sourceTree = "<group>"; };
+		D66F52621FF91A15410DCD0F /* NSDictionaryX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryX.h; sourceTree = "<group>"; };
+		D66F526A3B0DB1426FFD6D19 /* NSErrorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSErrorX.h; sourceTree = "<group>"; };
+		D66F52C56B87E6028AF3DC71 /* UIAlertViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewX.h; sourceTree = "<group>"; };
+		D66F52EA32FCA67832A9CC4C /* NSErrorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSErrorX.m; sourceTree = "<group>"; };
+		D66F53216CF65DD3992F3544 /* UIDeviceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceX.m; sourceTree = "<group>"; };
+		D66F534C6148DF527CF5A6E7 /* NSSetX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSetX.h; sourceTree = "<group>"; };
 		D66F53A8AB71E5A9049907A3 /* NSXtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSXtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66F53D061B3727DA09E8389 /* UIColorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorX.m; sourceTree = "<group>"; };
+		D66F545D5FCEB5B07CA1DCC5 /* UINavigationControllerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerX.m; sourceTree = "<group>"; };
+		D66F548B8629861C63545697 /* UIColorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorX.h; sourceTree = "<group>"; };
 		D66F54E276432E77B3AF4F51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D66F54E683DF95912E78A5CC /* NSXtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXtensions.h; sourceTree = "<group>"; };
 		D66F54F18AA85C0DC7C7620E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D66F54F3D182BDB59FBEEE27 /* UITabBarControllerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarControllerX.h; sourceTree = "<group>"; };
-		D66F550400F1E1023097DADC /* NSSetX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSetX.h; sourceTree = "<group>"; };
+		D66F55065B3103FB00C4C3AB /* MacroX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroX.h; sourceTree = "<group>"; };
+		D66F5506A4C44EC802B396BD /* UIWebViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewX.m; sourceTree = "<group>"; };
 		D66F556CFDB4EA61A2493086 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D66F55B434FCBF53572D431C /* NSErrorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSErrorX.m; sourceTree = "<group>"; };
-		D66F55B6D1CB86884CF6CAFA /* NSUUIDX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUUIDX.m; sourceTree = "<group>"; };
-		D66F55F909059A27B5553B9E /* UIApplicationX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationX.m; sourceTree = "<group>"; };
-		D66F5643ECBCE62D2F4E690B /* UIColorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorX.h; sourceTree = "<group>"; };
-		D66F569DB3D33FA2FFB15E42 /* UIColorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorX.m; sourceTree = "<group>"; };
-		D66F572D25798B4AABEDBCF4 /* UIDeviceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceX.m; sourceTree = "<group>"; };
+		D66F55E6D0131FBE76696A94 /* NSFileManagerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerX.h; sourceTree = "<group>"; };
+		D66F56259172EFF64CA55509 /* NSMutableArrayX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayX.m; sourceTree = "<group>"; };
+		D66F56290C91C133A2F880A1 /* NSDateX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateX.h; sourceTree = "<group>"; };
+		D66F56391480B01195DA42D0 /* NSDateX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateX.m; sourceTree = "<group>"; };
+		D66F565AB852EDFA41EE7424 /* UIImageX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageX.m; sourceTree = "<group>"; };
+		D66F566AB2BF3850F79959CD /* UIWebViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewX.h; sourceTree = "<group>"; };
+		D66F5714E2E8229808292863 /* NSStringX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringX.h; sourceTree = "<group>"; };
+		D66F5737ADF7B1EC8D30F8C5 /* NSStringX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringX.m; sourceTree = "<group>"; };
 		D66F5775220DF4DB9583C06D /* NSXtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "NSXtensionsTests-Info.plist"; sourceTree = "<group>"; };
-		D66F57A4FD9ED0DECEE7AB99 /* NSFileManagerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerX.m; sourceTree = "<group>"; };
-		D66F57F6DA063E142A352979 /* NSDictionaryX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryX.m; sourceTree = "<group>"; };
-		D66F5853C4236F18C9D083F3 /* NSURLX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLX.m; sourceTree = "<group>"; };
-		D66F5860117EFB6E6B41D525 /* NSSetX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSetX.m; sourceTree = "<group>"; };
-		D66F5868268E8A1A739BC586 /* UIWebViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewX.h; sourceTree = "<group>"; };
-		D66F5945B452FB2C04811D22 /* UIAlertViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewX.m; sourceTree = "<group>"; };
-		D66F59D0816F5D4A3AEA3E6B /* NSStringX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringX.h; sourceTree = "<group>"; };
-		D66F5A1F226F3FDE8580046C /* NSDictionaryX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryX.h; sourceTree = "<group>"; };
-		D66F5B29EF601231D83A74EE /* NSUUIDX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUUIDX.h; sourceTree = "<group>"; };
-		D66F5B45F10F803743F7A3E5 /* UIViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewX.h; sourceTree = "<group>"; };
-		D66F5BAD39FF11AEF71F054E /* NSXtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = NSXtensions.podspec; sourceTree = "<group>"; };
-		D66F5BE9DAF98BE727893EF9 /* NSManagedObjectContextX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSManagedObjectContextX.h; sourceTree = "<group>"; };
-		D66F5BF83583DBA767203FDF /* NSManagedObjectContextX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSManagedObjectContextX.m; sourceTree = "<group>"; };
-		D66F5C367CD6467271C2296C /* NSURLX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLX.h; sourceTree = "<group>"; };
+		D66F5784BA6B98D079AF8C4D /* NSManagedObjectContextX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSManagedObjectContextX.h; sourceTree = "<group>"; };
+		D66F578F1D508549666F5B48 /* NSObjectX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectX.m; sourceTree = "<group>"; };
+		D66F57F2F0D9EE1408027A64 /* NSUUIDX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUUIDX.h; sourceTree = "<group>"; };
+		D66F58A55A7BF249C56B0BE6 /* NSURLX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLX.m; sourceTree = "<group>"; };
+		D66F58B9A4EB2177AD945AE7 /* UIViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewX.m; sourceTree = "<group>"; };
+		D66F59394CD70EC8288AC5C8 /* UINavigationControllerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerX.h; sourceTree = "<group>"; };
+		D66F5986973B3E2D420EDEB6 /* UIApplicationX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationX.h; sourceTree = "<group>"; };
+		D66F5A17E3495AC754C9A82E /* NSObjectX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectX.h; sourceTree = "<group>"; };
+		D66F5B2F7833374F9447C6CC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
+		D66F5BFCE94EB0E3DC4D2870 /* NSSetX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSetX.m; sourceTree = "<group>"; };
+		D66F5C15E919FF281DAA88CC /* NSExceptionX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSExceptionX.m; sourceTree = "<group>"; };
+		D66F5C33208734AB8367A78D /* NSURLX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLX.h; sourceTree = "<group>"; };
+		D66F5C6D7D08BB3C7D8A50E2 /* UIImageX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageX.h; sourceTree = "<group>"; };
 		D66F5C740C01C09F59D8E2BA /* NSXtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSXtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D66F5CCC4CB931604798EE87 /* NSStringX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringX.m; sourceTree = "<group>"; };
-		D66F5D39C6BE02C912BFA575 /* UIViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewX.m; sourceTree = "<group>"; };
-		D66F5E07BEFAB80E27A7156C /* MKMapViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapViewX.h; sourceTree = "<group>"; };
-		D66F5E6FE14676CCDAD6961A /* UIAlertViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewX.h; sourceTree = "<group>"; };
-		D66F5EB22C12A2A9DD61F1B8 /* UIImageX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageX.h; sourceTree = "<group>"; };
-		D66F5EE2B1302431E2B662F5 /* NSXtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXtensions.h; sourceTree = "<group>"; };
-		D66F5EE3FD16D49D8C417F5B /* UIImageX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageX.m; sourceTree = "<group>"; };
-		D66F5EFC1D1C14B97BF22750 /* UITabBarControllerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarControllerX.m; sourceTree = "<group>"; };
-		D66F5F060172631F973A873E /* MKMapViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewX.m; sourceTree = "<group>"; };
-		D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewX.m; sourceTree = "<group>"; };
-		D66F5F64B2AD679FA5F0425A /* NSMutableArrayX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayX.h; sourceTree = "<group>"; };
+		D66F5CB383C587B95731121B /* UIAlertViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewX.m; sourceTree = "<group>"; };
+		D66F5CC517A9FA0D1272E859 /* NSXtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = NSXtensions.podspec; sourceTree = "<group>"; };
+		D66F5CD09EA25EED388AC8A0 /* UITabBarControllerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarControllerX.m; sourceTree = "<group>"; };
+		D66F5D0D3303442D9EFB5AA5 /* MKMapViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewX.m; sourceTree = "<group>"; };
+		D66F5D3F2E77FAC6CD85B25F /* NSDictionaryX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryX.m; sourceTree = "<group>"; };
+		D66F5DF9966FE634823281F8 /* NSFileManagerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerX.m; sourceTree = "<group>"; };
+		D66F5E16D5CD662B3DF71F18 /* MKMapViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMapViewX.h; sourceTree = "<group>"; };
+		D66F5E8B04C5F1234850B3EB /* UITabBarControllerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarControllerX.h; sourceTree = "<group>"; };
+		D66F5F47EC74A28D0B495E43 /* NSMutableArrayX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayX.h; sourceTree = "<group>"; };
 		D66F5F75BEEEC13F8D55CAB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D66F5F9A496070C3779FE886 /* NSMutableArrayX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayX.m; sourceTree = "<group>"; };
 		D66F5FCC5E2D16B8842F88E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D66F5FD9BFC8958EDFAB5780 /* UIViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewX.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,57 +161,68 @@
 			path = NSXtensionsTests;
 			sourceTree = "<group>";
 		};
+		D66F5908A89A6ED6D1D95557 /* Xtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D66F5E16D5CD662B3DF71F18 /* MKMapViewX.h */,
+				D66F5D0D3303442D9EFB5AA5 /* MKMapViewX.m */,
+				D66F56290C91C133A2F880A1 /* NSDateX.h */,
+				D66F56391480B01195DA42D0 /* NSDateX.m */,
+				D66F52621FF91A15410DCD0F /* NSDictionaryX.h */,
+				D66F5D3F2E77FAC6CD85B25F /* NSDictionaryX.m */,
+				D66F526A3B0DB1426FFD6D19 /* NSErrorX.h */,
+				D66F52EA32FCA67832A9CC4C /* NSErrorX.m */,
+				D66F501E8F45F19571F630E9 /* NSExceptionX.h */,
+				D66F5C15E919FF281DAA88CC /* NSExceptionX.m */,
+				D66F55E6D0131FBE76696A94 /* NSFileManagerX.h */,
+				D66F5DF9966FE634823281F8 /* NSFileManagerX.m */,
+				D66F5784BA6B98D079AF8C4D /* NSManagedObjectContextX.h */,
+				D66F511358A3606A0A6AC270 /* NSManagedObjectContextX.m */,
+				D66F5F47EC74A28D0B495E43 /* NSMutableArrayX.h */,
+				D66F56259172EFF64CA55509 /* NSMutableArrayX.m */,
+				D66F5A17E3495AC754C9A82E /* NSObjectX.h */,
+				D66F578F1D508549666F5B48 /* NSObjectX.m */,
+				D66F534C6148DF527CF5A6E7 /* NSSetX.h */,
+				D66F5BFCE94EB0E3DC4D2870 /* NSSetX.m */,
+				D66F5714E2E8229808292863 /* NSStringX.h */,
+				D66F5737ADF7B1EC8D30F8C5 /* NSStringX.m */,
+				D66F5C33208734AB8367A78D /* NSURLX.h */,
+				D66F58A55A7BF249C56B0BE6 /* NSURLX.m */,
+				D66F57F2F0D9EE1408027A64 /* NSUUIDX.h */,
+				D66F522D7388DCB9F714FD31 /* NSUUIDX.m */,
+				D66F54E683DF95912E78A5CC /* NSXtensions.h */,
+				D66F52C56B87E6028AF3DC71 /* UIAlertViewX.h */,
+				D66F5CB383C587B95731121B /* UIAlertViewX.m */,
+				D66F5986973B3E2D420EDEB6 /* UIApplicationX.h */,
+				D66F503DE53FF2B908F0ECB9 /* UIApplicationX.m */,
+				D66F548B8629861C63545697 /* UIColorX.h */,
+				D66F53D061B3727DA09E8389 /* UIColorX.m */,
+				D66F50FCBDB89D9AE1565FF6 /* UIDeviceX.h */,
+				D66F53216CF65DD3992F3544 /* UIDeviceX.m */,
+				D66F5C6D7D08BB3C7D8A50E2 /* UIImageX.h */,
+				D66F565AB852EDFA41EE7424 /* UIImageX.m */,
+				D66F5E8B04C5F1234850B3EB /* UITabBarControllerX.h */,
+				D66F5CD09EA25EED388AC8A0 /* UITabBarControllerX.m */,
+				D66F5FD9BFC8958EDFAB5780 /* UIViewX.h */,
+				D66F58B9A4EB2177AD945AE7 /* UIViewX.m */,
+				D66F566AB2BF3850F79959CD /* UIWebViewX.h */,
+				D66F5506A4C44EC802B396BD /* UIWebViewX.m */,
+				D66F55065B3103FB00C4C3AB /* MacroX.h */,
+				D66F59394CD70EC8288AC5C8 /* UINavigationControllerX.h */,
+				D66F545D5FCEB5B07CA1DCC5 /* UINavigationControllerX.m */,
+			);
+			path = Xtensions;
+			sourceTree = "<group>";
+		};
 		D66F5C81832CE82C7DC21C3B = {
 			isa = PBXGroup;
 			children = (
 				D66F569E4116D5089EAEC2E7 /* Products */,
 				D66F5FF231F4FF032284B9B6 /* Frameworks */,
 				D66F56C9E871115892127ABB /* NSXtensionsTests */,
-				D66F5E07BEFAB80E27A7156C /* MKMapViewX.h */,
-				D66F5F060172631F973A873E /* MKMapViewX.m */,
-				D66F536FD3368DA3E68656B5 /* NSDateX.h */,
-				D66F5008C768048062D1999E /* NSDateX.m */,
-				D66F5A1F226F3FDE8580046C /* NSDictionaryX.h */,
-				D66F57F6DA063E142A352979 /* NSDictionaryX.m */,
-				D66F525AD22656CED6253261 /* NSExceptionX.h */,
-				D66F50D8853B99CEED479844 /* NSExceptionX.m */,
-				D66F52998D2D9CDCCE0B6696 /* NSFileManagerX.h */,
-				D66F57A4FD9ED0DECEE7AB99 /* NSFileManagerX.m */,
-				D66F5BE9DAF98BE727893EF9 /* NSManagedObjectContextX.h */,
-				D66F5BF83583DBA767203FDF /* NSManagedObjectContextX.m */,
-				D66F5F64B2AD679FA5F0425A /* NSMutableArrayX.h */,
-				D66F5F9A496070C3779FE886 /* NSMutableArrayX.m */,
-				D66F509AC286CB27283C75AC /* NSObjectX.h */,
-				D66F52C324269C3574E959D8 /* NSObjectX.m */,
-				D66F550400F1E1023097DADC /* NSSetX.h */,
-				D66F5860117EFB6E6B41D525 /* NSSetX.m */,
-				D66F59D0816F5D4A3AEA3E6B /* NSStringX.h */,
-				D66F5CCC4CB931604798EE87 /* NSStringX.m */,
-				D66F5C367CD6467271C2296C /* NSURLX.h */,
-				D66F5853C4236F18C9D083F3 /* NSURLX.m */,
-				D66F5B29EF601231D83A74EE /* NSUUIDX.h */,
-				D66F55B6D1CB86884CF6CAFA /* NSUUIDX.m */,
-				D66F5EE2B1302431E2B662F5 /* NSXtensions.h */,
-				D66F5BAD39FF11AEF71F054E /* NSXtensions.podspec */,
-				D66F5091CE0E77CEFC9612CF /* README.md */,
-				D66F5E6FE14676CCDAD6961A /* UIAlertViewX.h */,
-				D66F5945B452FB2C04811D22 /* UIAlertViewX.m */,
-				D66F52A821816BF37766EBBF /* UIApplicationX.h */,
-				D66F55F909059A27B5553B9E /* UIApplicationX.m */,
-				D66F5643ECBCE62D2F4E690B /* UIColorX.h */,
-				D66F569DB3D33FA2FFB15E42 /* UIColorX.m */,
-				D66F53837B54BED698BAF23B /* UIDeviceX.h */,
-				D66F572D25798B4AABEDBCF4 /* UIDeviceX.m */,
-				D66F5EB22C12A2A9DD61F1B8 /* UIImageX.h */,
-				D66F5EE3FD16D49D8C417F5B /* UIImageX.m */,
-				D66F54F3D182BDB59FBEEE27 /* UITabBarControllerX.h */,
-				D66F5EFC1D1C14B97BF22750 /* UITabBarControllerX.m */,
-				D66F5B45F10F803743F7A3E5 /* UIViewX.h */,
-				D66F5D39C6BE02C912BFA575 /* UIViewX.m */,
-				D66F5868268E8A1A739BC586 /* UIWebViewX.h */,
-				D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */,
-				D66F55B434FCBF53572D431C /* NSErrorX.m */,
-				D66F537DF3BD3DB603B31975 /* NSErrorX.h */,
+				D66F5908A89A6ED6D1D95557 /* Xtensions */,
+				D66F5B2F7833374F9447C6CC /* README.md */,
+				D66F5CC517A9FA0D1272E859 /* NSXtensions.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,8 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66F53E9AAA83B192EEC00ED /* NSXtensions.podspec in Resources */,
-				D66F56EF6B162F10BDE75785 /* README.md in Resources */,
+				D66F587FE14DA5E625C1B07C /* README.md in Resources */,
+				D66F559079A1A8A607219B3C /* NSXtensions.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,27 +326,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66F50CE2DCB4E24A0B37FE2 /* MKMapViewX.m in Sources */,
-				D66F5726871BFAF1C8D97DDE /* NSDateX.m in Sources */,
-				D66F5FA7DDE639EE9E8169C8 /* NSDictionaryX.m in Sources */,
-				D66F5815F287D078F11FAAC7 /* NSExceptionX.m in Sources */,
-				D66F5EF22806C0C9D91947AE /* NSFileManagerX.m in Sources */,
-				D66F511C75622B16D805D675 /* NSManagedObjectContextX.m in Sources */,
-				D66F51D33E5E801884A56627 /* NSMutableArrayX.m in Sources */,
-				D66F50E6F296832EC7068D55 /* NSObjectX.m in Sources */,
-				D66F513ACD6B08CDCED1F63A /* NSSetX.m in Sources */,
-				D66F59786A8603683767248C /* NSStringX.m in Sources */,
-				D66F5CA5EAEB53A0F4143F4B /* NSURLX.m in Sources */,
-				D66F53EEA97D41BF80EF5CB0 /* NSUUIDX.m in Sources */,
-				D66F5566C458A0D7C6EC6306 /* UIAlertViewX.m in Sources */,
-				D66F55237D37F85B44631F42 /* UIApplicationX.m in Sources */,
-				D66F55852E381AA603EFC654 /* UIColorX.m in Sources */,
-				D66F556B455EEDD0296D5716 /* UIDeviceX.m in Sources */,
-				D66F5D3F30606E7833772046 /* UIImageX.m in Sources */,
-				D66F5DCFE0C06023F0AD7CD4 /* UITabBarControllerX.m in Sources */,
-				D66F5F208BDCD725F9CAB2DD /* UIViewX.m in Sources */,
-				D66F5703C1AC49DC6C42D2B5 /* UIWebViewX.m in Sources */,
 				D66F5BB1873DF8161B1DDE37,
+				D66F5058B26DCFF151153F09 /* MKMapViewX.m in Sources */,
+				D66F5B6872CF2FFB62B561E6 /* NSDateX.m in Sources */,
+				D66F528A6652D9D0F1EA8B97 /* NSDictionaryX.m in Sources */,
+				D66F5B903B16F06937253984 /* NSExceptionX.m in Sources */,
+				D66F5FD2C137D9EE7308A4E7 /* NSFileManagerX.m in Sources */,
+				D66F506C4E93EED3028A2E65 /* NSManagedObjectContextX.m in Sources */,
+				D66F571CFA1BA2720A9384E7 /* NSMutableArrayX.m in Sources */,
+				D66F5A1B8825154C8C4D3722 /* NSObjectX.m in Sources */,
+				D66F5F6930DD9E01D0894368 /* NSSetX.m in Sources */,
+				D66F5B0B3544D84F68CD98FA /* NSStringX.m in Sources */,
+				D66F540A7F1034F4C763EB90 /* NSURLX.m in Sources */,
+				D66F564868C89F9A4BDAF41A /* NSUUIDX.m in Sources */,
+				D66F53E6B48827A45073326F /* UIAlertViewX.m in Sources */,
+				D66F5978D4B0EF91A8886419 /* UIApplicationX.m in Sources */,
+				D66F50F7B695C81708BFE03E /* UIColorX.m in Sources */,
+				D66F593974D89ED4CAF629EA /* UIDeviceX.m in Sources */,
+				D66F5D19901484DB54A16435 /* UIImageX.m in Sources */,
+				D66F55BF8674B467B11D15B6 /* UITabBarControllerX.m in Sources */,
+				D66F55EC109487590D856895 /* UIViewX.m in Sources */,
+				D66F50251EEA208268CF7885 /* UIWebViewX.m in Sources */,
+				D66F540B87951D3C1C81502E /* UINavigationControllerX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
