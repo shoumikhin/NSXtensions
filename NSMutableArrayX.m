@@ -17,22 +17,17 @@
 - (void)shuffle
 {
     static BOOL seeded;
-    
+
     if (!seeded)
     {
         seeded = YES;
-        srandom(time(NULL));
+        srandom((unsigned)time(NULL));
     }
-    
+
     NSUInteger count = self.count;
-    
+
     for (NSUInteger i = 0; i < count; ++i)
-    {
-        int nElements = count - i;
-        int n = (random() % nElements) + i;
-        
-        [self exchangeObjectAtIndex:i withObjectAtIndex:n];
-    }
+        [self exchangeObjectAtIndex:i withObjectAtIndex:i + random() % (count - i)];
 }
 
 - (void)enqueue:(id)anObject

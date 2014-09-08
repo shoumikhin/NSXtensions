@@ -10,6 +10,20 @@
 @interface UIDevice (X)
 
 /**
+ Get device hardware name.
+ 
+ @return String representing device hadrware name.
+ */
++ (NSString *)machineName;
+
+/**
+ Get device human readable name.
+ 
+ @return String representing device human readable name.
+ */
++ (NSString *)deviceName;
+
+/**
  Check if it's iPhone.
  
  @return YES if iPhone.
@@ -66,7 +80,7 @@
 + (NSString *)CellularMACAddress;
 
 /**
- Get a unique device identifier which is computed as SHA256 hash of the device MAC address.
+ Get a unique device identifier which is identifierForVendor since 7.0 and SHA256 of the device MAC address before.
  
  @return A unique identifier for the device.
  */
@@ -89,7 +103,7 @@ typedef NS_ENUM(NSUInteger, UIDeviceResolution)
 };
 
 /**
- Device resolution.
+ Device screen resolution.
  
  @return A constant among enum of device resolutions.
  */
@@ -98,7 +112,7 @@ typedef NS_ENUM(NSUInteger, UIDeviceResolution)
 /**
  Check if a specific system version is supported.
 
- @param version String representing system version, e.g. @"6.0".
+ @param version String representing system version, e.g. @"7.0".
  @return YES if running on a system with given version or older.
  */
 + (BOOL)systemVersionIsAtLeast:(NSString *)version;
