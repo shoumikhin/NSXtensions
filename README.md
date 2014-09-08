@@ -232,6 +232,33 @@ Precompile definitions of some commonly-used boilerplate code.
     //move with animation
     - (void)moveTo:(CGPoint)destination duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options;
 
+    This extension makes it easy to set/get attributes to/from a UIView.
+    ```objc
+    @property (nonatomic) CGFloat x;
+    @property (nonatomic) CGFloat y;
+    @property (nonatomic) CGFloat width;
+    @property (nonatomic) CGFloat height;
+    @property (nonatomic, readonly) CGFloat bottom;
+    @property (nonatomic, readonly) CGFloat right;
+
+    @property (nonatomic) CGSize size;
+
+    @property (nonatomic) CGFloat centerX;
+    @property (nonatomic) CGFloat centerY;
+    ```
+
+    So why do this:
+    ```objc
+    CGRect frame = self.view.frame;
+    frame.origin.x = 50.0f;
+    self.view.frame = frame;
+    ```
+
+    When you can do this:
+    ```objc
+    self.view.x = 50.0f;
+    ```
+
 #### UIWebView
 
     //load HTML content with specific font
