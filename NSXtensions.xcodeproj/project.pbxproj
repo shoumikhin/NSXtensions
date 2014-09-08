@@ -16,6 +16,7 @@
 		D66F53E6B48827A45073326F /* UIAlertViewX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5CB383C587B95731121B /* UIAlertViewX.m */; };
 		D66F5404DE4253196E7547AA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54F18AA85C0DC7C7620E /* XCTest.framework */; };
 		D66F540A7F1034F4C763EB90 /* NSURLX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F58A55A7BF249C56B0BE6 /* NSURLX.m */; };
+		D66F540B87951D3C1C81502E /* UINavigationControllerX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F545D5FCEB5B07CA1DCC5 /* UINavigationControllerX.m */; };
 		D66F54417EB25B14E24BC040 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F5FCC5E2D16B8842F88E2 /* Foundation.framework */; };
 		D66F54E9CCD3354A1A3121C3 /* NSXtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F523327ACF9A659B42AC0 /* NSXtensionsTests.m */; };
 		D66F559079A1A8A607219B3C /* NSXtensions.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D66F5CC517A9FA0D1272E859 /* NSXtensions.podspec */; };
@@ -64,10 +65,12 @@
 		D66F534C6148DF527CF5A6E7 /* NSSetX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSetX.h; sourceTree = "<group>"; };
 		D66F53A8AB71E5A9049907A3 /* NSXtensions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSXtensions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66F53D061B3727DA09E8389 /* UIColorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorX.m; sourceTree = "<group>"; };
+		D66F545D5FCEB5B07CA1DCC5 /* UINavigationControllerX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerX.m; sourceTree = "<group>"; };
 		D66F548B8629861C63545697 /* UIColorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorX.h; sourceTree = "<group>"; };
 		D66F54E276432E77B3AF4F51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D66F54E683DF95912E78A5CC /* NSXtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSXtensions.h; sourceTree = "<group>"; };
 		D66F54F18AA85C0DC7C7620E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D66F55065B3103FB00C4C3AB /* MacroX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroX.h; sourceTree = "<group>"; };
 		D66F5506A4C44EC802B396BD /* UIWebViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewX.m; sourceTree = "<group>"; };
 		D66F556CFDB4EA61A2493086 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D66F55E6D0131FBE76696A94 /* NSFileManagerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerX.h; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		D66F57F2F0D9EE1408027A64 /* NSUUIDX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUUIDX.h; sourceTree = "<group>"; };
 		D66F58A55A7BF249C56B0BE6 /* NSURLX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLX.m; sourceTree = "<group>"; };
 		D66F58B9A4EB2177AD945AE7 /* UIViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewX.m; sourceTree = "<group>"; };
+		D66F59394CD70EC8288AC5C8 /* UINavigationControllerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerX.h; sourceTree = "<group>"; };
 		D66F5986973B3E2D420EDEB6 /* UIApplicationX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationX.h; sourceTree = "<group>"; };
 		D66F5A17E3495AC754C9A82E /* NSObjectX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectX.h; sourceTree = "<group>"; };
 		D66F5B2F7833374F9447C6CC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
@@ -203,6 +207,9 @@
 				D66F58B9A4EB2177AD945AE7 /* UIViewX.m */,
 				D66F566AB2BF3850F79959CD /* UIWebViewX.h */,
 				D66F5506A4C44EC802B396BD /* UIWebViewX.m */,
+				D66F55065B3103FB00C4C3AB /* MacroX.h */,
+				D66F59394CD70EC8288AC5C8 /* UINavigationControllerX.h */,
+				D66F545D5FCEB5B07CA1DCC5 /* UINavigationControllerX.m */,
 			);
 			path = Xtensions;
 			sourceTree = "<group>";
@@ -340,6 +347,7 @@
 				D66F55BF8674B467B11D15B6 /* UITabBarControllerX.m in Sources */,
 				D66F55EC109487590D856895 /* UIViewX.m in Sources */,
 				D66F50251EEA208268CF7885 /* UIWebViewX.m in Sources */,
+				D66F540B87951D3C1C81502E /* UINavigationControllerX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
