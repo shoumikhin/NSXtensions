@@ -15,6 +15,14 @@ Simply add:
 
 to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):
 
+#### MacroX.h
+
+Precompile definitions of some commonly-used boilerplate code.
+
+	SHOW_ALERT(title, message, delegate, cancel, other)  //pop up a UIAlertView with the given values
+	
+	SYNTHESIZE_SINGLETON_FOR_CLASS(classname)  //a macro to synthesize boilerplate code for a given class to support the singleton design pattern
+
 #### MKMapView
 
     - (NSInteger)zoomLevel;  //get the current zoom level
@@ -41,8 +49,14 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     - (NSDictionary *)mergeWith:(NSDictionary *)other;
 
 #### NSError
+
+	- (NSString *)friendlyLocalizedDescription;  //a friendly human-readable localized description
+	
     // Shows alert with localizedFailureReason or localizedDescription
     - (void)showAlertView;
+
+	//create an NSError object with given domain, code and userInfo with a friendly human-readable localized description for known domains and codes
+	+ (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
 
 #### NSException
 
@@ -111,6 +125,13 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
 #### NSString
 
+    //first substring that matches a given regular expression
+    - (NSString *)substringWithRegularExpressionPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;
+    
+    //short and smart way to deal with URL percent escapes
+    - (NSString *)URLEncoded;
+    - (NSString *)URLDecoded;
+
     //hash of contents
     - (NSString *)MD5;
     - (NSString *)SHA256;
@@ -150,6 +171,10 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
 #### UIDevice
 
+
+	+ (NSString *)machineName;  //hadrware device name
+	+ (NSString *)deviceName;  //human readable device name
+
     //check the device type
     + (BOOL)isPhone;
     + (BOOL)isPhone4Inch;
@@ -163,11 +188,11 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     + (NSString *)WiFiMACAddress;
     + (NSString *)CellularMACAddress;
 
-    + (NSString *)uniqueIdentifier;  //globally unique device identifier (actually SHA256 of Wi-Fi MAC address)
+    + (NSString *)uniqueIdentifier;  //globally unique device identifier (SHA256 of Wi-Fi MAC address before iOS 7.0, and identifier for vendor now)
 
     + (double)availableMemory;  //how much of free memory remains in system (Megabytes)
 
-    + (UIDeviceResolution)resolution;  //get device resolution
+    + (UIDeviceResolution)resolution;  //get the device screen resolution
     
     + (BOOL)systemVersionIsAtLeast:(NSString *)version;  //check if a specific system version is supported
 
@@ -176,6 +201,19 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
     //convenient way to download an image
     - (id)initWithContentsOfURL:(NSURL *)URL;
     + (id)imageWithContentsOfURL:(NSURL *)URL;
+    
+    //applies the blur effect to the image
+    - (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
+    
+    - (UIImage *)cropToRect:(CGRect)rect;  //returns a new image representing a cropped part of the original
+
+#### UINavigationController
+
+	//animates navigation action with custom CoreAnimation transitions
+	- (void)pushViewController:(UIViewController *)viewController withTransitionType:(NSString *)type;
+	- (UIViewController *)popViewControllerWithTransitionType:(NSString *)type;
+	- (NSArray *)popToRootViewControllerWithTransitionType:(NSString *)type;
+	- (NSArray *)popToViewController:(UIViewController *)viewController withTransitionType:(NSString *)type;
 
 #### UITabBarController
 
