@@ -47,6 +47,15 @@ Programmatically detect which iOS version is device running on:
 	SYSTEM_VERSION_LESS_THAN(v)
 	SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)
 
+and use them like this:
+
+	if (SYSTEM_VERSION_LESS_THAN(@"5.0")) {
+	    // code here
+	}
+
+	if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")) {
+	    // code here
+	}
 
 #### MKMapView
 
