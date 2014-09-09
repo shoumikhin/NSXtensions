@@ -17,11 +17,37 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
 #### MacroX.h
 
-Precompile definitions of some commonly-used boilerplate code.
+Precompile definitions for some commonly-used boilerplate code.
 
-	SHOW_ALERT(title, message, delegate, cancel, other)  //pop up a UIAlertView with the given values
+* Create and show a UIAlertView with the given values:
+
+
+		SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
+
 	
-	SYNTHESIZE_SINGLETON_FOR_CLASS(classname)  //a macro to synthesize boilerplate code for a given class to support the singleton design pattern
+Example:
+
+	UIAlertView *alert = SHOW_ALERT(@"Title", @"And message	", nil, @"OK", @"Other");
+	
+	[alert dismissWithClickedButtonIndex:0 animated:YES];
+
+* Synthesize boilerplate code for a given class to support the singleton design pattern:
+	
+		SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
+	
+Example:
+
+	@implementation MyClass SYNTHESIZE_SINGLETON_FOR_CLASS(MyClass)
+	+ (instancetype)init
+	{
+		//custom initialization
+	}
+	@end
+	
+	void foo()
+	{
+		MyClass.shared.bar = @"Singleton";
+	}
 
 #### MKMapView
 

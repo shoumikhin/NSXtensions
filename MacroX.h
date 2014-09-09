@@ -6,18 +6,17 @@
 //
 
 /**
- SHOW_ALERT(title, message, delegate, cancel, other)
+ SHOW_ALERT(title, message, delegate, cancel, ...)
 
  A macro to create and show a UIAlertView with the given title, message,
- deleagate and max two buttons with specified titles.
+ deleagate and arbitrary number of buttons with specified titles.
  */
 
-#define SHOW_ALERT(__title__, __message__, __delegate__, __cancel__, __other__) \
-do \
-{ \
-    [[[UIAlertView alloc] initWithTitle:__title__ message:__message__ delegate:__delegate__ cancelButtonTitle:__cancel__ otherButtonTitles:__other__, nil] show]; \
-} \
-while(0)
+#define SHOW_ALERT(_title_, _message_, _delegate_, _cancelButtonTitle_, ...) \
+({ \
+    UIAlertView *_; \
+    [_ = [UIAlertView.alloc initWithTitle:(_title_) message:(_message_) delegate:(_delegate_) cancelButtonTitle:(_cancelButtonTitle_) otherButtonTitles:__VA_ARGS__, nil] show], _; \
+})
 
 /**
     SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
@@ -53,25 +52,24 @@ while(0)
 }
 #endif
 
-#define SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(classname, accessorMethodName) \
+#define SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(_classname_, _accessor_) \
 \
-+ (instancetype)accessorMethodName \
++ (instancetype)_accessor_ \
 { \
-    static classname *accessorMethodName##Instance; \
-    static dispatch_once_t onceToken; \
-    dispatch_once(&onceToken, \
+    static _classname_ *_accessor_##Instance; \
+    static dispatch_once_t once; \
+    dispatch_once(&once, \
     ^ \
     { \
-        accessorMethodName##Instance = [super allocWithZone:nil]; \
-        accessorMethodName##Instance = [accessorMethodName##Instance init]; \
+        _accessor_##Instance = [[super allocWithZone:nil] init]; \
     }); \
 \
-    return accessorMethodName##Instance; \
+    return _accessor_##Instance; \
 } \
 \
 + (instancetype)allocWithZone:(NSZone *)zone \
 { \
-    return [self accessorMethodName]; \
+    return self._accessor_; \
 } \
 \
 - (instancetype)copyWithZone:(NSZone *)zone \
@@ -81,4 +79,4 @@ while(0)
 \
 SYNTHESIZE_SINGLETON_RETAIN_METHODS
 
-#define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(classname, shared)
+#define SYNTHESIZE_SINGLETON_FOR_CLASS(_classname_) SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(_classname_, shared)
