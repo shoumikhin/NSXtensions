@@ -101,3 +101,13 @@ SYNTHESIZE_SINGLETON_RETAIN_METHODS
 #define LANDSCAPE_LEFT [UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight
 #define PORTRAIT UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
 #define PORTRAIT_REVERSE [UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown
+
+/**
+ *  Programmatically detect which iOS version is device running on:
+ */
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
