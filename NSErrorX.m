@@ -1,6 +1,7 @@
 #import "NSErrorX.h"
 
 #import "NSDictionaryX.h"
+#import "MacroX.h"
 
 #import <Foundation/FoundationErrors.h>
 #import <CoreData/CoreDataErrors.h>
@@ -1097,17 +1098,13 @@
 
 -(void)showAlertView
 {
-    [self showAlertViewWithTitle:@"Error" andMessage:self.localizedFailureReason ?: self.localizedDescription];
+    [self showAlertViewWithTitle:@"Error" andMessage:self.localizedFailureReason ?: self.friendlyLocalizedDescription];
 }
 
 -(void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title
-                                                            message:message
-                                                           delegate:nil
-                                                  cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
-        [alertView show];
+        SHOW_ALERT(title, message, nil, NSLocalizedString(@"OK", nil), nil);
     });
 }
 
