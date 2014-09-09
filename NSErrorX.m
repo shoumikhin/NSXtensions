@@ -1025,9 +1025,10 @@
              
              @(KERN_CODESIGN_ERROR) :
                  @"During a page fault, indicates that the page was rejected as a result of a signature check.",
-             
+#if defined(__MAC_10_10)
              @(KERN_POLICY_STATIC) :
                  @"The requested property cannot be changed at this time."
+#endif
             };
 }
 

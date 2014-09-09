@@ -6,7 +6,7 @@
 //
 
 /**
- SHOW_ALERT(title, message, delegate, cancel, ...)
+ SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
 
  A macro to create and show a UIAlertView with the given title, message,
  deleagate and arbitrary number of buttons with specified titles.
