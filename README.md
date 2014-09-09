@@ -27,13 +27,13 @@ Precompile definitions for some commonly-used boilerplate code.
 SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
 ```
 
-Example:
+> Example:
 
-```objc
-UIAlertView *alert = SHOW_ALERT(@"Title", @"And message	", nil, @"OK", @"Other");
+> ```objc
+> UIAlertView *alert = SHOW_ALERT(@"Title", @"And message	", nil, @"OK", @"Other");
 	
-[alert dismissWithClickedButtonIndex:0 animated:YES];
-```
+> [alert dismissWithClickedButtonIndex:0 animated:YES];
+> ```
 
 * Synthesize boilerplate code for a given class to support the singleton design pattern:
 
@@ -41,21 +41,21 @@ UIAlertView *alert = SHOW_ALERT(@"Title", @"And message	", nil, @"OK", @"Other")
 SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 ```
 	
-Example:
+> Example:
 
-```objc
-@implementation MyClass SYNTHESIZE_SINGLETON_FOR_CLASS(MyClass)
-  + (instancetype)init
-  {
-      //custom initialization
-  }
-@end
+> ```objc
+> @implementation MyClass SYNTHESIZE_SINGLETON_FOR_CLASS(MyClass)
+>   + (instancetype)init
+>   {
+>       //custom initialization
+>  }
+> @end
 
-void foo()
-{
-	MyClass.shared.bar = @"Singleton";
-}
-```
+> void foo()
+> {
+> 	MyClass.shared.bar = @"Singleton";
+> }
+> ```
 
 #### MKMapView
 
