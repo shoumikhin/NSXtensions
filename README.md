@@ -11,7 +11,9 @@ Pull requests are welcome! :)
 
 Simply add:
 
-    #import <NSXtensions.h>
+```objc
+#import <NSXtensions.h>
+```
 
 to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):
 
@@ -21,8 +23,10 @@ Precompile definitions for some commonly-used boilerplate code.
 
 * Create and show a UIAlertView with the given values:
 
-    SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
-	
+```objc
+SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
+```
+
 Example:
 
 ```objc
@@ -33,7 +37,9 @@ UIAlertView *alert = SHOW_ALERT(@"Title", @"And message	", nil, @"OK", @"Other")
 
 * Synthesize boilerplate code for a given class to support the singleton design pattern:
 
-    SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
+```objc
+SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
+```
 	
 Example:
 
