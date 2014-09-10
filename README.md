@@ -27,10 +27,10 @@ Precompile definitions for some commonly-used boilerplate code.
 SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
 ```
 
-> Example:
+> *Example:*
 
 > ```objc
-> UIAlertView *alert = SHOW_ALERT(@"Title", @"And message	", nil, @"OK", @"Other");
+> UIAlertView *alert = SHOW_ALERT(@"Title", @"And message", nil, @"OK", @"Other");
 	
 > [alert dismissWithClickedButtonIndex:0 animated:YES];
 > ```
@@ -41,7 +41,7 @@ SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
 SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 ```
 	
-> Example:
+> *Example:*
 
 > ```objc
 > @implementation MyClass SYNTHESIZE_SINGLETON_FOR_CLASS(MyClass)
