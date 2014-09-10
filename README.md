@@ -21,6 +21,13 @@ to your precompiled header, and you'll boost Cocoa with the following stuff (in 
 
 Precompile definitions for some commonly-used boilerplate code.
 
+* Mark a line of code with a "TODO" or "FIXME" prefixed compiler warning:
+
+```objc
+TODO(message)
+FIXME(message)
+```
+
 * Create and show a UIAlertView with the given values:
 
 ```objc
@@ -33,6 +40,23 @@ SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
 > UIAlertView *alert = SHOW_ALERT(@"Title", @"And message", nil, @"OK", @"Other");
 	
 > [alert dismissWithClickedButtonIndex:0 animated:YES];
+> ```
+
+* Rapidly implement a read-only static property of a given type and name.
+
+```objc
+SYNTHESIZE_STATIC_PROPERTY(_type_, _name_, ...)
+```
+
+> *Example:*
+
+> ```objc
+> SYNTHESIZE_STATIC_PROPERTY(NSString *, bundleID,
+> {
+> 	NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
+
+> 	return bundleID;
+> })
 > ```
 
 * Synthesize boilerplate code for a given class to support the singleton design pattern:
@@ -220,7 +244,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 
 + (NSArray *)backtrace;  //pretty-formatted backtrace of current point of execution
 
-//  call, email or open ULR with an ability to quickly return back
+//call, email or open ULR with an ability to quickly return back
 + (void)call:(NSString *)phoneNumber andShowReturn:(BOOL)shouldReturn;
 + (void)email:(NSString *)address andShowReturn:(BOOL)shouldReturn;
 + (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn;
@@ -235,29 +259,29 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### UIDevice
 
 ```objc
++ (NSString *)uniqueIdentifier;  //globally unique device identifier (SHA256 of Wi-Fi MAC address before iOS 7.0, and identifier for vendor now)
+
 + (NSString *)machineName;  //hadrware device name
 + (NSString *)deviceName;  //human readable device name
 
-//check the device type
-+ (BOOL)isPhone;
-+ (BOOL)isPhone4Inch;
-+ (BOOL)isPad;
-+ (BOOL)isPad8Inch;
++ (BOOL)systemVersionIsAtLeast:(NSString *)version;  //check if a specific system version is supported
 
-+ (BOOL)isSimulator;  //check if the current device is iOS Simulator
-+ (BOOL)isJailbroken;  //check if the device is cracked
-
-//get MAC addresses of installed network interfaces
-+ (NSString *)WiFiMACAddress;
-+ (NSString *)CellularMACAddress;
-
-+ (NSString *)uniqueIdentifier;  //globally unique device identifier (SHA256 of Wi-Fi MAC address before iOS 7.0, and identifier for vendor now)
++ (UIResolution)resolution;  //get the screen resolution of the device
 
 + (double)availableMemory;  //how much of free memory remains in system (Megabytes)
 
-+ (UIDeviceResolution)resolution;  //get the device screen resolution
+//check the device type
++ (BOOL)isSimulator;
++ (BOOL)isPhone;
++ (BOOL)isPad;
++ (BOOL)isPod;
++ (BOOL)isAppleTV;
 
-+ (BOOL)systemVersionIsAtLeast:(NSString *)version;  //check if a specific system version is supported
++ (BOOL)isJailbroken;  //check if the device is cracked
+
+//get the MAC addresses of installed network interfaces (deprecated)
++ (NSString *)WiFiMACAddress;
++ (NSString *)CellularMACAddress;
 ```
 
 #### UIImage
@@ -297,6 +321,19 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### UIView
 
 ```objc
+//a convenient way to control UIView's frame
+@property (nonatomic) CGFloat x;
+@property (nonatomic) CGFloat y;
+@property (nonatomic) CGPoint origin;
+
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat height;
+@property (nonatomic) CGSize size;
+
+@property (nonatomic) CGFloat dx;
+@property (nonatomic) CGFloat dy;
+@property (nonatomic) CGVector bound;
+
 - (UIViewController *)viewController;  //returns a parent view controller
 - (BOOL)resignFirstResponderRecursively;  //resigns the first responder, if found in this view hierarchy
 
@@ -306,33 +343,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 //move with animation
 - (void)moveTo:(CGPoint)destination duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options;
 ```
-
-    This extension makes it easy to set/get attributes to/from a UIView.
-    ```objc
-    @property (nonatomic) CGFloat x;
-    @property (nonatomic) CGFloat y;
-    @property (nonatomic) CGFloat width;
-    @property (nonatomic) CGFloat height;
-    @property (nonatomic, readonly) CGFloat bottom;
-    @property (nonatomic, readonly) CGFloat right;
-
-    @property (nonatomic) CGSize size;
-
-    @property (nonatomic) CGFloat centerX;
-    @property (nonatomic) CGFloat centerY;
-    ```
-
-    So why do this:
-    ```objc
-    CGRect frame = self.view.frame;
-    frame.origin.x = 50.0f;
-    self.view.frame = frame;
-    ```
-
-    When you can do this:
-    ```objc
-    self.view.x = 50.0f;
-    ```
 
 #### UIWebView
 
