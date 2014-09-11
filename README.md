@@ -166,6 +166,10 @@ Precompile definitions of some commonly-used boilerplate code.
 
 	+ (UIColor *)colorWithHTMLColor:(NSString *)HTMLColor;  //convert "#RRGGBB" to UIColor
 
+####UIButtonX
+
+	-(void)setImageForAllStates:(UIImage *)image;  //Set image for all states at once:
+
 #### UIDevice
 
 
