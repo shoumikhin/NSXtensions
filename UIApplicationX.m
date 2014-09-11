@@ -1,30 +1,22 @@
 #import "UIApplicationX.h"
 
+#import "MacroX.h"
+
 #include <execinfo.h>
 
 #define RETURN_ALERT_TIMEOUT 3.0
 
 @implementation UIApplication (X)
 
-+ (NSString *)identifier
+SYNTHESIZE_STATIC_PROPERTY(NSString *, identifier,
 {
-    static NSString *s_identifier;
+    return NSBundle.mainBundle.bundleIdentifier;
+})
     
-    if (!s_identifier)
-        s_identifier = NSBundle.mainBundle.bundleIdentifier;
-    
-    return s_identifier;
-}
-
-+ (NSString *)version
+SYNTHESIZE_STATIC_PROPERTY(NSString *, version,
 {
-    static NSString *s_version;
-    
-    if (!s_version)
-        s_version = [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
-    
-    return s_version;
-}
+    return [NSBundle.mainBundle objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+})
 
 + (CGRect)frame
 {

@@ -5,19 +5,58 @@
 //  mailto:anthony@shoumikh.in
 //
 
-/**
- SHOW_ALERT(title, message, delegate, cancel, other)
+#define _QUOTE_(__text__) #__text__
 
- A macro to create and show a UIAlertView with the given title, message,
- deleagate and max two buttons with specified titles.
+/**
+ TODO(message)
+
+ A macro to mark a line of code with a "TODO" prefixed compiler warning.
  */
 
-#define SHOW_ALERT(__title__, __message__, __delegate__, __cancel__, __other__) \
-do \
+#define TODO(_text_) _Pragma(_QUOTE_(message("TODO: "_text_)))
+
+/**
+ FIXME(message)
+
+ A macro to mark a line of code with a "FIXME" prefixed compiler warning.
+ */
+
+#define FIXME(_text_) _Pragma(_QUOTE_(message("FIXME: "_text_)))
+
+/**
+ SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
+
+ A macro to create and show a UIAlertView with the given title, message,
+ deleagate and arbitrary number of buttons with specified titles.
+ */
+
+#define SHOW_ALERT(_title_, _message_, _delegate_, _cancelButtonTitle_, ...) \
+({ \
+    UIAlertView *_; \
+    [_ = [UIAlertView.alloc initWithTitle:(_title_) message:(_message_) delegate:(_delegate_) cancelButtonTitle:(_cancelButtonTitle_) otherButtonTitles:__VA_ARGS__, nil] show], _; \
+})
+
+/**
+ SYNTHESIZE_STATIC_PROPERTY(type, name, ...)
+
+ A macro to rapidly implement a read-only static property of a given type and name.
+ */
+
+#define SYNTHESIZE_STATIC_PROPERTY(_type_, _name_, ...) \
++ (_type_)_name_ \
 { \
-    [[[UIAlertView alloc] initWithTitle:__title__ message:__message__ delegate:__delegate__ cancelButtonTitle:__cancel__ otherButtonTitles:__other__, nil] show]; \
-} \
-while(0)
+    static _type_ _name_; \
+    static dispatch_once_t once; \
+\
+    dispatch_once(&once, \
+    ^ \
+    { \
+        _type_ (^evaluate)() = ^{ do { __VA_ARGS__ } while(0); }; \
+        _name_ = evaluate(); \
+    }); \
+\
+    return _name_; \
+}
 
 /**
     SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
@@ -32,9 +71,9 @@ while(0)
 #import <objc/runtime.h>
 
 #if __has_feature(objc_arc)
-    #define SYNTHESIZE_SINGLETON_RETAIN_METHODS
+    #define _SYNTHESIZE_SINGLETON_RETAIN_METHODS_
 #else
-    #define SYNTHESIZE_SINGLETON_RETAIN_METHODS \
+    #define _SYNTHESIZE_SINGLETON_RETAIN_METHODS_ \
 - (instancetype)retain \
 { \
     return self; \
@@ -53,25 +92,21 @@ while(0)
 }
 #endif
 
-#define SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(classname, accessorMethodName) \
+#define _SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR_(_classname_, _accessor_) \
 \
-+ (instancetype)accessorMethodName \
++ (instancetype)_accessor_ \
 { \
-    static classname *accessorMethodName##Instance; \
-    static dispatch_once_t onceToken; \
-    dispatch_once(&onceToken, \
-    ^ \
-    { \
-        accessorMethodName##Instance = [super allocWithZone:nil]; \
-        accessorMethodName##Instance = [accessorMethodName##Instance init]; \
-    }); \
+    static _classname_ *_accessor_; \
+    static dispatch_once_t once; \
 \
-    return accessorMethodName##Instance; \
+    dispatch_once(&once, ^{ _accessor_ = [[super allocWithZone:nil] init]; }); \
+\
+    return _accessor_; \
 } \
 \
 + (instancetype)allocWithZone:(NSZone *)zone \
 { \
-    return [self accessorMethodName]; \
+    return self._accessor_; \
 } \
 \
 - (instancetype)copyWithZone:(NSZone *)zone \
@@ -79,9 +114,9 @@ while(0)
     return self; \
 } \
 \
-SYNTHESIZE_SINGLETON_RETAIN_METHODS
+_SYNTHESIZE_SINGLETON_RETAIN_METHODS_
 
-#define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(classname, shared)
+#define SYNTHESIZE_SINGLETON_FOR_CLASS(_classname_) _SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR_(_classname_, shared)
 
 /**
  *  Several macros that might be handy to detect if the device is an iPhone, iPad, or iPhone5

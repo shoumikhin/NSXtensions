@@ -1,5 +1,6 @@
 #import "NSErrorX.h"
 
+#import "MacroX.h"
 #import "NSDictionaryX.h"
 #import "MacroX.h"
 
@@ -1033,16 +1034,9 @@
             };
 }
 
-+ (NSString *)friendlyDescriptionWithDomain:(NSString *)domain andCode:(NSInteger)code
+SYNTHESIZE_STATIC_PROPERTY(NSDictionary *, friendlyErrorDescription,
 {
-    static NSDictionary *friendlyErrorDescription;
-    static dispatch_once_t onceToken;
-
-    dispatch_once(&onceToken,
-    ^
-    {
-        friendlyErrorDescription =
-        @{
+    return @{
           NSCocoaErrorDomain :
               [[self.class._friendlyFoundationErrorsDescriptions mergeWith:
                 self.class._friendlyAppKitErrorsDescriptions] mergeWith:
@@ -1068,11 +1062,12 @@
           
           NSMachErrorDomain :
               self.class._friendlyMachErrorDescriptions
-          
         }.copy;
-    });
+})
 
-    return [friendlyErrorDescription[domain][@(code)] copy];
++ (NSString *)friendlyDescriptionWithDomain:(NSString *)domain andCode:(NSInteger)code
+{
+    return [self.class.friendlyErrorDescription[domain][@(code)] copy];
 }
 
 - (NSString *)friendlyLocalizedDescription
