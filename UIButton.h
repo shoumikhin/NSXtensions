@@ -13,4 +13,8 @@
  */
 -(void)setImageForAllStates:(UIImage *)image;
 
+/**
+*  Set image for all states at once
+*/
+- (void)setTitleForAllStates:(NSString *)title;
 @end
