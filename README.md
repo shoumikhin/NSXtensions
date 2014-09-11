@@ -1,3 +1,7 @@
+My improved version of `NSXtensions`.
+
+	pod 'NSXtensions', :git => 'https://github.com/skywinder/NSXtensions.git', :branch => 'master'
+
 # NSXtensions
 
 ![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)<br>
