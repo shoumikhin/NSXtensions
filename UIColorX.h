@@ -16,4 +16,12 @@
  */
 + (UIColor *)colorWithHTMLColor:(NSString *)HTMLColor;
 
+/**
+ *  Convert hex string color from pattern #RBG, #ARGB, #RRGGBB, or #AARRGGBB (# is optional sign) to UIColor.
+ *
+ *  @param hexString input string color
+ *
+ *  @return Generated UIColor
+ */
++ (UIColor *)colorWithHexString:(NSString *)hexString;
 @end
