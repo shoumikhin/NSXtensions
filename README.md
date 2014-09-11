@@ -65,6 +65,7 @@ Detect if the device is an iPhone, iPad, or iPhone5:
 > ```
 			
 Detect if the device is an iPhone, iPad, or iPhone5:
+
 	IS_WIDESCREEN
 	IS_RETINA
 	IS_IPAD
