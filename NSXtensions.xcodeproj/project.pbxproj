@@ -15,6 +15,7 @@
 		D66F513ACD6B08CDCED1F63A /* NSSetX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5860117EFB6E6B41D525 /* NSSetX.m */; };
 		D66F5152C84335BC305FF92A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54E276432E77B3AF4F51 /* UIKit.framework */; };
 		D66F51D33E5E801884A56627 /* NSMutableArrayX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5F9A496070C3779FE886 /* NSMutableArrayX.m */; };
+		D66F52B7A5D172F414430830 /* UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56949EE258B797D3F14E /* UIButton.m */; };
 		D66F53E9AAA83B192EEC00ED /* NSXtensions.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D66F5BAD39FF11AEF71F054E /* NSXtensions.podspec */; };
 		D66F53EEA97D41BF80EF5CB0 /* NSUUIDX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F55B6D1CB86884CF6CAFA /* NSUUIDX.m */; };
 		D66F5404DE4253196E7547AA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54F18AA85C0DC7C7620E /* XCTest.framework */; };
@@ -77,6 +78,7 @@
 		D66F55B6D1CB86884CF6CAFA /* NSUUIDX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUUIDX.m; sourceTree = "<group>"; };
 		D66F55F909059A27B5553B9E /* UIApplicationX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationX.m; sourceTree = "<group>"; };
 		D66F5643ECBCE62D2F4E690B /* UIColorX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorX.h; sourceTree = "<group>"; };
+		D66F56949EE258B797D3F14E /* UIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButton.m; sourceTree = "<group>"; };
 		D66F569DB3D33FA2FFB15E42 /* UIColorX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorX.m; sourceTree = "<group>"; };
 		D66F572D25798B4AABEDBCF4 /* UIDeviceX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceX.m; sourceTree = "<group>"; };
 		D66F5775220DF4DB9583C06D /* NSXtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "NSXtensionsTests-Info.plist"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		D66F5F060172631F973A873E /* MKMapViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMapViewX.m; sourceTree = "<group>"; };
 		D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewX.m; sourceTree = "<group>"; };
 		D66F5F64B2AD679FA5F0425A /* NSMutableArrayX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArrayX.h; sourceTree = "<group>"; };
+		D66F5F6CCA6F00FA0F8B15F2 /* UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButton.h; sourceTree = "<group>"; };
 		D66F5F75BEEEC13F8D55CAB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D66F5F9A496070C3779FE886 /* NSMutableArrayX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayX.m; sourceTree = "<group>"; };
 		D66F5FCC5E2D16B8842F88E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -216,6 +219,8 @@
 				D66F5D39C6BE02C912BFA575 /* UIViewX.m */,
 				D66F5868268E8A1A739BC586 /* UIWebViewX.h */,
 				D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */,
+				D66F56949EE258B797D3F14E /* UIButton.m */,
+				D66F5F6CCA6F00FA0F8B15F2 /* UIButton.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,6 +346,7 @@
 				D66F5DCFE0C06023F0AD7CD4 /* UITabBarControllerX.m in Sources */,
 				D66F5F208BDCD725F9CAB2DD /* UIViewX.m in Sources */,
 				D66F5703C1AC49DC6C42D2B5 /* UIWebViewX.m in Sources */,
+				D66F52B7A5D172F414430830 /* UIButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

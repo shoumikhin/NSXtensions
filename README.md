@@ -203,6 +203,10 @@ and use them like this:
 
 	+ (UIColor *)colorWithHTMLColor:(NSString *)HTMLColor;  //convert "#RRGGBB" to UIColor
 
+####UIButtonX
+
+	-(void)setImageForAllStates:(UIImage *)image;  //Set image for all states at once:
+
 #### UIDevice
 
 
