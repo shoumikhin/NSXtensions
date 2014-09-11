@@ -274,7 +274,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 
 //set an image for all UIControl states at once
 - (void)setImageForAllStates:(UIImage *)image;
-
 ```
 
 #### UIColor
