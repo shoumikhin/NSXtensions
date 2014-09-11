@@ -13,4 +13,9 @@
     [self setImage:image forState:UIControlStateNormal|UIControlStateHighlighted|UIControlStateDisabled|UIControlStateSelected];
 }
 
+- (void)setTitleForAllStates:(NSString *)title
+{
+    [self setTitle:title forState:UIControlStateNormal|UIControlStateHighlighted|UIControlStateDisabled|UIControlStateSelected];
+}
+
 @end
