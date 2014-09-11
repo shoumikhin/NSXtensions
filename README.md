@@ -266,16 +266,23 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn;
 ```
 
+#### UIButton
+
+```objc
+//set a title for all UIControl states at once
+- (void)setTitleForAllStates:(NSString *)title;
+
+//set an image for all UIControl states at once
+- (void)setImageForAllStates:(UIImage *)image;
+
+```
+
 #### UIColor
 
 ```objc
 //convert "#RRGGBB" to UIColor
 + (UIColor *)colorWithHTMLColor:(NSString *)HTMLColor;
 ```
-
-####UIButton
-
-	-(void)setImageForAllStates:(UIImage *)image;  //Set image for all states at once:
 
 #### UIDevice
 
