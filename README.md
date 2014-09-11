@@ -273,6 +273,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (UIColor *)colorWithHTMLColor:(NSString *)HTMLColor;
 ```
 
+####UIButton
+
+	-(void)setImageForAllStates:(UIImage *)image;  //Set image for all states at once:
+
 #### UIDevice
 
 ```objc
