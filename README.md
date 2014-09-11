@@ -297,7 +297,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (UIColor *)colorWithHexString:(NSString *)hexString; //Convert hex string color from pattern #RBG, #ARGB, #RRGGBB, or #AARRGGBB (# is optional sign) to UIColor.
 ```
 
-####UIButtonX
+####UIButton
 
 
 	-(void)setImageForAllStates:(UIImage *)image;  //Set image for all states at once:
