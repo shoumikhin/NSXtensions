@@ -14,6 +14,7 @@
 #import "NSUUIDX.h"
 #import "UIAlertViewX.h"
 #import "UIApplicationX.h"
+#import "UIButtonX.h"
 #import "UIColorX.h"
 #import "UIDeviceX.h"
 #import "UIImageX.h"

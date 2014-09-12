@@ -306,6 +306,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn;
 ```
 
+#### UIButton
+
+```objc
+//set a title for all UIControl states at once
+- (void)setTitleForAllStates:(NSString *)title;
+
+//set an image for all UIControl states at once
+- (void)setImageForAllStates:(UIImage *)image;
+```
+
 #### UIColor
 
 ```objc
@@ -315,11 +325,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 //Convert hex string color from pattern #RBG, #ARGB, #RRGGBB, or #AARRGGBB (# is optional sign) to UIColor.
 + (UIColor *)colorWithHexString:(NSString *)hexString; 
 ```
-
-####UIButton
-
-
-	-(void)setImageForAllStates:(UIImage *)image;  //Set image for all states at once:
 
 #### UIDevice
 
