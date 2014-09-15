@@ -45,8 +45,7 @@
             blue  = [self colorComponentFrom: colorString start: 6 length: 2];
             break;
         default:
-            [NSException raise:@"Invalid color value" format: @"Color value %@ is invalid.  It should be a hex value of the form #RBG, #ARGB, #RRGGBB, or #AARRGGBB", hexString];
-            break;
+            return nil;
     }
     return [UIColor colorWithRed: red green: green blue: blue alpha: alpha];
 }

@@ -253,8 +253,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### UIColor
 
 ```objc
-+ (UIColor *)colorWithHTMLColor:(NSString *)HTMLColor;  //convert "#RRGGBB" to UIColor
-
 //Convert hex string color from pattern #RBG, #ARGB, #RRGGBB, or #AARRGGBB (# is optional sign) to UIColor.
 + (UIColor *)colorWithHexString:(NSString *)hexString; 
 ```
