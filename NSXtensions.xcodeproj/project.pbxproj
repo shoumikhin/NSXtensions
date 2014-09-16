@@ -63,6 +63,7 @@
 		1CBA95A619C864D50049F847 /* libNSXtensions-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */; };
 		1CBA95A919C8665C0049F847 /* NSArray+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA95A719C8665C0049F847 /* NSArray+X.h */; };
 		1CBA95AA19C8665C0049F847 /* NSArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA95A819C8665C0049F847 /* NSArray+X.m */; };
+		D66F57D5AE94270A73949898 /* NSArray+XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F54FDE18569CE7B34196C /* NSArray+XTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		1CBA953019C85C7F0049F847 /* UIWebView+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+X.m"; sourceTree = "<group>"; };
 		1CBA95A719C8665C0049F847 /* NSArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+X.h"; sourceTree = "<group>"; };
 		1CBA95A819C8665C0049F847 /* NSArray+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+X.m"; sourceTree = "<group>"; };
+		D66F54FDE18569CE7B34196C /* NSArray+XTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XTestCase.m"; sourceTree = "<group>"; };
 		D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XTestCase.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +236,7 @@
 			children = (
 				1CBA94F519C85B8B0049F847 /* Supporting Files */,
 				D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */,
+				D66F54FDE18569CE7B34196C /* NSArray+XTestCase.m */,
 			);
 			path = "NSXtensions-iOSTests";
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CBA956119C85DF00049F847 /* NSMutableArray+XTestCase.m in Sources */,
+				D66F57D5AE94270A73949898 /* NSArray+XTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
