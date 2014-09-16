@@ -54,4 +54,11 @@
  */
 - (id)pop;
 
+/**
+ *  Move object to new index
+ *
+ *  @param fromIndex index of moving object
+ *  @param toIndex   new index of object
+ */
+- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
 @end

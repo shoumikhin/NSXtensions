@@ -228,6 +228,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 //use as stack ADT
 - (void)push:(id)anObject;
 - (id)pop;
+
+//  Move object to new index
+- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
 ```
 
 #### NSObject
