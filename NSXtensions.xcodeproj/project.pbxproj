@@ -58,6 +58,7 @@
 		1CBA955E19C85C7F0049F847 /* UIView+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA952E19C85C7F0049F847 /* UIView+X.m */; };
 		1CBA955F19C85C7F0049F847 /* UIWebView+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA952F19C85C7F0049F847 /* UIWebView+X.h */; };
 		1CBA956019C85C7F0049F847 /* UIWebView+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA953019C85C7F0049F847 /* UIWebView+X.m */; };
+		1CBA956119C85DF00049F847 /* NSMutableArray+XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -132,6 +133,7 @@
 		1CBA952E19C85C7F0049F847 /* UIView+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+X.m"; sourceTree = "<group>"; };
 		1CBA952F19C85C7F0049F847 /* UIWebView+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+X.h"; sourceTree = "<group>"; };
 		1CBA953019C85C7F0049F847 /* UIWebView+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+X.m"; sourceTree = "<group>"; };
+		D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XTestCase.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				1CBA94F519C85B8B0049F847 /* Supporting Files */,
+				D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */,
 			);
 			path = "NSXtensions-iOSTests";
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBA956119C85DF00049F847 /* NSMutableArray+XTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +608,7 @@
 				1CBA94F919C85B8B0049F847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CBA94FA19C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSXtensions-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -612,6 +617,7 @@
 				1CBA94FC19C85B8B0049F847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
