@@ -8,7 +8,7 @@
 
 @implementation NSArray (X)
 
-- (NSArray *)filteredArrayUsingBlock:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate
+- (NSArray *)filteredArrayPassingTest:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate
 {
     return [self objectsAtIndexes:[self indexesOfObjectsPassingTest:predicate]];
 }
