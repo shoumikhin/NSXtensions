@@ -11,4 +11,3 @@
  */
 - (NSArray *)filteredArrayUsingBlock:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate;
 @end
-

@@ -128,6 +128,13 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate zoomLevel:(NSUInteger)zoomLevel animated:(BOOL)animated;
 ```
 
+#### NSArray
+
+```objc
+// Return new NSArray with objects, that passing test block
+- (NSArray *)filteredArrayUsingBlock:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate;
+```
+
 #### NSDate
 
 ```objc
