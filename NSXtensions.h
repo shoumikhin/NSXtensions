@@ -1,5 +1,6 @@
 #import "MacroX.h"
 #import "MKMapViewX.h"
+#import "NSArrayX.h"
 #import "NSDateX.h"
 #import "NSDictionaryX.h"
 #import "NSErrorX.h"

@@ -31,6 +31,7 @@
 		D66F58116426BEC6C9EF206E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D66F5707A119AFDA4EA923AA /* InfoPlist.strings */; };
 		D66F5815F287D078F11FAAC7 /* NSExceptionX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F50D8853B99CEED479844 /* NSExceptionX.m */; };
 		D66F59786A8603683767248C /* NSStringX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5CCC4CB931604798EE87 /* NSStringX.m */; };
+		D66F5B658A1EE5C785CBE797 /* NSArrayX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5A21B718862D031FA5EF /* NSArrayX.m */; };
 		D66F5B73707C193DB407DB01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66F54E276432E77B3AF4F51 /* UIKit.framework */; };
 		D66F5CA5EAEB53A0F4143F4B /* NSURLX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5853C4236F18C9D083F3 /* NSURLX.m */; };
 		D66F5D3F30606E7833772046 /* UIImageX.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F5EE3FD16D49D8C417F5B /* UIImageX.m */; };
@@ -66,6 +67,7 @@
 		D66F525AD22656CED6253261 /* NSExceptionX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSExceptionX.h; sourceTree = "<group>"; };
 		D66F52998D2D9CDCCE0B6696 /* NSFileManagerX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFileManagerX.h; sourceTree = "<group>"; };
 		D66F52A821816BF37766EBBF /* UIApplicationX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationX.h; sourceTree = "<group>"; };
+		D66F52AC5CFAEB5B54F67CAD /* NSArrayX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayX.h; sourceTree = "<group>"; };
 		D66F52C324269C3574E959D8 /* NSObjectX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectX.m; sourceTree = "<group>"; };
 		D66F536FD3368DA3E68656B5 /* NSDateX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateX.h; sourceTree = "<group>"; };
 		D66F53837B54BED698BAF23B /* UIDeviceX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceX.h; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		D66F5945B452FB2C04811D22 /* UIAlertViewX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewX.m; sourceTree = "<group>"; };
 		D66F59D0816F5D4A3AEA3E6B /* NSStringX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringX.h; sourceTree = "<group>"; };
 		D66F5A1F226F3FDE8580046C /* NSDictionaryX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryX.h; sourceTree = "<group>"; };
+		D66F5A21B718862D031FA5EF /* NSArrayX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayX.m; sourceTree = "<group>"; };
 		D66F5B29EF601231D83A74EE /* NSUUIDX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUUIDX.h; sourceTree = "<group>"; };
 		D66F5B45F10F803743F7A3E5 /* UIViewX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewX.h; sourceTree = "<group>"; };
 		D66F5BAD39FF11AEF71F054E /* NSXtensions.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = NSXtensions.podspec; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				D66F5F28C9AB5438B010ADC4 /* UIWebViewX.m */,
 				D66F56949EE258B797D3F14E /* UIButton.m */,
 				D66F5F6CCA6F00FA0F8B15F2 /* UIButton.h */,
+				D66F5A21B718862D031FA5EF /* NSArrayX.m */,
+				D66F52AC5CFAEB5B54F67CAD /* NSArrayX.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,6 +352,7 @@
 				D66F5F208BDCD725F9CAB2DD /* UIViewX.m in Sources */,
 				D66F5703C1AC49DC6C42D2B5 /* UIWebViewX.m in Sources */,
 				D66F52B7A5D172F414430830 /* UIButton.m in Sources */,
+				D66F5B658A1EE5C785CBE797 /* NSArrayX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
