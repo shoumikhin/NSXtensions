@@ -59,7 +59,19 @@
 		1CBA955F19C85C7F0049F847 /* UIWebView+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA952F19C85C7F0049F847 /* UIWebView+X.h */; };
 		1CBA956019C85C7F0049F847 /* UIWebView+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA953019C85C7F0049F847 /* UIWebView+X.m */; };
 		1CBA956119C85DF00049F847 /* NSMutableArray+XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */; };
+		1CBA95A419C8638D0049F847 /* NSXtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA951C19C85C7F0049F847 /* NSXtensions.h */; };
+		1CBA95A519C863A20049F847 /* libNSXtensions-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CBA956319C861150049F847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C18DF0A19C82F270053377E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CBA94E819C85B8B0049F847;
+			remoteInfo = "NSXtensions-iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1CBA94E719C85B8B0049F847 /* CopyFiles */ = {
@@ -149,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBA95A519C863A20049F847 /* libNSXtensions-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +332,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CBA95A319C863840049F847 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBA95A419C8638D0049F847 /* NSXtensions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -347,10 +368,12 @@
 				1CBA94EF19C85B8B0049F847 /* Sources */,
 				1CBA94F019C85B8B0049F847 /* Frameworks */,
 				1CBA94F119C85B8B0049F847 /* Resources */,
+				1CBA95A319C863840049F847 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1CBA956419C861150049F847 /* PBXTargetDependency */,
 			);
 			name = "NSXtensions-iOSTests";
 			productName = "NSXtensions-iOSTests";
@@ -443,6 +466,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CBA956419C861150049F847 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CBA94E819C85B8B0049F847 /* NSXtensions-iOS */;
+			targetProxy = 1CBA956319C861150049F847 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1C18DF1E19C82F270053377E /* Debug */ = {
@@ -565,6 +596,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -583,6 +620,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

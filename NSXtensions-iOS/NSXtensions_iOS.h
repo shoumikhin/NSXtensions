@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSXtensions.h"
 
 @interface NSXtensions_iOS : NSObject
 
