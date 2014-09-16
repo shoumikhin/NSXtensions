@@ -61,6 +61,8 @@
 		1CBA956119C85DF00049F847 /* NSMutableArray+XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */; };
 		1CBA95A419C8638D0049F847 /* NSXtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA951C19C85C7F0049F847 /* NSXtensions.h */; };
 		1CBA95A619C864D50049F847 /* libNSXtensions-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */; };
+		1CBA95A919C8665C0049F847 /* NSArray+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA95A719C8665C0049F847 /* NSArray+X.h */; };
+		1CBA95AA19C8665C0049F847 /* NSArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA95A819C8665C0049F847 /* NSArray+X.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		1CBA952E19C85C7F0049F847 /* UIView+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+X.m"; sourceTree = "<group>"; };
 		1CBA952F19C85C7F0049F847 /* UIWebView+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+X.h"; sourceTree = "<group>"; };
 		1CBA953019C85C7F0049F847 /* UIWebView+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+X.m"; sourceTree = "<group>"; };
+		1CBA95A719C8665C0049F847 /* NSArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+X.h"; sourceTree = "<group>"; };
+		1CBA95A819C8665C0049F847 /* NSArray+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+X.m"; sourceTree = "<group>"; };
 		D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XTestCase.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +257,8 @@
 				1CBA950619C85C7F0049F847 /* NSDictionary+X.h */,
 				1CBA950719C85C7F0049F847 /* NSDictionary+X.m */,
 				1CBA950819C85C7F0049F847 /* NSError+X.h */,
+				1CBA95A719C8665C0049F847 /* NSArray+X.h */,
+				1CBA95A819C8665C0049F847 /* NSArray+X.m */,
 				1CBA950919C85C7F0049F847 /* NSError+X.m */,
 				1CBA950A19C85C7F0049F847 /* NSException+X.h */,
 				1CBA950B19C85C7F0049F847 /* NSException+X.m */,
@@ -312,6 +318,7 @@
 				1CBA954A19C85C7F0049F847 /* NSUUID+X.h in Headers */,
 				1CBA953C19C85C7F0049F847 /* NSFileManager+X.h in Headers */,
 				1CBA954C19C85C7F0049F847 /* NSXtensions.h in Headers */,
+				1CBA95A919C8665C0049F847 /* NSArray+X.h in Headers */,
 				1CBA954219C85C7F0049F847 /* NSObject+X.h in Headers */,
 				1CBA955F19C85C7F0049F847 /* UIWebView+X.h in Headers */,
 				1CBA955919C85C7F0049F847 /* UINavigationController+X.h in Headers */,
@@ -441,6 +448,7 @@
 				1CBA955819C85C7F0049F847 /* UIImage+X.m in Sources */,
 				1CBA953D19C85C7F0049F847 /* NSFileManager+X.m in Sources */,
 				1CBA954E19C85C7F0049F847 /* UIAlertView+X.m in Sources */,
+				1CBA95AA19C8665C0049F847 /* NSArray+X.m in Sources */,
 				1CBA953319C85C7F0049F847 /* MKMapView+X.m in Sources */,
 				1CBA954B19C85C7F0049F847 /* NSUUID+X.m in Sources */,
 				1CBA953F19C85C7F0049F847 /* NSManagedObjectContext+X.m in Sources */,
