@@ -9,5 +9,5 @@
 /**
  *  @return new NSArray with objects, that passing test block
  */
-- (NSArray *)filteredArrayUsingBlock:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate;
+- (NSArray *)filteredArrayPassingTest:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate;
 @end
