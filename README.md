@@ -38,7 +38,7 @@ SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
 
 > ```objc
 > UIAlertView *alert = SHOW_ALERT(@"Title", @"And message", nil, @"OK", @"Other");
-	
+
 > [alert dismissWithClickedButtonIndex:0 animated:YES];
 > ```
 
@@ -64,7 +64,7 @@ SYNTHESIZE_STATIC_PROPERTY(_type_, _name_, ...)
 ```objc
 SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 ```
-	
+
 > *Example:*
 
 > ```objc
@@ -84,7 +84,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### MKMapView
 
 ```objc
-- (NSInteger)zoomLevel;  //get the current zoom level
+//get the current zoom level
+- (NSInteger)zoomLevel;
 
 //change map's location and zoom level
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate zoomLevel:(NSUInteger)zoomLevel animated:(BOOL)animated;
@@ -115,7 +116,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### NSError
 
 ```objc
-- (NSString *)friendlyLocalizedDescription;  //a friendly human-readable localized description
+//a friendly human-readable localized description
+- (NSString *)friendlyLocalizedDescription;
 
 //create an NSError object with given domain, code and userInfo with a friendly human-readable localized description for known domains and codes
 + (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
@@ -124,7 +126,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### NSException
 
 ```objc
-- (NSArray *)backtrace;  //pretty-formatted stack trace
+//pretty-formatted stack trace
+- (NSArray *)backtrace;
 ```
 
 #### NSFileManager
@@ -138,9 +141,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (NSURL *)cachesURL;
 + (NSString *)cachesPath;
 
-+ (BOOL)addSkipBackupAttributeToFile:(NSString *)path;  //prevent syncing with iCloud
+//prevent syncing with iCloud
++ (BOOL)addSkipBackupAttributeToFile:(NSString *)path;
 
-+ (double)availableDiskSpace;  //check available disk space (Megabytes)
+//check available disk space (Megabytes)
++ (double)availableDiskSpace;
 ```
 
 #### NSManagedObjectContext
@@ -166,7 +171,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (id)arrayUsingWeakReferences;
 + (id)arrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity;
 
-- (void)shuffle;  //randomly mix contents
+//randomly mix contents
+- (void)shuffle;
 
 //use as queue ADT
 - (void)enqueue:(id)anObject;
@@ -195,7 +201,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### NSSet
 
 ```objc
-- (NSDictionary *)indexedDictionary;  //returns a dictionary with integer keys and all objects in set as values
+//returns a dictionary with integer keys and all objects in set as values
+- (NSDictionary *)indexedDictionary;
 ```
 
 #### NSString
@@ -212,42 +219,61 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (NSString *)MD5;
 - (NSString *)SHA256;
 
-- (NSString *)likeUUID;  //helper to insert dashes in 32-chars length string to make it look like UUID
+//helper to insert dashes in 32-chars length string to make it look like UUID
+- (NSString *)likeUUID;
 ```
 
 #### NSURL
 
 ```objc
-- (NSURL *)hostURL;  //get base host URL
+//get base host URL
+- (NSURL *)hostURL;
 ```
 
 #### NSUUID
 
 ```objc
-+ (NString *)makeUUID;  //generate a new unique identifier
+//generate a new unique identifier
++ (NString *)makeUUID;
 ```
 
 #### UIAlertView
 
 ```objc
-- (void)showWithCompletion:(void (^)(UIAlertView *alertView, NSInteger buttonIndex))completionBlock;  //display an alert and execute a completion block on dismiss
+//display an alert and execute a completion block on dismiss
+- (void)showWithCompletion:(void (^)(UIAlertView *alertView, NSInteger buttonIndex))completionBlock;
 ```
 
 #### UIApplication
 
 ```objc
-+ (NSString *)identifier;  //application's bundle identifier
-+ (NSString *)version;  //application's bundle version
+//application's bundle identifier
++ (NSString *)identifier;
+//application's bundle version
++ (NSString *)version;
 
-+ (CGRect)frame;  //application's frame regardless current orientation
-+ (CGFloat)statusBarHeight;  //application's status bar height
+//application's frame regardless current orientation
++ (CGRect)frame;
+//application's status bar height
++ (CGFloat)statusBarHeight;
 
-+ (NSArray *)backtrace;  //pretty-formatted backtrace of current point of execution
+//pretty-formatted backtrace of current point of execution
++ (NSArray *)backtrace;
 
 //call, email or open ULR with an ability to quickly return back
 + (void)call:(NSString *)phoneNumber andShowReturn:(BOOL)shouldReturn;
 + (void)email:(NSString *)address andShowReturn:(BOOL)shouldReturn;
 + (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn;
+```
+
+#### UIButton
+
+```objc
+//set a title for all UIControl states at once
+- (void)setTitleForAllStates:(NSString *)title;
+
+//set an image for all UIControl states at once
+- (void)setImageForAllStates:(UIImage *)image;
 ```
 
 #### UIColor
@@ -260,16 +286,22 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### UIDevice
 
 ```objc
-+ (NSString *)uniqueIdentifier;  //globally unique device identifier (SHA256 of Wi-Fi MAC address before iOS 7.0, and identifier for vendor now)
+//globally unique device identifier (SHA256 of Wi-Fi MAC address before iOS 7.0, and identifier for vendor now)
++ (NSString *)uniqueIdentifier;
 
-+ (NSString *)machineName;  //hadrware device name
-+ (NSString *)deviceName;  //human readable device name
+//hadrware device name
++ (NSString *)machineName;
+//human readable device name
++ (NSString *)deviceName;
 
-+ (BOOL)systemVersionIsAtLeast:(NSString *)version;  //check if a specific system version is supported
+//check if a specific system version is supported
++ (BOOL)systemVersionIsAtLeast:(NSString *)version;
 
-+ (UIResolution)resolution;  //get the screen resolution of the device
+//get the screen resolution of the device
++ (UIResolution)resolution;
 
-+ (double)availableMemory;  //how much of free memory remains in system (Megabytes)
+//how much of free memory remains in system (Megabytes)
++ (double)availableMemory;
 
 //check the device type
 + (BOOL)isSimulator;
@@ -278,7 +310,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (BOOL)isPod;
 + (BOOL)isAppleTV;
 
-+ (BOOL)isJailbroken;  //check if the device is cracked
+//check if the device is cracked
++ (BOOL)isJailbroken;
 
 //get the MAC addresses of installed network interfaces (deprecated)
 + (NSString *)WiFiMACAddress;
@@ -295,7 +328,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 //applies the blur effect to the image
 - (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
 
-- (UIImage *)cropToRect:(CGRect)rect;  //returns a new image representing a cropped part of the original
+//returns a new image representing a cropped part of the original
+- (UIImage *)cropToRect:(CGRect)rect;
 ```
 
 #### UINavigationController
@@ -335,8 +369,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 @property (nonatomic) CGFloat dy;
 @property (nonatomic) CGVector bound;
 
-- (UIViewController *)viewController;  //returns a parent view controller
-- (BOOL)resignFirstResponderRecursively;  //resigns the first responder, if found in this view hierarchy
+//returns a parent view controller
+- (UIViewController *)viewController;
+//resigns the first responder, if found in this view hierarchy
+- (BOOL)resignFirstResponderRecursively;
 
 //find a superview of specific class
 - (UIView *)superviewOfClass:(Class)aClass;
@@ -351,5 +387,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 //load HTML content with specific font
 - (void)loadHTMLString:(NSString *)string baseURL:(NSURL *)baseURL font:(UIFont *)font;
 
-- (void)clearCookies;  //clear all saved cookies
+//clear all saved cookies
+- (void)clearCookies;
 ```
