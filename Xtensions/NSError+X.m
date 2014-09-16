@@ -10,6 +10,7 @@
 #import <sqlite3.h>
 #import <errno.h>
 #import <mach/kern_return.h>
+#import <UIKit/UIKit.h>
 
 #if !TARGET_OS_IPHONE
     #import <AppKit/AppKitErrors.h>
