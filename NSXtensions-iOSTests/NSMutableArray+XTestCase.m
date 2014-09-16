@@ -35,4 +35,12 @@
     [_mutableArray dequeue];
     XCTAssertEqualObjects(_mutableArray[0], @1);
 }
+
+- (void)testMoveItem
+{
+    [_mutableArray moveObjectAtIndex:0 toIndex:2];
+    XCTAssertEqualObjects(_mutableArray[2], @0);
+    XCTAssertNotEqualObjects(_mutableArray[0], @0);
+}
+
 @end

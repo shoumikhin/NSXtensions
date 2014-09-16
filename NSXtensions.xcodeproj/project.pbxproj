@@ -60,7 +60,7 @@
 		1CBA956019C85C7F0049F847 /* UIWebView+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA953019C85C7F0049F847 /* UIWebView+X.m */; };
 		1CBA956119C85DF00049F847 /* NSMutableArray+XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */; };
 		1CBA95A419C8638D0049F847 /* NSXtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA951C19C85C7F0049F847 /* NSXtensions.h */; };
-		1CBA95A519C863A20049F847 /* libNSXtensions-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */; };
+		1CBA95A619C864D50049F847 /* libNSXtensions-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBA95A519C863A20049F847 /* libNSXtensions-iOS.a in Frameworks */,
+				1CBA95A619C864D50049F847 /* libNSXtensions-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
