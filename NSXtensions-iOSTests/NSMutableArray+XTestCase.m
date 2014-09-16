@@ -32,15 +32,17 @@
 }
 
 - (void)testDequeueFromArray {
+    NSNumber *number = _mutableArray[1];
     [_mutableArray dequeue];
-    XCTAssertEqualObjects(_mutableArray[0], @1);
+    XCTAssertEqualObjects(_mutableArray[0], number);
 }
 
 - (void)testMoveItem
 {
+    id firstObject = _mutableArray[0];
     [_mutableArray moveObjectAtIndex:0 toIndex:2];
-    XCTAssertEqualObjects(_mutableArray[2], @0);
-    XCTAssertNotEqualObjects(_mutableArray[0], @0);
+    XCTAssertEqualObjects(_mutableArray[2], firstObject);
+    XCTAssertNotEqualObjects(_mutableArray[0], firstObject);
 }
 
 @end
