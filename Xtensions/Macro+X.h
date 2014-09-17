@@ -131,6 +131,12 @@ _SYNTHESIZE_SINGLETON_RETAIN_METHODS_
 /**
 *  Determining the orientation of the device
 */
+
+// UIInterfaceOrientationMask vs. UIInterfaceOrientation
+// As far as I know, a function like this isn't available in the API. I derived this from the enum def for
+// UIInterfaceOrientationMask.
+#define OrientationMaskSupportsOrientation(mask, orientation)   ((mask & (1 << orientation)) != 0)
+
 #define DEVICE_ORIENTATION [UIDevice currentDevice].orientation
 #define LANDSCAPE           UIInterfaceOrientationIsLandscape(DEVICE_ORIENTATION)
 #define LANDSCAPE_RIGHT     DEVICE_ORIENTATION == UIDeviceOrientationLandscapeLeft
