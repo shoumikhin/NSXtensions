@@ -29,4 +29,9 @@
  */
 + (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
 
+/**
+ *  Shows alert with localizedFailureReason or localizedDescription
+ */
+- (void)showAlertView;
+
 @end

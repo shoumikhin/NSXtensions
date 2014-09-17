@@ -1,3 +1,7 @@
+My improved version of `NSXtensions`.
+
+	pod 'NSXtensions', :git => 'https://github.com/skywinder/NSXtensions.git', :branch => 'master'
+
 # NSXtensions
 
 ![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)<br>
@@ -46,6 +50,8 @@ SHOW_ALERT(title, message, delegate, cancelButtonTitle, ...)
 
 ```objc
 SYNTHESIZE_STATIC_PROPERTY(_type_, _name_, ...)
+			
+Detect if the device is an iPhone, iPad, or iPhone5:
 ```
 
 > *Example:*
@@ -58,6 +64,37 @@ SYNTHESIZE_STATIC_PROPERTY(_type_, _name_, ...)
 > 	return bundleID;
 > })
 > ```
+			
+Detect if the device is an iPhone, iPad, or iPhone5:
+
+	IS_WIDESCREEN
+	IS_RETINA
+	IS_IPAD
+	IS_IPHONE
+	IS_IPHONE_5
+	
+Determining the orientation of the device:
+
+	LANDSCAPE
+	LANDSCAPE_RIGHT
+	LANDSCAPE_LEFT
+	PORTRAIT
+	PORTRAIT_REVERSE
+	
+Programmatically detect which iOS version is device running on:
+
+	SYSTEM_VERSION_EQUAL_TO(v)
+	SYSTEM_VERSION_GREATER_THAN(v)
+	SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)
+	SYSTEM_VERSION_LESS_THAN(v)
+	SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)
+and use them like this:
+	if (SYSTEM_VERSION_LESS_THAN(@"5.0")) {
+	    // code here
+	}
+	if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")) {
+	    // code here
+	}
 
 * Synthesize boilerplate code for a given class to support the singleton design pattern:
 
@@ -125,6 +162,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 ```objc
 //a friendly human-readable localized description
 - (NSString *)friendlyLocalizedDescription;
+
+// Shows alert with localizedFailureReason or localizedDescription
+- (void)showAlertView;
 
 //create an NSError object with given domain, code and userInfo with a friendly human-readable localized description for known domains and codes
 + (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
@@ -289,8 +329,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 #### UIColor
 
 ```objc
-//convert "#RRGGBB" to UIColor
-+ (UIColor *)colorWithHTMLColor:(NSString *)HTMLColor;
+//Convert hex string color from pattern #RBG, #ARGB, #RRGGBB, or #AARRGGBB (# is optional sign) to UIColor.
++ (UIColor *)colorWithHexString:(NSString *)hexString; 
 ```
 
 #### UIDevice
