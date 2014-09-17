@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/shoumikhin/nsxtensions.png?label=ready&title=Ready)](https://waffle.io/shoumikhin/nsxtensions)
 # NSXtensions
 
 ![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)<br>
