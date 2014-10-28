@@ -5,17 +5,17 @@
 - (void)setTitleForAllStates:(NSString *)title
 {
     [self setTitle:title forState:UIControlStateNormal];
-    [self setTitle:nil forState:UIControlStateHighlighted];
-    [self setTitle:nil forState:UIControlStateDisabled];
-    [self setTitle:nil forState:UIControlStateSelected];
+    [self setTitle:title forState:UIControlStateHighlighted];
+    [self setTitle:title forState:UIControlStateDisabled];
+    [self setTitle:title forState:UIControlStateSelected];
 }
 
 - (void)setImageForAllStates:(UIImage *)image
 {
     [self setImage:image forState:UIControlStateNormal];
-    [self setImage:nil forState:UIControlStateHighlighted];
-    [self setImage:nil forState:UIControlStateDisabled];
-    [self setImage:nil forState:UIControlStateSelected];
+    [self setImage:image forState:UIControlStateHighlighted];
+    [self setImage:image forState:UIControlStateDisabled];
+    [self setImage:image forState:UIControlStateSelected];
 }
 
 @end
