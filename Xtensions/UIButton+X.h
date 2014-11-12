@@ -18,6 +18,13 @@
 - (void)setTitleForAllStates:(NSString *)title;
 
 /**
+Set a color for all UIControl states at once.
+
+@param title A title to be set.
+*/
+- (void)setTextColorForAllStates:(UIColor *)color;
+
+/**
  Set an image for all UIControl states at once.
 
  @param image An image to be set.

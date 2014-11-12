@@ -322,6 +322,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 //set a title for all UIControl states at once
 - (void)setTitleForAllStates:(NSString *)title;
 
+//Set a color for all UIControl states at once.
+- (void)setTextColorForAllStates:(UIColor *)color;
+
 //set an image for all UIControl states at once
 - (void)setImageForAllStates:(UIImage *)image;
 ```

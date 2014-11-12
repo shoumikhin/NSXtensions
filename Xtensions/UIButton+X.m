@@ -10,6 +10,14 @@
     [self setTitle:title forState:UIControlStateSelected];
 }
 
+- (void)setTextColorForAllStates:(UIColor *)color
+{
+    [self setTitleColor:color forState:UIControlStateNormal];
+    [self setTitleColor:color forState:UIControlStateHighlighted];
+    [self setTitleColor:color forState:UIControlStateDisabled];
+    [self setTitleColor:color forState:UIControlStateSelected];
+}
+
 - (void)setImageForAllStates:(UIImage *)image
 {
     [self setImage:image forState:UIControlStateNormal];
