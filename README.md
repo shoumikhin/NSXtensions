@@ -21,7 +21,7 @@ Simply add:
 
 to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):
 
-#### MacroX.h
+#### Macro+X.h
 
 Precompile definitions for some commonly-used boilerplate code.
 
@@ -118,7 +118,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 > }
 > ```
 
-#### MKMapView
+#### MKMapView+X
 
 ```objc
 //get the current zoom level
@@ -128,14 +128,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate zoomLevel:(NSUInteger)zoomLevel animated:(BOOL)animated;
 ```
 
-#### NSArray
+#### NSArray+X
 
 ```objc
 // Return new NSArray with objects, that passing test block
 - (NSArray *)filteredArrayUsingBlock:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate;
 ```
 
-#### NSDate
+#### NSDate+X
 
 ```objc
 //helper methods whose names speak for themselves
@@ -149,7 +149,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (NSInteger)daysBeforeDate:(NSDate *)date;
 ```
 
-#### NSDictionary
+#### NSDictionary+X
 
 ```objc
 //merge two dictionaries
@@ -157,7 +157,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (NSDictionary *)mergeWith:(NSDictionary *)other;
 ```
 
-#### NSError
+#### NSError+X
 
 ```objc
 //a friendly human-readable localized description
@@ -170,14 +170,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
 ```
 
-#### NSException
+#### NSException+X
 
 ```objc
 //pretty-formatted stack trace
 - (NSArray *)backtrace;
 ```
 
-#### NSFileManager
+#### NSFileManager+X
 
 ```objc
 //get standard directories paths and URLs
@@ -195,7 +195,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (double)availableDiskSpace;
 ```
 
-#### NSManagedObjectContext
+#### NSManagedObjectContext+X
 
 ```objc
 //create new object
@@ -211,7 +211,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (void)deleteObjectsOfEntity:(NSString *)name withPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors;
 ```
 
-#### NSMutableArray
+#### NSMutableArray+X
 
 ```objc
 //a new array storing weak references to objects
@@ -233,7 +233,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
 ```
 
-#### NSObject
+#### NSObject+X
 
 ```objc
 //add or change methods in run-time
@@ -248,14 +248,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (BOOL)instancesRespondToSelector:(SEL)selector untilClass:(Class)stopClass;
 ```
 
-#### NSSet
+#### NSSet+X
 
 ```objc
 //returns a dictionary with integer keys and all objects in set as values
 - (NSDictionary *)indexedDictionary;
 ```
 
-#### NSString
+#### NSString+X
 
 ```objc
 //first substring that matches a given regular expression
@@ -273,28 +273,28 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (NSString *)likeUUID;
 ```
 
-#### NSURL
+#### NSURL+X
 
 ```objc
 //get base host URL
 - (NSURL *)hostURL;
 ```
 
-#### NSUUID
+#### NSUUID+X
 
 ```objc
 //generate a new unique identifier
 + (NString *)makeUUID;
 ```
 
-#### UIAlertView
+#### UIAlertView+X
 
 ```objc
 //display an alert and execute a completion block on dismiss
 - (void)showWithCompletion:(void (^)(UIAlertView *alertView, NSInteger buttonIndex))completionBlock;
 ```
 
-#### UIApplication
+#### UIApplication+X
 
 ```objc
 //application's bundle identifier
@@ -316,7 +316,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (void)openURL:(NSURL *)url andShowReturn:(BOOL)shouldReturn;
 ```
 
-#### UIButton
+#### UIButton+X
 
 ```objc
 //set a title for all UIControl states at once
@@ -329,14 +329,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (void)setImageForAllStates:(UIImage *)image;
 ```
 
-#### UIColor
+#### UIColor+X
 
 ```objc
 //Convert hex string color from pattern #RBG, #ARGB, #RRGGBB, or #AARRGGBB (# is optional sign) to UIColor.
 + (UIColor *)colorWithHexString:(NSString *)hexString; 
 ```
 
-#### UIDevice
+#### UIDevice+X
 
 ```objc
 //globally unique device identifier (SHA256 of Wi-Fi MAC address before iOS 7.0, and identifier for vendor now)
@@ -371,7 +371,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (NSString *)CellularMACAddress;
 ```
 
-#### UIImage
+#### UIImage+X
 
 ```objc
 //convenient way to download an image
@@ -385,7 +385,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (UIImage *)cropToRect:(CGRect)rect;
 ```
 
-#### UINavigationController
+#### UINavigationController+X
 
 ```objc
 //animates navigation action with custom CoreAnimation transitions
@@ -395,7 +395,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (NSArray *)popToViewController:(UIViewController *)viewController withTransitionType:(NSString *)type;
 ```
 
-#### UITabBarController
+#### UITabBarController+X
 
 ```objc
 //methods to hide/show the tab bar similarly to the standard navigation bar behavior
@@ -406,7 +406,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (void)swipeToIndex:(NSUInteger)index;
 ```
 
-#### UIView
+#### UIView+X
 
 ```objc
 //a convenient way to control UIView's frame
@@ -434,7 +434,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 - (void)moveTo:(CGPoint)destination duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options;
 ```
 
-#### UIWebView
+#### UIWebView+X
 
 ```objc
 //load HTML content with specific font
