@@ -193,8 +193,8 @@ def run_bumping_script
   execute_line_if_not_dry_run("git tag #{bumped_version}")
   execute_line_if_not_dry_run('git push')
   execute_line_if_not_dry_run('git push --tags')
-  execute_line_if_not_dry_run("gem build #{spec_file}")
 
+  # execute_line_if_not_dry_run("gem build #{spec_file}")
   # gem = find_current_gem_file
   # execute_line_if_not_dry_run("gem push #{gem}")
   execute_line_if_not_dry_run("pod trunk push #{spec_file}")
