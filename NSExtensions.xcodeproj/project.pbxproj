@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CBA94EC19C85B8B0049F847 /* NSXtensions_iOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1CBA94EB19C85B8B0049F847 /* NSXtensions_iOS.h */; };
-		1CBA94EE19C85B8B0049F847 /* NSXtensions_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA94ED19C85B8B0049F847 /* NSXtensions_iOS.m */; };
+		1CBA94EC19C85B8B0049F847 /* NSExtensions_iOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1CBA94EB19C85B8B0049F847 /* NSExtensions_iOS.h */; };
+		1CBA94EE19C85B8B0049F847 /* NSExtensions_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA94ED19C85B8B0049F847 /* NSExtensions_iOS.m */; };
 		1CBA94FE19C85BD30049F847 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94FD19C85BD30049F847 /* UIKit.framework */; };
 		1CBA953119C85C7F0049F847 /* Macro+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA950119C85C7F0049F847 /* Macro+X.h */; };
 		1CBA953219C85C7F0049F847 /* MKMapView+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA950219C85C7F0049F847 /* MKMapView+X.h */; };
@@ -60,10 +60,12 @@
 		1CBA956019C85C7F0049F847 /* UIWebView+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA953019C85C7F0049F847 /* UIWebView+X.m */; };
 		1CBA956119C85DF00049F847 /* NSMutableArray+XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */; };
 		1CBA95A419C8638D0049F847 /* NSXtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA951C19C85C7F0049F847 /* NSXtensions.h */; };
-		1CBA95A619C864D50049F847 /* libNSXtensions-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */; };
+		1CBA95A619C864D50049F847 /* libNSExtensions-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBA94E919C85B8B0049F847 /* libNSExtensions-iOS.a */; };
 		1CBA95A919C8665C0049F847 /* NSArray+X.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBA95A719C8665C0049F847 /* NSArray+X.h */; };
 		1CBA95AA19C8665C0049F847 /* NSArray+X.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA95A819C8665C0049F847 /* NSArray+X.m */; };
+		D66F5547EDBB5501B1E0C971 /* NSEtensions-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = D66F57E0AE2465B19868181A /* NSEtensions-Prefix.pch */; };
 		D66F57D5AE94270A73949898 /* NSArray+XTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F54FDE18569CE7B34196C /* NSArray+XTestCase.m */; };
+		D66F5C432AAB44D9ECFEFCA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D66F502BFC36A3BC3E1E99B7 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +85,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				1CBA94EC19C85B8B0049F847 /* NSXtensions_iOS.h in CopyFiles */,
+				1CBA94EC19C85B8B0049F847 /* NSExtensions_iOS.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +94,12 @@
 /* Begin PBXFileReference section */
 		1C18DF1519C82F270053377E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C18DF1819C82F270053377E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C18DF1B19C82F270053377E /* NSXtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSXtensions-Prefix.pch"; sourceTree = "<group>"; };
+		1C18DF1B19C82F270053377E /* NSEtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSEtensions-Prefix.pch"; sourceTree = "<group>"; };
 		1C18DF1C19C82F270053377E /* NSXtensions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NSXtensions.1; sourceTree = "<group>"; };
-		1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSXtensions-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CBA94EB19C85B8B0049F847 /* NSXtensions_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSXtensions_iOS.h; sourceTree = "<group>"; };
-		1CBA94ED19C85B8B0049F847 /* NSXtensions_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSXtensions_iOS.m; sourceTree = "<group>"; };
-		1CBA94F319C85B8B0049F847 /* NSXtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSXtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBA94E919C85B8B0049F847 /* libNSExtensions-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSExtensions-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBA94EB19C85B8B0049F847 /* NSExtensions_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSExtensions_iOS.h; sourceTree = "<group>"; };
+		1CBA94ED19C85B8B0049F847 /* NSExtensions_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSExtensions_iOS.m; sourceTree = "<group>"; };
+		1CBA94F319C85B8B0049F847 /* NSExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBA94F619C85B8B0049F847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CBA94FD19C85BD30049F847 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1CBA950119C85C7F0049F847 /* Macro+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Macro+X.h"; sourceTree = "<group>"; };
@@ -150,8 +152,12 @@
 		1CBA953019C85C7F0049F847 /* UIWebView+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+X.m"; sourceTree = "<group>"; };
 		1CBA95A719C8665C0049F847 /* NSArray+X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+X.h"; sourceTree = "<group>"; };
 		1CBA95A819C8665C0049F847 /* NSArray+X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+X.m"; sourceTree = "<group>"; };
+		D66F502BFC36A3BC3E1E99B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D66F506D9489ED481BD15284 /* NSExtensions.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = NSExtensions.1; sourceTree = "<group>"; };
 		D66F54FDE18569CE7B34196C /* NSArray+XTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XTestCase.m"; sourceTree = "<group>"; };
 		D66F56370B6FBE8B94125442 /* NSMutableArray+XTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XTestCase.m"; sourceTree = "<group>"; };
+		D66F57E0AE2465B19868181A /* NSEtensions-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEtensions-Prefix.pch"; sourceTree = "<group>"; };
+		D66F5FC3261E1E57DFB54CCA /* NSXtensions.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = NSXtensions.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBA95A619C864D50049F847 /* libNSXtensions-iOS.a in Frameworks */,
+				1CBA95A619C864D50049F847 /* libNSExtensions-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,18 +185,19 @@
 			children = (
 				1CBA950019C85C7F0049F847 /* Xtensions */,
 				1C18DF1719C82F270053377E /* NSXtensions */,
-				1CBA94EA19C85B8B0049F847 /* NSXtensions-iOS */,
+				1CBA94EA19C85B8B0049F847 /* NSExtensions-iOS */,
 				1CBA94F419C85B8B0049F847 /* NSXtensions-iOSTests */,
 				1C18DF1419C82F270053377E /* Frameworks */,
 				1C18DF1319C82F270053377E /* Products */,
+				D66F540E57CBC90BE718EF6C /* NSExtensions */,
 			);
 			sourceTree = "<group>";
 		};
 		1C18DF1319C82F270053377E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */,
-				1CBA94F319C85B8B0049F847 /* NSXtensions-iOSTests.xctest */,
+				1CBA94E919C85B8B0049F847 /* libNSExtensions-iOS.a */,
+				1CBA94F319C85B8B0049F847 /* NSExtensions-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 				1C18DF1819C82F270053377E /* main.m */,
 				1C18DF1C19C82F270053377E /* NSXtensions.1 */,
 				1C18DF1A19C82F270053377E /* Supporting Files */,
+				D66F506D9489ED481BD15284 /* NSExtensions.1 */,
 			);
 			path = NSXtensions;
 			sourceTree = "<group>";
@@ -217,18 +225,18 @@
 		1C18DF1A19C82F270053377E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1C18DF1B19C82F270053377E /* NSXtensions-Prefix.pch */,
+				1C18DF1B19C82F270053377E /* NSEtensions-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1CBA94EA19C85B8B0049F847 /* NSXtensions-iOS */ = {
+		1CBA94EA19C85B8B0049F847 /* NSExtensions-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				1CBA94EB19C85B8B0049F847 /* NSXtensions_iOS.h */,
-				1CBA94ED19C85B8B0049F847 /* NSXtensions_iOS.m */,
+				1CBA94EB19C85B8B0049F847 /* NSExtensions_iOS.h */,
+				1CBA94ED19C85B8B0049F847 /* NSExtensions_iOS.m */,
 			);
-			path = "NSXtensions-iOS";
+			path = "NSExtensions-iOS";
 			sourceTree = "<group>";
 		};
 		1CBA94F419C85B8B0049F847 /* NSXtensions-iOSTests */ = {
@@ -306,6 +314,16 @@
 			path = Xtensions;
 			sourceTree = "<group>";
 		};
+		D66F540E57CBC90BE718EF6C /* NSExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D66F502BFC36A3BC3E1E99B7 /* main.m */,
+				D66F5FC3261E1E57DFB54CCA /* NSXtensions.1 */,
+				D66F57E0AE2465B19868181A /* NSEtensions-Prefix.pch */,
+			);
+			path = NSExtensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -339,6 +357,7 @@
 				1CBA954419C85C7F0049F847 /* NSSet+X.h in Headers */,
 				1CBA955319C85C7F0049F847 /* UIColor+X.h in Headers */,
 				1CBA955119C85C7F0049F847 /* UIButton+X.h in Headers */,
+				D66F5547EDBB5501B1E0C971 /* NSEtensions-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,9 +372,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1CBA94E819C85B8B0049F847 /* NSXtensions-iOS */ = {
+		1CBA94E819C85B8B0049F847 /* NSExtensions-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CBA94F719C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSXtensions-iOS" */;
+			buildConfigurationList = 1CBA94F719C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSExtensions-iOS" */;
 			buildPhases = (
 				1CBA94E519C85B8B0049F847 /* Sources */,
 				1CBA94E619C85B8B0049F847 /* Frameworks */,
@@ -366,14 +385,14 @@
 			);
 			dependencies = (
 			);
-			name = "NSXtensions-iOS";
+			name = "NSExtensions-iOS";
 			productName = "NSXtensions-iOS";
-			productReference = 1CBA94E919C85B8B0049F847 /* libNSXtensions-iOS.a */;
+			productReference = 1CBA94E919C85B8B0049F847 /* libNSExtensions-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		1CBA94F219C85B8B0049F847 /* NSXtensions-iOSTests */ = {
+		1CBA94F219C85B8B0049F847 /* NSExtensions-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CBA94FA19C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSXtensions-iOSTests" */;
+			buildConfigurationList = 1CBA94FA19C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSExtensions-iOSTests" */;
 			buildPhases = (
 				1CBA94EF19C85B8B0049F847 /* Sources */,
 				1CBA94F019C85B8B0049F847 /* Frameworks */,
@@ -385,9 +404,9 @@
 			dependencies = (
 				1CBA956419C861150049F847 /* PBXTargetDependency */,
 			);
-			name = "NSXtensions-iOSTests";
+			name = "NSExtensions-iOSTests";
 			productName = "NSXtensions-iOSTests";
-			productReference = 1CBA94F319C85B8B0049F847 /* NSXtensions-iOSTests.xctest */;
+			productReference = 1CBA94F319C85B8B0049F847 /* NSExtensions-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -397,7 +416,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Anthony Shoumikhin";
+				ORGANIZATIONNAME = "Petr Korolev";
 				TargetAttributes = {
 					1CBA94E819C85B8B0049F847 = {
 						CreatedOnToolsVersion = 6.0;
@@ -407,7 +426,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1C18DF0D19C82F270053377E /* Build configuration list for PBXProject "NSXtensions" */;
+			buildConfigurationList = 1C18DF0D19C82F270053377E /* Build configuration list for PBXProject "NSExtensions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -419,8 +438,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CBA94E819C85B8B0049F847 /* NSXtensions-iOS */,
-				1CBA94F219C85B8B0049F847 /* NSXtensions-iOSTests */,
+				1CBA94E819C85B8B0049F847 /* NSExtensions-iOS */,
+				1CBA94F219C85B8B0049F847 /* NSExtensions-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -464,7 +483,8 @@
 				1CBA953B19C85C7F0049F847 /* NSException+X.m in Sources */,
 				1CBA955219C85C7F0049F847 /* UIButton+X.m in Sources */,
 				1CBA953519C85C7F0049F847 /* NSDate+X.m in Sources */,
-				1CBA94EE19C85B8B0049F847 /* NSXtensions_iOS.m in Sources */,
+				1CBA94EE19C85B8B0049F847 /* NSExtensions_iOS.m in Sources */,
+				D66F5C432AAB44D9ECFEFCA1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +502,7 @@
 /* Begin PBXTargetDependency section */
 		1CBA956419C861150049F847 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1CBA94E819C85B8B0049F847 /* NSXtensions-iOS */;
+			target = 1CBA94E819C85B8B0049F847 /* NSExtensions-iOS */;
 			targetProxy = 1CBA956319C861150049F847 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -570,7 +590,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NSExtensions-iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -584,7 +604,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NSExtensions-iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
@@ -614,7 +634,7 @@
 					XCTest,
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NSExtensions-iOSTests";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -638,7 +658,7 @@
 					XCTest,
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "NSExtensions-iOSTests";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -647,7 +667,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C18DF0D19C82F270053377E /* Build configuration list for PBXProject "NSXtensions" */ = {
+		1C18DF0D19C82F270053377E /* Build configuration list for PBXProject "NSExtensions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1C18DF1E19C82F270053377E /* Debug */,
@@ -656,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CBA94F719C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSXtensions-iOS" */ = {
+		1CBA94F719C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSExtensions-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CBA94F819C85B8B0049F847 /* Debug */,
@@ -665,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CBA94FA19C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSXtensions-iOSTests" */ = {
+		1CBA94FA19C85B8B0049F847 /* Build configuration list for PBXNativeTarget "NSExtensions-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CBA94FB19C85B8B0049F847 /* Debug */,

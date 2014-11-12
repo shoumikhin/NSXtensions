@@ -1,11 +1,11 @@
-My improved version of `NSXtensions`.
+My improved version of `NSExtensions`.
 
-	pod 'NSXtensions', :git => 'https://github.com/skywinder/NSXtensions.git', :branch => 'master'
+	pod 'NSExtensions', :git => 'https://github.com/skywinder/NSXtensions.git', :branch => 'master'
 
-# NSXtensions
+# NSExtensions
 
-![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)<br>
-![Pod Version](http://cocoapod-badges.herokuapp.com/v/NSXtensions/badge.png)
+![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSExtensions/badge.png)<br>
+![Pod Version](http://cocoapod-badges.herokuapp.com/v/NSExtensions/badge.png)
 
 A collection of useful categories for standard Cocoa classes. Also available among CocoaPods.
 
@@ -16,7 +16,7 @@ Pull requests are welcome! :)
 Simply add:
 
 ```objc
-#import <NSXtensions.h>
+#import <NSExtensions.h>
 ```
 
 to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):

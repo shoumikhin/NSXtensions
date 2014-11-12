@@ -1,13 +1,14 @@
 //
-//  NSXtensions_iOS.m
+//  NSXtensions_iOS.h
 //  NSXtensions-iOS
 //
 //  Created by Petr Korolev on 16/09/14.
 //  Copyright (c) 2014 Anthony Shoumikhin. All rights reserved.
 //
 
-#import "NSXtensions_iOS.h"
+#import <Foundation/Foundation.h>
+#import "NSXtensions.h"
 
-@implementation NSXtensions_iOS
+@interface NSExtensions_iOS : NSObject
 
 @end
