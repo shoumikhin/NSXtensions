@@ -1,6 +1,5 @@
 My improved version of `NSExtensions`.
 
-	pod 'NSExtensions', :git => 'https://github.com/skywinder/NSXtensions.git', :branch => 'master'
 
 # NSExtensions
 
@@ -10,6 +9,9 @@ My improved version of `NSExtensions`.
 A collection of useful categories for standard Cocoa classes. Also available among CocoaPods.
 
 Pull requests are welcome! :)
+
+## Installation
+	pod 'NSExtensions'
 
 ## Usage
 
