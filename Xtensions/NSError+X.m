@@ -24,25 +24,25 @@
 #if !TARGET_OS_IPHONE
              @(NSTextReadInapplicableDocumentTypeError) :
                  @"There's a problem reading data with the specified format.",
-             
+
              @(NSTextWriteInapplicableDocumentTypeError) :
                  @"There's a problem writing data of the specified format.",
-             
+
              @(NSServiceApplicationNotFoundError) :
                  @"The service provider could not be found.",
-             
+
              @(NSServiceApplicationLaunchFailedError) :
                  @"The service providing application could not be launched.",
-             
+
              @(NSServiceRequestTimedOutError) :
                  @"The service providing application did not open its service listening port in time, or the app didn't respond to the request in time.",
-             
+
              @(NSServiceInvalidPasteboardDataError) :
                  @"The service providing app did not return a pasteboard with any of the promised types, or we couldn't write the data from the pasteboard to the object receiving the returned data.",
-             
+
              @(NSServiceMalformedServiceDictionaryError) :
                  @"The service dictionary did not contain the necessary keys.",
-             
+
              @(NSServiceMiscellaneousError) :
                  @"There're programmatic mistakes in the service consuming application.",
 
@@ -178,10 +178,10 @@
 
              @(NSExecutableRuntimeMismatchError) :
                  @"Executable has Objective C runtime information incompatible with the current process.",
-             
+
              @(NSExecutableLoadError) :
                  @"Executable cannot be loaded for some other reason, such as a problem with a library it depends on.",
-             
+
              @(NSExecutableLinkError) :
                  @"Executable fails due to linking issues."
             };
@@ -300,16 +300,16 @@
 
              @(NSEntityMigrationPolicyError) :
                  @"Migration failed during processing of an entity migration policy.",
-             
+
              @(NSInferredMappingModelError) :
                  @"Problem with the creation of an inferred mapping model.",
-             
+
              @(NSExternalRecordImportError) :
                  @"General error encountered while importing external records.",
-             
+
              @(NSCoreDataError) :
                  @"General CoreData error.",
-             
+
              @(NSSQLiteError) :
                  @"General SQLite error."
             };
@@ -441,16 +441,16 @@
 
              @(kCFURLErrorCannotWriteToFile) :
                  @"The file cannot be written.",
-             
+
              @(kCFURLErrorCannotRemoveFile) :
                  @"The file cannot be removed.",
-             
+
              @(kCFURLErrorCannotMoveFile) :
                  @"The file cannot be moved.",
-             
+
              @(kCFURLErrorDownloadDecodingFailedMidStream) :
                  @"The download failed because decoding of the downloaded data failed mid-stream.",
-             
+
              @(kCFURLErrorDownloadDecodingFailedToComplete) :
                  @"The download failed because decoding of the downloaded data failed to complete."
             };
@@ -1003,28 +1003,28 @@
 
              @(KERN_SEMAPHORE_DESTROYED) :
                  @"Semaphore has been destroyed and is no longer available.",
-             
+
              @(KERN_RPC_SERVER_TERMINATED) :
                  @"Return from RPC indicating the target server was terminated before it successfully replied.",
-             
+
              @(KERN_RPC_TERMINATE_ORPHAN) :
                  @"Terminate an orphaned activation.",
-             
+
              @(KERN_RPC_CONTINUE_ORPHAN) :
                  @"Allow an orphaned activation to continue executing.",
-             
+
              @(KERN_NOT_SUPPORTED) :
                  @"Empty thread activation.",
-             
+
              @(KERN_NODE_DOWN) :
                  @"Remote node down or inaccessible.",
-             
+
              @(KERN_NOT_WAITING) :
                  @"A signalled thread was not actually waiting.",
-             
+
              @(KERN_OPERATION_TIMED_OUT) :
                  @"Some thread-oriented operation timed out.",
-             
+
              @(KERN_CODESIGN_ERROR) :
                  @"During a page fault, indicates that the page was rejected as a result of a signature check.",
 #if defined(__MAC_10_10)
@@ -1059,7 +1059,7 @@ SYNTHESIZE_STATIC_PROPERTY(NSDictionary *, friendlyErrorDescription,
 
           NSPOSIXErrorDomain :
               self.class._friendlyPOSIXErrorDescriptions,
-          
+
           NSMachErrorDomain :
               self.class._friendlyMachErrorDescriptions
         }.copy;
@@ -1088,6 +1088,24 @@ SYNTHESIZE_STATIC_PROPERTY(NSDictionary *, friendlyErrorDescription,
                                             NSLocalizedDescriptionKey :
                                                 NSLocalizedString(friendlyDescription, nil)
                                         } : nil];
+}
+
+
+
+-(void)showAlertView
+{
+    [self showAlertViewWithTitle:@"Error" andMessage:self.localizedFailureReason ?: self.localizedDescription];
+}
+
+-(void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
+        [alertView show];
+    });
 }
 
 @end
