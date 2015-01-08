@@ -1,34 +1,28 @@
 # Changelog
 
-## [0.69] (https://github.com/shoumikhin/NSXtensions/tree/0.69)
+## [0.0.2] (https://github.com/skywinder/NSExtensions/tree/0.0.2)
+#### 08/01/15
+## [0.0.1] (https://github.com/skywinder/NSExtensions/tree/0.0.1)
+#### 12/11/14
+## [0.69] (https://github.com/skywinder/NSExtensions/tree/0.69)
 #### 10/09/14
-- *Merged pull-request:* Ui view++ [\#5](https://github.com/shoumikhin/NSXtensions/pull/5)
-
-## [0.68] (https://github.com/shoumikhin/NSXtensions/tree/0.68)
-#### 09/09/14
-- *Merged pull-request:* fix for #8 [\#9](https://github.com/shoumikhin/NSXtensions/pull/9)
-
-- *Closed issue:* KERN_POLICY_STATIC is not available in iOS [\#8](https://github.com/shoumikhin/NSXtensions/issues/8)
-
-## [0.67] (https://github.com/shoumikhin/NSXtensions/tree/0.67)
+## [0.68] (https://github.com/skywinder/NSExtensions/tree/0.68)
+#### 02/09/14
+## [0.67] (https://github.com/skywinder/NSExtensions/tree/0.67)
 #### 27/08/14
-## [0.66] (https://github.com/shoumikhin/NSXtensions/tree/0.66)
+## [0.66] (https://github.com/skywinder/NSExtensions/tree/0.66)
 #### 20/08/14
-- *Merged pull-request:* grammar fix & update copyright date [\#2](https://github.com/shoumikhin/NSXtensions/pull/2)
-
-## [0.6] (https://github.com/shoumikhin/NSXtensions/tree/0.6)
+## [0.6] (https://github.com/skywinder/NSExtensions/tree/0.6)
 #### 25/09/13
-- *Merged pull-request:* UIApplication improvement [\#1](https://github.com/shoumikhin/NSXtensions/pull/1)
-
-## [0.5] (https://github.com/shoumikhin/NSXtensions/tree/0.5)
+## [0.5] (https://github.com/skywinder/NSExtensions/tree/0.5)
 #### 21/06/13
-## [0.4] (https://github.com/shoumikhin/NSXtensions/tree/0.4)
+## [0.4] (https://github.com/skywinder/NSExtensions/tree/0.4)
 #### 01/03/13
-## [0.3] (https://github.com/shoumikhin/NSXtensions/tree/0.3)
+## [0.3] (https://github.com/skywinder/NSExtensions/tree/0.3)
 #### 21/01/13
-## [0.2] (https://github.com/shoumikhin/NSXtensions/tree/0.2)
+## [0.2] (https://github.com/skywinder/NSExtensions/tree/0.2)
 #### 03/12/12
-## [0.1] (https://github.com/shoumikhin/NSXtensions/tree/0.1)
+## [0.1] (https://github.com/skywinder/NSExtensions/tree/0.1)
 #### 02/12/12
 
 
