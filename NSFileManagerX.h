@@ -55,6 +55,7 @@
  Adds a special filesystem flag to a file to avoid iCloud backup it.
  
  @param path Path to a file to set an attribute.
+ @return Yes or No depending on whether the operation was successful.
  */
 + (BOOL)addSkipBackupAttributeToFile:(NSString *)path;
 
