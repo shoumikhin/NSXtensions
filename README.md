@@ -1,7 +1,8 @@
-# NSXtensions
-
-![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)<br>
+[![Stories in Ready](https://badge.waffle.io/shoumikhin/nsxtensions.png?label=ready&title=Ready)](https://waffle.io/shoumikhin/nsxtensions)&nbsp;
+![Pod Platform](http://cocoapod-badges.herokuapp.com/p/NSXtensions/badge.png)&nbsp; 
 ![Pod Version](http://cocoapod-badges.herokuapp.com/v/NSXtensions/badge.png)
+
+# NSXtensions
 
 A collection of useful categories for standard Cocoa classes. Also available among CocoaPods.
 
@@ -274,7 +275,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 
 //set an image for all UIControl states at once
 - (void)setImageForAllStates:(UIImage *)image;
-
 ```
 
 #### UIColor
