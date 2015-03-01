@@ -10,13 +10,40 @@ Pull requests are welcome! :)
 
 ## Usage
 
-Simply add:
+Simply add the following line to your precompiled header:
 
 ```objc
 #import <NSXtensions.h>
 ```
 
-to your precompiled header, and you'll boost Cocoa with the following stuff (in alphabetical order):
+And you'll boost the following Cocoa classes (in alphabetical order):
+
+* [MacroX](#macroxh)
+* [MKMapView](#mkmapview)
+* [NSDate](#nsdate)
+* [NSDictionary](#nsdictionary)
+* [NSError](#nserror)
+* [NSException](#nsexception)
+* [NSFileManager](#nsfilemanager)
+* [NSIndexPath](#nsindexpath)
+* [NSManagedObjectContext](#nsmanagedobjectcontext)
+* [NSMutableArray](#nsmutablearray)
+* [NSObject](#nsobject)
+* [NSSet](#nsset)
+* [NSString](#nsstring)
+* [NSURL](#nsurl)
+* [NSUUID](#nsuuid)
+* [UIAlertView](#uialertview)
+* [UIApplication](#uiapplication)
+* [UIButton](#uibutton)
+* [UIDevice](#uidevice)
+* [UIImage](#uiimage)
+* [UINavigationController](#uinavigationcontroller)
+* [UITabBarController](#uitabbarcontroller)
+* [UIView](#uiview)
+* [UIWebView](#uiwebview)
+
+## Details
 
 #### MacroX.h
 
@@ -147,6 +174,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 
 //check available disk space (Megabytes)
 + (double)availableDiskSpace;
+```
+
+#### NSIndexPath
+
+```objc
+//convert index path to a string like "1.2.3.4" and back
++ (NSIndexPath *)indexPathWithString:(NSString *)path;
+- (NSString *)stringValue;
+
+//convenience methonds
+- (NSUInteger)firstIndex;
+- (NSUInteger)lastIndex;
 ```
 
 #### NSManagedObjectContext
