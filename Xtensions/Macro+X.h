@@ -152,3 +152,11 @@ _SYNTHESIZE_SINGLETON_RETAIN_METHODS_
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
+/**
+* Check is string is nil, them put empty string instead.
+*/
+#if !defined(StringOrEmpty)
+#define StringOrEmpty(A)  ({ __typeof__(A) __a = (A); __a ? __a : @""; })
+#endif
