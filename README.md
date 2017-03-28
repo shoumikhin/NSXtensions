@@ -151,6 +151,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(classname)
 + (instancetype)friendlyErrorWithDomain:(NSString *)domain andCode:(NSInteger)code;
 ```
 
+    // Shows alert with localizedFailureReason or localizedDescription
+    - (void)showAlertView;
+
 #### NSException
 
 ```objc

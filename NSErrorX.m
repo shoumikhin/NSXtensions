@@ -2,6 +2,7 @@
 
 #import "MacroX.h"
 #import "NSDictionaryX.h"
+#import "MacroX.h"
 
 #import <Foundation/FoundationErrors.h>
 #import <CoreData/CoreDataErrors.h>
@@ -1087,6 +1088,19 @@ SYNTHESIZE_STATIC_PROPERTY(NSDictionary *, friendlyErrorDescription,
                                             NSLocalizedDescriptionKey :
                                                 NSLocalizedString(friendlyDescription, nil)
                                         } : nil];
+}
+
+
+-(void)showAlertView
+{
+    [self showAlertViewWithTitle:@"Error" andMessage:self.localizedFailureReason ?: self.friendlyLocalizedDescription];
+}
+
+-(void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        SHOW_ALERT(title, message, nil, NSLocalizedString(@"OK", nil), nil);
+    });
 }
 
 @end
